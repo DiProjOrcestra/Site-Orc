@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Grande Aventura: Do WordPress ao Nosso Site Épico</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #f4e8c1, #d9c2a6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: 'Cinzel', serif; /* Medieval font */
+    }
+
+    /* Parchment container */
+    .parchment {
+      background: url('https://www.transparenttextures.com/patterns/old-paper.png'), #f5e9d4;
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 40px;
+      border: 10px solid #8b5e3c;
+      border-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png') 30 stretch;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .parchment::before,
+    .parchment::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(to bottom, #8b5e3c, transparent);
+      left: 0;
+    }
+
+    .parchment::before {
+      top: 0;
+    }
+
+    .parchment::after {
+      bottom: 0;
+      background: linear-gradient(to top, #8b5e3c, transparent);
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 2.5em;
+      color: #3c2f2f;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      border-bottom: 2px solid #8b5e3c;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #5c4033;
+      margin: 30px 0 15px;
+      position: relative;
+    }
+
+    h2::before {
+      content: '✦';
+      color: #8b5e3c;
+      position: absolute;
+      left: -20px;
+    }
+
+    p, li {
+      font-size: 1.1em;
+      color: #4a3728;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      font-family: 'IM Fell English', serif; /* Old English font */
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    ul li::before {
+      content: '➳';
+      color: #8b5e3c;
+      margin-right: 10px;
+    }
+
+    code {
+      background: #d9c2a6;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #3c2f2f;
+    }
+
+    pre {
+      background: #d9c2a6;
+      padding: 15px;
+      border-left: 4px solid #8b5e3c;
+      margin: 15px 0;
+      overflow-x: auto;
+      font-size: 0.9em;
+    }
+
+    /* Animation for scroll effect */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .parchment {
+        padding: 20px;
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+
+      p, li {
+        font-size: 1em;
+      }
+    }
+
+    /* Import fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap');
+  </style>
+</head>
+<body>
+  <div class="parchment">
+    <h1>A Grande Aventura: Do WordPress para o Nosso Site Épico!</h1>
+    <p><strong>Bem-vindo, Aventureiro(a)!</strong> Você está prestes a embarcar em uma jornada heroica para construir o site da nossa empresa. Estamos saindo do WordPress (aquele dragão antigo e lento) para um mundo moderno, rápido e poderoso: <strong>Frontend com React + Vite</strong> e <strong>Backend com NestJS</strong>.</p>
+    <p>Pense nisso como um jogo RPG: você começa como um novato (sabendo HTML, CSS e JS no front, e JS/Node no back), e vai subindo de nível até virar um mestre dev. Cada nível tem <strong>missões</strong> (tarefas práticas), <strong>dicas de sobrevivência</strong> (explicações didáticas), e <strong>recompensas</strong> (o que você ganha ao completar).</p>
+    <h2>Regras do Jogo</h2>
+    <ul>
+      <li><strong>Vida (Ambiente):</strong> Certifique-se de ter Node.js instalado (versão 18+). Use NPM ou Yarn como sua poção de mana para instalar pacotes.</li>
+      <li><strong>Mapa (Estrutura do Projeto):</strong> Nosso reino é um <strong>monorepo</strong> (um diretório principal com pastas <code>frontend</code> e <code>backend</code>).</li>
+      <li><strong>Armas Iniciais:</strong> Rode <code>npm install</code> na raiz. Para testar: no <code>frontend</code>, <code>npm run dev</code> (abre em localhost:5173). No <code>backend</code>, <code>npm run start:dev</code> (API em localhost:3000).</li>
+      <li><strong>Dificuldade:</strong> Introdutório a intermediário – explico do zero, mas assumo JS básico.</li>
+      <li><strong>Objetivo Final:</strong> Criar um site onde front e back conversam felizes, sem crashes.</li>
+    </ul>
+    <p><strong>Pronto? Vamos level up!</strong> 🎮</p>
+
+    <h2>Nível 1: A Lore do Mundo – O Que é React e NestJS?</h2>
+    <p><strong>Missão:</strong> Entenda os heróis principais. Leia e responda mentalmente: "Por que usamos isso em vez de WordPress?"</p>
+    <h3>Dicas de Sobrevivência</h3>
+    <ul>
+      <li><strong>React: O Mago da Interface (Frontend)</strong><br>Imagine HTML, CSS e JS como ingredientes básicos de uma poção. React é o caldeirão mágico que os mistura para criar UIs interativas e reutilizáveis. Criado pelo Facebook, React é uma biblioteca JS para apps web dinâmicos.<br>
+        - <strong>Por quê?</strong> No WordPress, editamos templates manualmente – lento e bagunçado. React divide tudo em <strong>componentes</strong> (pedaços reutilizáveis, como blocos de Lego). Atualiza só o que muda (graças ao Virtual DOM).<br>
+        - <strong>Vite:</strong> Uma ferramenta de build super rápida para React.<br>
+        - <strong>Exemplo Básico:</strong> Em JS puro, manipulava DOM com <code>document.getElementById</code>. Em React, você declara o que quer, e ele cuida do resto.
+      </li>
+      <li><strong>NestJS: O Guardião do Backend</strong><br>Nest é um framework Node.js inspirado em Angular (estruturado). Pense nele como um castelo: módulos, controllers e services para gerenciar API, banco de dados e lógica.<br>
+        - <strong>Por quê?</strong> Em Node puro, código vira macarrão. Nest organiza em camadas, com decorators (como <code>@Controller</code>) para rotas fáceis. Suporta TypeScript (JS com tipos).<br>
+        - <strong>Exemplo Básico:</strong> Em Node/Express, rotas são manuais. Nest faz isso modular e escalável.
+      </li>
+    </ul>
+    <p><strong>Recompensa:</strong> +10 de Sabedoria! React cuida da "cara" do site, Nest da "mente".</p>
+
+    <h2>Nível 2: Configurando o Acampamento – Preparando o Ambiente</h2>
+    <p><strong>Missão:</strong> Abra o projeto no VS Code. Rode os servidores e veja se funciona.</p>
+    <h3>Dicas de Sobrevivência</h3>
+    <ul>
+      <li><strong>Frontend (React + Vite):</strong> Vá para a pasta <code>frontend</code>.<br>
+        - <code>src/App.tsx</code>: Coração, como o <code>index.html</code> do WordPress.<br>
+        - Rode: <code>npm run dev</code>. Veja no browser.<br>
+        - Dica: Arquivos <code>.tsx</code> são JS com JSX (HTML dentro de JS). Ex: <code>&lt;h1&gt;Olá&lt;/h1&gt;</code> é válido!
+      </li>
+      <li><strong>Backend (NestJS):</strong> Vá para <code>backend</code>.<br>
+        - <code>src/main.ts</code>: Entry point, como <code>server.js</code> em Node.<br>
+        - Rode: <code>npm run start:dev</code>. Teste: <code>localhost:3000</code> (deve mostrar "Hello World").<br>
+        - Dica: Use Postman para testar APIs.
+      </li>
+      <li><strong>Integração Inicial:</strong> No <code>frontend/vite.config.ts</code>, proxy para backend evita erros de CORS.</li>
+    </ul>
+    <p><strong>Recompensa:</strong> +15 de Resistência! Se der erro, cheque <code>node_modules</code> – rode <code>npm install</code>.</p>
+
+    <h2>Nível 3: Forjando Armas – Criando Componentes no React</h2>
+    <p><strong>Missão:</strong> Crie <code>BotaoLegal.tsx</code> em <code>frontend/src/components</code> e importe na <code>App.tsx</code>.</p>
+    <h3>Dicas de Sobrevivência</h3>
+    <ul>
+      <li><strong>O Que é um Componente?</strong> Um pedaço reutilizável de UI, como um shortcode no WordPress, mas mais poderoso.</li>
+      <li><strong>Como Criar:</strong><br>
+        1. Crie <code>src/components/BotaoLegal.tsx</code>:
+        <pre><code>import React from 'react';
+
+function BotaoLegal() {
+  return (
+    &lt;button style={{ background: 'blue', color: 'white' }}&gt;Clique Aqui!&lt;/button&gt;
+  );
+}
+
+export default BotaoLegal;</code></pre>
+        - JSX mistura HTML com JS. Style é CSS inline.<br>
+        2. <strong>Props:</strong> Passe dados. Ex:
+        <pre><code>function BotaoLegal(props: { texto: string }) {
+  return &lt;button&gt;{props.texto}&lt;/button&gt;;
+}</code></pre>
+        - Use: <code>&lt;BotaoLegal texto="Salvar" /&gt;</code>.<br>
+        3. <strong>Estado:</strong> Use <code>useState</code> para mudanças. Ex:
+        <pre><code>import { useState } from 'react';
+
+function Contador() {
+  const [contagem, setContagem] = useState(0);
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Contagem: {contagem}&lt;/p&gt;
+      &lt;button onClick={() => setContagem(contagem + 1)}&gt;Aumentar&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+      </li>
+      <li><strong>Dica Intermediária:</strong> Para listas, use <code>map()</code>: <code>{itens.map(item => &lt;p key={item.id}&gt;{item}&lt;/p&gt;)}</code>.</li>
+    </ul>
+    <p><strong>Recompensa:</strong> +20 de Força! Teste: Importe em <code>App.tsx</code>.</p>
+
+    <h2>Nível 4: Construindo o Castelo – Colocando Componentes na Página</h2>
+    <p><strong>Missão:</strong> Crie uma página. Instale React Router (<code>npm i react-router-dom</code>) e faça rotas.</p>
+    <h3>Dicas de Sobrevivência</h3>
+    <ul>
+      <li><strong>Páginas:</strong> Componentes maiores. Crie <code>src/pages/Home.tsx</code>:
+        <pre><code>import BotaoLegal from '../components/BotaoLegal';
+
+function Home() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Bem-vindo ao Nosso Site!&lt;/h1&gt;
+      &lt;BotaoLegal texto="Entrar" /&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Home;</code></pre>
+      </li>
+      <li><strong>Rotas:</strong> Use React Router. Em <code>App.tsx</code>:
+        <pre><code>import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Sobre from './pages/Sobre';
+
+function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+        &lt;Route path="/sobre" element={&lt;Sobre /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/Router&gt;
+  );
+}</code></pre>
+        - Links: <code>&lt;Link to="/sobre"&gt;Ir para Sobre&lt;/Link&gt;</code>.
+      </li>
+      <li><strong>Estilos:</strong> Use CSS modules ou Tailwind.</li>
+    </ul>
+    <p><strong>Recompensa:</strong> +25 de Agilidade! Páginas navegáveis como um site real.</p>
+
+    <h2>Nível 5: Treinando o Guardião – Backend com NestJS</h2>
+    <p><strong>Missão:</strong> Crie um módulo para "produtos". Teste uma rota GET.</p>
+    <h3>Dicas de Sobrevivência</h3>
+    <ul>
+      <li><strong>Módulos:</strong> Crie com <code>nest g module produtos</code>.</li>
+      <li><strong>Controller:</strong> Gerencia rotas. Ex: <code>src/produtos/produtos.controller.ts</code>:
+        <pre><code>import { Controller, Get } from '@nestjs/common';
+
+@Controller('produtos')
+export class ProdutosController {
+  @Get()
+  findAll() {
+    return ['Produto1', 'Produto2'];
+  }
+}</code></pre>
+      </li>
+      <li><strong>Service:</strong> Lógica. Ex: <code>src/produtos/produtos.service.ts</code>:
+        <pre><code>import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class ProdutosService {
+  findAll() {
+    return ['Produto1', 'Produto2'];
+  }
+}</code></pre>
+      </li>
+      <li><strong>Dica Intermediária:</strong> Adicione TypeORM para banco.</li>
+    </ul>
+    <p><strong>Recompensa:</strong> +30 de Inteligência! Teste: <code>localhost:3000/produtos</code>.</p>
+
+    <h2>Nível 6: Aliança dos Reinos – Juntando Front e Back</h2>
+    <p><strong>Missão:</strong> Chame a API do backend no frontend.</p>
+    <h3>Dicas de Sobrevivência</h3>
+    <ul>
+      <li><strong>Chamadas API:</strong> Use <code>axios</code> (<code>npm i axios</code>). Crie <code>src/services/api.ts</code>:
+        <pre><code>import axios from 'axios';
+const api = axios.create({ baseURL: '/api' });
+export default api;</code></pre>
+      </li>
+      <li><strong>useEffect:</strong> Fetch dados. Ex: <code>Home.tsx</code>:
+        <pre><code>import { useState, useEffect } from 'react';
+import api from '../services/api';
+
+function Home() {
+  const [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    api.get('/produtos').then(response => setProdutos(response.data));
+  }, []);
+
+  return (
+    &lt;ul&gt;
+      {produtos.map(prod => &lt;li key={prod}&gt;{prod}&lt;/li&gt;)}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+      </li>
+      <li><strong>Autenticação:</strong> Adicione JWT no Nest e use localStorage no React.</li>
+    </ul>
+    <p><strong>Recompensa:</strong> +50 de Poder! Front e back aliados.</p>
+
+    <h2>Boss Level: Vitória Final – Dicas para o Projeto Inteiro</h2>
+    <ul>
+      <li><strong>Debug:</strong> Use console.log, React Dev Tools, Nest logs.</li>
+      <li><strong>Deploy:</strong> Frontend no Vercel, backend no Render.</li>
+      <li><strong>Próximos Passos:</strong> Adicione banco, autenticação, estilize.</li>
+    </ul>
+    <p><strong>Parabéns, Herói!</strong> Você nivelou do WordPress para um app full-stack. Se travar, pergunte – continuamos a aventura juntos. 🚀</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML: O Primeiro Poder do Desenvolvimento Web</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #f4e8c1, #d9c2a6);
+      font-family: 'IM Fell English', serif;
+      color: #4a3728;
+      line-height: 1.6;
+    }
+
+    .reino {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: url('https://www.transparenttextures.com/patterns/old-paper.png'), #f5e9d4;
+      border: 5px solid #8b5e3c;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #3c2f2f;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .subtitulo {
+      font-size: 1.3em;
+      color: #5c4033;
+      font-style: italic;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-tabs button {
+      padding: 12px 20px;
+      background: #8b5e3c;
+      color: #f5e9d4;
+      border: 2px solid #3c2f2f;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .nav-tabs button:hover,
+    .nav-tabs button.active {
+      background: #3c2f2f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .nivel {
+      display: none;
+      background: url('https://www.transparenttextures.com/patterns/old-paper.png'), #f5e9d4;
+      padding: 40px;
+      margin: 20px 0;
+      border: 8px solid #8b5e3c;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    .nivel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #5c4033;
+      margin: 30px 0 15px;
+      border-bottom: 2px solid #8b5e3c;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      color: #5c4033;
+      margin: 20px 0 10px;
+      margin-left: 20px;
+    }
+
+    .card {
+      background: #f5e9d4;
+      border-left: 4px solid #8b5e3c;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 3px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .conceito {
+      border-left-color: #2196F3;
+      background: rgba(33, 150, 243, 0.05);
+    }
+
+    .desafio {
+      border-left-color: #FF9800;
+      background: rgba(255, 152, 0, 0.05);
+    }
+
+    .recompensa {
+      border-left-color: #4CAF50;
+      background: rgba(76, 175, 80, 0.05);
+    }
+
+    .armadilha {
+      border-left-color: #F44336;
+      background: rgba(244, 67, 54, 0.05);
+    }
+
+    .card strong {
+      color: #3c2f2f;
+      font-weight: bold;
+    }
+
+    pre {
+      background: #d9c2a6;
+      padding: 15px;
+      border-left: 4px solid #8b5e3c;
+      margin: 15px 0;
+      overflow-x: auto;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #3c2f2f;
+    }
+
+    code {
+      background: #d9c2a6;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #3c2f2f;
+    }
+
+    ul, ol {
+      margin-left: 40px;
+      margin-bottom: 15px;
+    }
+
+    ul li::marker {
+      color: #8b5e3c;
+    }
+
+    ol li::marker {
+      color: #8b5e3c;
+      font-weight: bold;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #8b5e3c;
+    }
+
+    th {
+      background: #8b5e3c;
+      color: #f5e9d4;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(139, 94, 60, 0.1);
+    }
+
+    .progress-section {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 30px;
+      background: #d9c2a6;
+      border: 2px solid #8b5e3c;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(to right, #8b5e3c, #5c4033);
+      width: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5e9d4;
+      font-weight: bold;
+      transition: width 0.3s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #8b5e3c;
+      color: #5c4033;
+    }
+
+    @media (max-width: 768px) {
+      .nav-tabs {
+        flex-direction: column;
+      }
+
+      .nav-tabs button {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+
+      .nivel {
+        padding: 20px;
+      }
+
+      pre, code {
+        font-size: 0.85em;
+        overflow-x: auto;
+      }
+    }
+
+    .emoji {
+      font-size: 1.2em;
+      margin-right: 5px;
+    }
+
+    .xp-counter {
+      text-align: right;
+      font-size: 1.1em;
+      color: #8b5e3c;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, rgba(255, 193, 7, 0.3), rgba(255, 193, 7, 0.1));
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap');
+  </style>
+</head>
+<body>
+  <div class="reino">
+    <header>
+      <h1>⚔️ HTML: O Primeiro Poder</h1>
+      <p class="subtitulo">Uma Jornada Épica para Iniciantes Absolutos</p>
+      <p style="margin-top: 15px; font-size: 1.1em;">
+        Bem-vindo, Aventureiro! Você está prestes a aprender a linguagem que alimenta TODA a internet.
+      </p>
+    </header>
+
+    <div class="nav-tabs">
+      <button class="nav-btn active" data-target="intro">Introdução</button>
+      <button class="nav-btn" data-target="prerequisitos">Pré-Requisitos</button>
+      <button class="nav-btn" data-target="conceitos">Conceitos</button>
+      <button class="nav-btn" data-target="nivel1">Nível 1</button>
+      <button class="nav-btn" data-target="nivel2">Nível 2</button>
+      <button class="nav-btn" data-target="nivel3">Nível 3</button>
+      <button class="nav-btn" data-target="nivel4">Nível 4</button>
+      <button class="nav-btn" data-target="nivel5">Nível 5</button>
+      <button class="nav-btn" data-target="boss">Boss Final</button>
+      <button class="nav-btn" data-target="resumo">Resumo</button>
+    </div>
+
+    <!-- INTRODUÇÃO -->
+    <div class="nivel active" id="intro">
+      <h2><span class="emoji">📖</span>Prefácio: Bem-vindo ao Reino da Web</h2>
+      <p>
+        Você está prestes a aprender a linguagem que alimenta TODA a internet. Antes de você virar um mestre dev 
+        com React, NestJS e bancos de dados, você precisa dominar <strong>HTML</strong> – a estrutura mágica que 
+        sustenta cada página web que você vê.
+      </p>
+
+      <h3>🎮 Sistema de Gamificação</h3>
+      <p>Cada seção será seu <strong>Nível</strong>. A cada nível:</p>
+      <ul>
+        <li>✨ <strong>Conceito</strong> – O que você precisa saber (a lore)</li>
+        <li>🎯 <strong>Desafio Prático</strong> – Tarefa para praticar (a missão)</li>
+        <li>🏆 <strong>Recompensa</strong> – O que você ganha (pontos de XP)</li>
+        <li>⚠️ <strong>Armadilhas Comuns</strong> – Erros que a maioria comete</li>
+      </ul>
+
+      <div class="progress-section">
+        <h3>Seu Progresso</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressBar" style="width: 5%">5%</div>
+        </div>
+        <div class="xp-counter">XP: <span id="xpCounter">10</span> / 445</div>
+      </div>
+
+      <p style="text-align: center; margin-top: 30px; font-size: 1.3em;">
+        <strong>Prepare-se. A aventura começa agora. 🗡️</strong>
+      </p>
+    </div>
+
+    <!-- PRÉ-REQUISITOS -->
+    <div class="nivel" id="prerequisitos">
+      <h2><span class="emoji">🛠️</span>Pré-Requisitos: Preparando o Terreno</h2>
+
+      <h3>O Que Você Precisa</h3>
+
+      <h4>1. Um Computador (óbvio, mas importante)</h4>
+      <p>Pode ser Windows, Mac ou Linux. HTML funciona em todos.</p>
+
+      <h4>2. Um Editor de Texto</h4>
+      <div class="card conceito">
+        <strong>O que é:</strong> Um programa para escrever código (não use Word ou Google Docs).
+        <br><strong>Recomendado:</strong> Visual Studio Code (gratuito)
+        <br><strong>Alternativas:</strong> Sublime Text, Notepad++, ou até o Bloco de Notas
+      </div>
+
+      <h4>3. Um Navegador Web</h4>
+      <p>Você provavelmente já tem: Chrome, Firefox, Safari ou Edge. Recomendo Chrome ou Firefox para debug.</p>
+
+      <h4>4. Uma Pasta de Trabalho</h4>
+      <p>Crie uma pasta chamada <code>meu-primeiro-site</code> em um lugar que você lembre.</p>
+
+      <div class="card desafio">
+        <strong>🎯 Desafio Pré-Requisito:</strong>
+        <ol>
+          <li>Abra seu editor de texto</li>
+          <li>Crie uma pasta vazia em um lugar que você lembre</li>
+          <li>Salve um arquivo de teste chamado <code>teste.html</code> naquela pasta</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> ✅ 10 XP – Ambiente preparado!
+      </div>
+    </div>
+
+    <!-- CONCEITOS FUNDAMENTAIS -->
+    <div class="nivel" id="conceitos">
+      <h2><span class="emoji">💡</span>Conceitos Fundamentais: A Lore da Web</h2>
+
+      <h3>Como a Web Funciona (Resumido)</h3>
+      <p>
+        Imagina que você é um cliente em um restaurante (seu navegador) e o chef é um servidor:
+      </p>
+      <ol>
+        <li><strong>Você faz um pedido</strong> → Seu navegador envia um pedido para um servidor</li>
+        <li><strong>Chef prepara a comida</strong> → O servidor processa e monta a resposta</li>
+        <li><strong>Comida chega na mesa</strong> → Você recebe HTML, CSS, JavaScript, imagens</li>
+        <li><strong>Você vê o resultado</strong> → Seu navegador desenha tudo na tela</li>
+      </ol>
+
+      <h3>A Tríade Sagrada do Web Dev</h3>
+      <table>
+        <tr>
+          <th>Tecnologia</th>
+          <th>O Que Faz</th>
+          <th>Analogia</th>
+        </tr>
+        <tr>
+          <td><strong>HTML</strong></td>
+          <td>Define ESTRUTURA (títulos, textos, imagens, links)</td>
+          <td>Esqueleto do corpo humano</td>
+        </tr>
+        <tr>
+          <td><strong>CSS</strong></td>
+          <td>Define APARÊNCIA (cores, fontes, posicionamento)</td>
+          <td>Roupa e maquiagem</td>
+        </tr>
+        <tr>
+          <td><strong>JavaScript</strong></td>
+          <td>Define COMPORTAMENTO (cliques, validações, animações)</td>
+          <td>Músculos e movimento</td>
+        </tr>
+      </table>
+
+      <h3>Navegador: Seu Intérprete Mágico</h3>
+      <p>
+        Seu navegador lê um arquivo <code>.html</code> e desenha na tela. Teste isto AGORA:
+      </p>
+      <ol>
+        <li>Abra qualquer site (Google, por exemplo)</li>
+        <li>Pressione <code>F12</code> ou <code>Ctrl+Shift+I</code> (Windows) ou <code>Cmd+Option+I</code> (Mac)</li>
+        <li>Você verá o código HTML da página! Tudo que você vê foi criado assim.</li>
+      </ol>
+
+      <div class="card desafio">
+        <strong>🎯 Desafio Conceitual:</strong>
+        <ol>
+          <li>Abra o Developer Tools de um site que você gosta</li>
+          <li>Encontre uma tag <code>&lt;h1&gt;</code> (título grande)</li>
+          <li>Veja o HTML por trás daquilo que você vê</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> ✅ 15 XP – Você entende a magia!
+      </div>
+    </div>
+
+    <!-- NÍVEL 1 -->
+    <div class="nivel" id="nivel1">
+      <h2><span class="emoji">🔥</span>Nível 1: HTML Básico – Seu Primeiro Documento</h2>
+
+      <div class="card conceito">
+        <h4>Conceito: Tags e Elementos</h4>
+        <p>HTML funciona com <strong>tags</strong>. Uma tag é um rótulo que diz ao navegador "isso é um parágrafo", "isso é um título", etc.</p>
+        <p><strong>Estrutura de uma tag:</strong></p>
+        <pre>&lt;nomeDaTag&gt;Conteúdo&lt;/nomeDaTag&gt;</pre>
+        <p><strong>Exemplos:</strong></p>
+        <pre>&lt;h1&gt;Isto é um Título Grande&lt;/h1&gt;
+&lt;p&gt;Isto é um parágrafo normal&lt;/p&gt;
+&lt;a href="https://google.com"&gt;Isto é um link&lt;/a&gt;</pre>
+        <p><strong>REGRA OURO:</strong> Toda tag que abre deve fechar!</p>
+      </div>
+
+      <h3>O Documento HTML Mínimo</h3>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Título da Minha Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Seu conteúdo vai aqui --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Desafio Prático: Seu Primeiro Site</h4>
+        <ol>
+          <li>Abra seu editor de texto (VS Code)</li>
+          <li>Crie um novo arquivo chamado <code>index.html</code></li>
+          <li>Cole o código acima</li>
+          <li>Salve (<code>Ctrl+S</code>)</li>
+          <li>Abra no seu navegador (arraste o arquivo ou clique com botão direito → Abrir com)</li>
+        </ol>
+        <p style="margin-top: 10px;"><strong>VEJA A MAGIA ACONTECER! ✨</strong></p>
+      </div>
+
+      <div class="card armadilha">
+        <h4>⚠️ Armadilhas Comuns</h4>
+        <ul>
+          <li><strong>❌ Esqueci de fechar a tag:</strong> Toda tag aberta precisa fechar com <code>&lt;/nomeDaTag&gt;</code></li>
+          <li><strong>❌ Salvei em .txt:</strong> O arquivo precisa terminar em <code>.html</code></li>
+          <li><strong>❌ Não consigo ver a página:</strong> Arraste o arquivo correto para o navegador</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> ✅ 25 XP – Seu primeiro documento HTML!
+      </div>
+    </div>
+
+    <!-- NÍVEL 2 -->
+    <div class="nivel" id="nivel2">
+      <h2><span class="emoji">🏰</span>Nível 2: Tags Importantes – Construindo a Estrutura</h2>
+
+      <h3>Tags de Texto: Títulos</h3>
+      <pre>&lt;h1&gt;Título Mega Grande (use UMA vez por página)&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Menor ainda&lt;/h3&gt;
+...
+&lt;h6&gt;O menor título&lt;/h6&gt;</pre>
+
+      <h3>Parágrafos e Quebras</h3>
+      <pre>&lt;p&gt;Isto é um parágrafo.&lt;/p&gt;
+&lt;p&gt;Este é outro parágrafo separado.&lt;/p&gt;
+&lt;br&gt; &lt;!-- Quebra de linha --&gt;
+&lt;hr&gt; &lt;!-- Linha horizontal --&gt;</pre>
+
+      <h3>Formatação de Texto</h3>
+      <pre>&lt;strong&gt;Muito importante (negrito)&lt;/strong&gt;
+&lt;em&gt;Ênfase (itálico)&lt;/em&gt;
+&lt;u&gt;Sublinhado&lt;/u&gt;
+&lt;del&gt;Deletado (tachado)&lt;/del&gt;
+&lt;small&gt;Texto pequeno&lt;/small&gt;</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Desafio Prático: Página Estruturada</h4>
+        <p>Crie <code>nivel2.html</code> com:</p>
+        <ul>
+          <li>Um título h1</li>
+          <li>Alguns parágrafos com formatação</li>
+          <li>Pelo menos um h2 e h3</li>
+          <li>Quebras de linha</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> ✅ 35 XP – Você domina a estrutura básica!
+      </div>
+    </div>
+
+    <!-- NÍVEL 3 -->
+    <div class="nivel" id="nivel3">
+      <h2><span class="emoji">🔗</span>Nível 3: Links e Imagens – Conectando o Mundo</h2>
+
+      <h3>Links (`&lt;a&gt;`)</h3>
+      <pre>&lt;!-- Link para site externo --&gt;
+&lt;a href="https://google.com"&gt;Ir para Google&lt;/a&gt;
+
+&lt;!-- Link para outra página --&gt;
+&lt;a href="pagina2.html"&gt;Ir para Página 2&lt;/a&gt;
+
+&lt;!-- Link para seção específica --&gt;
+&lt;a href="#secao-importante"&gt;Ir para Seção&lt;/a&gt;
+
+&lt;!-- Abrir em nova aba --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;Google (nova aba)&lt;/a&gt;</pre>
+
+      <h3>Imagens (`&lt;img&gt;`)</h3>
+      <pre>&lt;!-- Imagem local --&gt;
+&lt;img src="gato.jpg" alt="Um gato fofo"&gt;
+
+&lt;!-- Imagem de URL --&gt;
+&lt;img src="https://example.com/imagem.png" alt="Exemplo"&gt;
+
+&lt;!-- Com tamanho --&gt;
+&lt;img src="gato.jpg" alt="Gato" width="300" height="200"&gt;</pre>
+
+      <div class="card conceito">
+        <strong>Atributo ALT é essencial!</strong> Aparece se a imagem não carregar e é importante para acessibilidade.
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Desafio Prático: Links e Imagens</h4>
+        <p>Crie <code>nivel3.html</code> com:</p>
+        <ul>
+          <li>Pelo menos 3 links (internos e externos)</li>
+          <li>Pelo menos 2 imagens</li>
+          <li>Use <code>https://via.placeholder.com/150</code> para imagens de teste</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> ✅ 45 XP – Você conecta o mundo!
+      </div>
+    </div>
+
+    <!-- NÍVEL 4 -->
+    <div class="nivel" id="nivel4">
+      <h2><span class="emoji">📋</span>Nível 4: Listas e Tabelas – Organizando Dados</h2>
+
+      <h3>Listas Não-Ordenadas</h3>
+      <pre>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+      <h3>Listas Ordenadas</h3>
+      <pre>&lt;ol&gt;
+  &lt;li&gt;Primeiro&lt;/li&gt;
+  &lt;li&gt;Segundo&lt;/li&gt;
+  &lt;li&gt;Terceiro&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+      <h3>Tabelas</h3>
+      <pre>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nome&lt;/th&gt;
+    &lt;th&gt;Nível&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Você&lt;/td&gt;
+    &lt;td&gt;1&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Desafio Prático: Listas e Tabelas</h4>
+        <ul>
+          <li>Crie uma lista não-ordenada de itens</li>
+          <li>Crie uma lista ordenada (passos)</li>
+          <li>Crie uma tabela com pelo menos 3 colunas e 4 linhas</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> ✅ 55 XP – Seus dados estão organizados!
+      </div>
+    </div>
+
+    <!-- NÍVEL 5 -->
+    <div class="nivel" id="nivel5">
+      <h2><span class="emoji">📝</span>Nível 5: Formulários – Capturando Informação</h2>
+
+      <h3>Estrutura Básica</h3>
+      <pre>&lt;form action="processar.php" method="POST"&gt;
+  &lt;!-- Campos do formulário --&gt;
+&lt;/form&gt;</pre>
+
+      <h3>Tipos de Input</h3>
+      <pre>&lt;label for="nome"&gt;Seu Nome:&lt;/label&gt;
+&lt;input type="text" id="nome" name="nome" placeholder="Digite aqui"&gt;
+
+&lt;input type="email" name="email" placeholder="seu@email.com"&gt;
+&lt;input type="password" name="senha"&gt;
+&lt;input type="number" name="idade" min="1" max="120"&gt;
+
+&lt;select name="classe"&gt;
+  &lt;option&gt;Selecione&lt;/option&gt;
+  &lt;option value="guerreiro"&gt;Guerreiro&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;textarea name="msg" rows="4" cols="30"&gt;&lt;/textarea&gt;
+
+&lt;button type="submit"&gt;Enviar&lt;/button&gt;</pre>
+
+      <div class="card conceito">
+        <strong>IMPORTANTE:</strong> Sempre use <code>&lt;label&gt;</code> para acessibilidade!
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Desafio Prático: Formulário Completo</h4>
+        <p>Crie um formulário com:</p>
+        <ul>
+          <li>Campos de texto, email, número</li>
+          <li>Select dropdown</li>
+          <li>Textarea</li>
+          <li>Checkbox ou radio</li>
+          <li>Botões submit e reset</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> ✅ 65 XP – Você captura informações!
+      </div>
+    </div>
+
+    <!-- BOSS FINAL -->
+    <div class="nivel" id="boss">
+      <h2><span class="emoji">🐉</span>Boss Final: Seu Primeiro Projeto Grande</h2>
+
+      <h3>Missão: Criar um Portfólio Pessoal</h3>
+      <p>
+        Hora de unir TUDO em um projeto real. Você vai criar um <strong>portfólio pessoal</strong> – uma página 
+        sobre você, seus projetos, e contato.
+      </p>
+
+      <h3>Requisitos do Projeto</h3>
+      <ul>
+        <li>✅ Usar estrutura HTML semântica</li>
+        <li>✅ Incluir múltiplas seções (Sobre, Projetos, Contato)</li>
+        <li>✅ Adicionar imagens e links</li>
+        <li>✅ Criar um formulário de contato</li>
+        <li>✅ Usar classes e IDs para organização</li>
+      </ul>
+
+      <h3>Template Base</h3>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Meu Portfólio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Bem-vindo!&lt;/h1&gt;
+    &lt;p&gt;Desenvolvedor em Treinamento&lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#projetos"&gt;Projetos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+
+  &lt;section id="sobre"&gt;
+    &lt;h2&gt;Sobre Mim&lt;/h2&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section id="projetos"&gt;
+    &lt;h2&gt;Meus Projetos&lt;/h2&gt;
+    &lt;table border="1"&gt;
+      &lt;tr&gt;&lt;th&gt;Projeto&lt;/th&gt;&lt;th&gt;Link&lt;/th&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;td&gt;&lt;a href="#"&gt;Ver&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/section&gt;
+
+  &lt;section id="contato"&gt;
+    &lt;h2&gt;Contato&lt;/h2&gt;
+    &lt;form action="processar.php" method="POST"&gt;
+      &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+      &lt;input type="text" id="nome" name="nome" required&gt;
+      &lt;br&gt;&lt;br&gt;
+      &lt;label for="email"&gt;Email:&lt;/label&gt;
+      &lt;input type="email" id="email" name="email" required&gt;
+      &lt;br&gt;&lt;br&gt;
+      &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/section&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2024 Seu Nome. Todos os direitos reservados.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Seu Desafio Final</h4>
+        <ol>
+          <li>Copie o template para <code>portfolio.html</code></li>
+          <li>Personalize com suas informações</li>
+          <li>Adicione imagens (use placeholders se necessário)</li>
+          <li>Teste no navegador</li>
+          <li>Compartilhe com seus colegas!</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa Final:</strong> ✅ 100 XP – Você é um Herói HTML! 🎉
+      </div>
+    </div>
+
+    <!-- RESUMO -->
+    <div class="nivel" id="resumo">
+      <h2><span class="emoji">📚</span>Resumo: O Que Você Aprendeu</h2>
+
+      <h3>Progressão de Níveis</h3>
+      <table>
+        <tr>
+          <th>Nível</th>
+          <th>Tema</th>
+          <th>XP</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>Pré-Requisitos</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>HTML Básico</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Tags Importantes</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Links e Imagens</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Listas e Tabelas</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Formulários</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Boss</td>
+          <td>Seu Portfólio</td>
+          <td>100</td>
+        </tr>
+        <tr style="background: #8b5e3c; color: #f5e9d4;">
+          <td><strong>TOTAL</strong></td>
+          <td></td>
+          <td><strong>335 XP</strong></td>
+        </tr>
+      </table>
+
+      <h3>🎓 Dicas Finais do Sábio Mentor</h3>
+      <ul>
+        <li><strong>Pratique Todos os Dias</strong> – Mesmo 15 minutos ajuda</li>
+        <li><strong>Use o Developer Tools</strong> – Inspecione sites que você gosta</li>
+        <li><strong>Não Tenha Medo de Erros</strong> – Eles são oportunidades de aprender</li>
+        <li><strong>Leia Documentação</strong> – MDN Web Docs é sua bíblia</li>
+        <li><strong>Faça Projetos Reais</strong> – A melhor forma de aprender é construindo</li>
+      </ul>
+
+      <h3>📖 Próximos Passos</h3>
+      <p><strong>Parabéns!</strong> Você dominou HTML. Agora você está pronto para:</p>
+      <ol>
+        <li><strong>CSS (Nível Intermediário)</strong> – Deixar suas páginas lindas</li>
+        <li><strong>JavaScript (Nível Avançado)</strong> – Adicionar interatividade</li>
+        <li><strong>React (Nível Épico)</strong> – Componentes reutilizáveis</li>
+        <li><strong>NestJS (Nível Lendário)</strong> – Criar backends poderosos</li>
+      </ol>
+
+      <p style="text-align: center; margin-top: 30px; font-size: 1.3em; color: #8b5e3c;">
+        <strong>🎮 Que sua aventura continue! ⚔️✨</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Capacitação de Desenvolvimento Web | Tema Medieval | <a href="#" style="color: #8b5e3c;">Voltar ao Topo</a></p>
+    <p><em>Documento Interativo - Versão 1.0</em></p>
+  </footer>
+
+  <script>
+    // Navigation logic
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const niveles = document.querySelectorAll('.nivel');
+
+    navButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+        
+        // Remove active class from all buttons and levels
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        niveles.forEach(nivel => nivel.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding level
+        button.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+      });
+    });
+
+    function updateProgress(xp) {
+      const progressBar = document.getElementById('progressBar');
+      const xpCounter = document.getElementById('xpCounter');
+      const percentage = Math.round((xp / 445) * 100);
+      progressBar.style.width = percentage + '%';
+      progressBar.textContent = percentage + '%';
+      xpCounter.textContent = xp;
+    }
+
+    updateProgress(10);
+  </script>
+</body>
+</html>

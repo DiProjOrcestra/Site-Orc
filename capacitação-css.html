@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS: A Magia Visual do Reino Web</title>
+  <style>
+    /* PALETA DA MARCA
+      Verde principal:      #2EB600
+      Verde auxiliar:       #3FCC10
+      Verde escuro:         #003D0D
+      Verde escuro aux.:    #01571E
+      Branco principal:     #FFFBDC
+      Branco auxiliar:      #FFFFFF
+    */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #FFFBDC, #FFFFFF);
+      font-family: 'IM Fell English', serif;
+      color: #003D0D;
+      line-height: 1.6;
+    }
+
+    .reino {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: #FFFBDC;
+      border: 5px solid #01571E;
+      box-shadow: 0 0 20px rgba(0, 61, 13, 0.25);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #003D0D;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 61, 13, 0.2);
+    }
+
+    .subtitulo {
+      font-size: 1.3em;
+      color: #01571E;
+      font-style: italic;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-tabs button {
+      padding: 10px 18px;
+      background: #2EB600;
+      color: #FFFFFF;
+      border: 2px solid #003D0D;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.95em;
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .nav-tabs button:hover,
+    .nav-tabs button.active {
+      background: #01571E;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 61, 13, 0.3);
+    }
+
+    .nivel {
+      display: none;
+      background: #FFFBDC;
+      padding: 30px;
+      margin: 20px 0;
+      border: 8px solid #01571E;
+      box-shadow: 0 0 20px rgba(0, 61, 13, 0.25);
+      border-radius: 5px;
+      animation: fadeIn 0.4s ease-in;
+    }
+
+    .nivel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #01571E;
+      margin: 10px 0 15px;
+      border-bottom: 2px solid #01571E;
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      color: #01571E;
+      margin: 20px 0 10px;
+    }
+
+    h4 {
+      font-size: 1.1em;
+      margin: 12px 0 6px;
+      color: #003D0D;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    ul li::marker {
+      color: #2EB600;
+    }
+
+    ol li::marker {
+      color: #2EB600;
+      font-weight: bold;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border-left: 4px solid #01571E;
+      padding: 15px;
+      margin: 12px 0;
+      border-radius: 3px;
+      box-shadow: 0 2px 5px rgba(0, 61, 13, 0.15);
+      font-size: 0.98em;
+    }
+
+    .conceito   { border-left-color: #2EB600; background: rgba(46, 182, 0, 0.06); }
+    .desafio    { border-left-color: #3FCC10; background: rgba(63, 204, 16, 0.07); }
+    .recompensa { border-left-color: #01571E; background: rgba(1, 87, 30, 0.06); }
+    .armadilha  { border-left-color: #003D0D; background: rgba(0, 61, 13, 0.06); }
+
+    pre {
+      background: #FFFBDC;
+      padding: 12px;
+      border-left: 4px solid #01571E;
+      margin: 12px 0;
+      overflow-x: auto;
+      border-radius: 3px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+      color: #003D0D;
+    }
+
+    code {
+      background: #FFFBDC;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+      color: #003D0D;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 0.95em;
+    }
+
+    th, td {
+      border: 1px solid #01571E;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #01571E;
+      color: #FFFBDC;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(46, 182, 0, 0.06);
+    }
+
+    .progress-section {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 26px;
+      background: #FFFBDC;
+      border: 2px solid #01571E;
+      border-radius: 13px;
+      overflow: hidden;
+      margin: 8px 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(to right, #2EB600, #3FCC10);
+      width: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 0.9em;
+      transition: width 0.3s;
+    }
+
+    .xp-counter {
+      text-align: right;
+      font-size: 1em;
+      color: #01571E;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      margin-top: 25px;
+      border-top: 2px solid #01571E;
+      color: #003D0D;
+      font-size: 0.9em;
+      background: #FFFBDC;
+    }
+
+    .emoji { font-size: 1.15em; }
+
+    @media (max-width: 768px) {
+      .nav-tabs { flex-direction: column; }
+      .nav-tabs button { width: 100%; }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.4em; }
+      .nivel { padding: 20px; }
+      pre { font-size: 0.8em; }
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap');
+  </style>
+</head>
+<body>
+  <div class="reino">
+    <header>
+      <h1>🎨 CSS: A Magia Visual do Reino Web</h1>
+      <p class="subtitulo">Do pergaminho cru ao site épico</p>
+      <p style="margin-top:10px;">HTML é o esqueleto do seu site. CSS é a magia que dá cor, forma e estilo a tudo.[web:15][web:41]</p>
+    </header>
+
+    <div class="nav-tabs">
+      <button class="nav-btn active" data-target="intro">Prólogo</button>
+      <button class="nav-btn" data-target="conceito">O que é CSS</button>
+      <button class="nav-btn" data-target="nivel1">Nível 1</button>
+      <button class="nav-btn" data-target="nivel2">Nível 2</button>
+      <button class="nav-btn" data-target="nivel3">Nível 3</button>
+      <button class="nav-btn" data-target="nivel4">Nível 4</button>
+      <button class="nav-btn" data-target="nivel5">Nível 5</button>
+      <button class="nav-btn" data-target="nivel6">Nível 6</button>
+      <button class="nav-btn" data-target="boss">Boss Final</button>
+      <button class="nav-btn" data-target="resumo">Resumo</button>
+    </div>
+
+    <!-- INTRO -->
+    <div class="nivel active" id="intro">
+      <h2><span class="emoji">📖</span>Prólogo: Invocando a Magia das Folhas de Estilo</h2>
+      <p>
+        Se HTML é o pergaminho onde a história é escrita, CSS são as tintas, o brasão do reino, 
+        o brilho das armaduras e o fogo das tochas na parede do castelo.[web:38][web:44]
+      </p>
+      <p>
+        CSS (<strong>Cascading Style Sheets</strong>) é a linguagem usada para estilizar e organizar o 
+        layout de páginas web: cores, fontes, espaçamentos, tamanhos, colunas, sombras e até animações.[web:15][web:41]
+      </p>
+
+      <h3>Sistema de Gamificação</h3>
+      <ul>
+        <li>✨ <strong>Conceito</strong> – a lore mágica</li>
+        <li>🎯 <strong>Missão</strong> – um desafio prático</li>
+        <li>🏆 <strong>Recompensa</strong> – XP e título</li>
+        <li>⚠️ <strong>Armadilhas</strong> – erros que derrubam magos iniciantes</li>
+      </ul>
+
+      <div class="progress-section">
+        <h3>Seu Progresso na Magia CSS</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressBar">0%</div>
+        </div>
+        <div class="xp-counter">XP: <span id="xpCounter">0</span> / 365</div>
+      </div>
+    </div>
+
+    <!-- O QUE É CSS -->
+    <div class="nivel" id="conceito">
+      <h2><span class="emoji">💡</span>O que é CSS e como funciona</h2>
+
+      <div class="card conceito">
+        <h4>CSS em uma frase</h4>
+        <p>
+          CSS é uma linguagem que diz ao navegador <strong>como</strong> mostrar o HTML: 
+          quais cores usar, qual fonte, qual tamanho, quanto espaço entre elementos e como posicionar tudo na tela.[web:15][web:41]
+        </p>
+      </div>
+
+      <h3>A Tríade do Reino Web</h3>
+      <table>
+        <tr>
+          <th>Magia</th>
+          <th>Função</th>
+          <th>Analogia</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>Estrutura e conteúdo</td>
+          <td>Esqueleto do herói</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>Aparência e layout</td>
+          <td>Armadura, roupas e símbolos</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Comportamento e lógica</td>
+          <td>Poderes mágicos e habilidades</td>
+        </tr>
+      </table>
+
+      <div class="card desafio">
+        <h4>🎯 Missão Rápida</h4>
+        <ol>
+          <li>Abra uma página qualquer no navegador.</li>
+          <li>Use <code>F12</code> e vá na aba “Elements” / “Inspecionar”.</li>
+          <li>Observe o painel “Styles” e veja as regras CSS aplicadas.[web:44][web:47]</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +20 XP de Sabedoria Estilística.
+      </div>
+    </div>
+
+    <!-- NÍVEL 1 -->
+    <div class="nivel" id="nivel1">
+      <h2><span class="emoji">🪄</span>Nível 1: Invocando CSS (inline, interno e externo)</h2>
+
+      <div class="card conceito">
+        <h4>Três formas de lançar magia CSS</h4>
+        <p><strong>Inline:</strong> direto na tag HTML (útil para testes, ruim para projetos grandes).[web:47][web:48]</p>
+        <pre>&lt;p style="color: #2EB600; font-size: 20px;"&gt;
+  Texto em verde
+&lt;/p&gt;</pre>
+
+        <p><strong>CSS interno:</strong> dentro da tag <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code>.[web:47]</p>
+        <pre>&lt;head&gt;
+  &lt;style&gt;
+    p {
+      color: #01571E;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+
+        <p><strong>CSS externo (forma ideal):</strong> arquivo separado <code>style.css</code>.[web:15][web:47]</p>
+        <pre>&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;</pre>
+        <pre>/* style.css */
+body {
+  background-color: #FFFBDC;
+  font-family: Arial, sans-serif;
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Primeiro feitiço CSS</h4>
+        <ol>
+          <li>Use seu <code>index.html</code> do módulo de HTML.</li>
+          <li>Crie <code>style.css</code> na mesma pasta.</li>
+          <li>Linke o CSS com <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
+          <li>No <code>style.css</code>, altere:
+            <ul>
+              <li>Cor de fundo do <code>body</code> para <code>#FFFBDC</code>.</li>
+              <li>Fonte padrão do site.</li>
+              <li>Cor do <code>h1</code> para <code>#01571E</code>.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="card armadilha">
+        <h4>⚠️ Armadilhas Comuns</h4>
+        <ul>
+          <li>Salvar como <code>style.css.txt</code> em vez de <code>.css</code>.</li>
+          <li>Errar o caminho em <code>href</code> do <code>&lt;link&gt;</code>.</li>
+          <li>Esquecer chaves <code>{}</code> ou ponto-e-vírgula <code>;</code>.[web:47][web:48]</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +30 XP de Conjuração de Estilo.
+      </div>
+    </div>
+
+    <!-- NÍVEL 2 -->
+    <div class="nivel" id="nivel2">
+      <h2><span class="emoji">🎯</span>Nível 2: Seletores e Especificidade</h2>
+
+      <div class="card conceito">
+        <h4>Selecionando alvos para sua magia</h4>
+        <p>Para aplicar CSS, é preciso <strong>selecionar</strong> os elementos HTML corretos.[web:16][web:37]</p>
+        <pre>/* Seletor por tag */
+p {
+  color: #003D0D;
+}
+
+/* Seletor por classe */
+.destaque {
+  color: #2EB600;
+  font-weight: bold;
+}
+
+/* Seletor por id */
+#titulo-principal {
+  font-size: 32px;
+}</pre>
+        <p>Use <code>class</code> para estilos que se repetem e <code>id</code> para algo único na página.[web:37]</p>
+      </div>
+
+      <h3>Combinando seletores</h3>
+      <pre>/* Todos os &lt;p&gt; dentro de .card */
+.card p {
+  font-size: 0.95rem;
+}
+
+/* Links dentro do nav */
+nav a {
+  color: #01571E;
+}</pre>
+
+      <div class="card armadilha">
+        <h4>⚠️ Especificidade (quem ganha o duelo?)</h4>
+        <p>CSS usa uma hierarquia chamada <strong>especificidade</strong>.[web:15][web:41]</p>
+        <ul>
+          <li>Inline &gt; id &gt; classe &gt; tag.</li>
+          <li>Regras mais específicas vencem as genéricas.</li>
+          <li>Empate: a regra mais abaixo no arquivo ganha.[web:15]</li>
+        </ul>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Brasões de Classe</h4>
+        <ol>
+          <li>Crie 3 parágrafos com classes: <code>mago</code>, <code>guerreiro</code>, <code>arqueiro</code>.</li>
+          <li>Pinte cada um com uma cor da paleta.</li>
+          <li>Adicione um <code>id</code> em um deles e sobrescreva a cor com seletor de id.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +40 XP de Mira Seletora.
+      </div>
+    </div>
+
+    <!-- NÍVEL 3 -->
+    <div class="nivel" id="nivel3">
+      <h2><span class="emoji">🎨</span>Nível 3: Cores, Fontes e Texto</h2>
+
+      <div class="card conceito">
+        <h4>Cores – tingindo o reino</h4>
+        <p>Você pode usar nomes, <code>rgb()</code>, <code>hex</code> ou <code>hsl()</code>.[web:15][web:48]</p>
+        <pre>body {
+  background-color: #FFFBDC;
+  color: #003D0D;
+}
+
+h1 {
+  color: #01571E;
+}
+
+a {
+  color: #2EB600;
+}</pre>
+      </div>
+
+      <div class="card conceito">
+        <h4>Fontes e tipografia</h4>
+        <pre>body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+}</pre>
+        <p>Você pode importar fontes do Google Fonts via <code>&lt;link&gt;</code> ou <code>@import</code>.[web:41]</p>
+      </div>
+
+      <h3>Outras propriedades de texto</h3>
+      <pre>p {
+  text-align: justify;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Carta de Apresentação Épica</h4>
+        <ol>
+          <li>Crie um texto com sua “história de herói dev”.</li>
+          <li>Defina uma fonte para o corpo e outra para títulos.</li>
+          <li>Use cores da paleta e <code>text-align</code> adequado.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +40 XP de Carisma Visual.
+      </div>
+    </div>
+
+    <!-- NÍVEL 4 -->
+    <div class="nivel" id="nivel4">
+      <h2><span class="emoji">🛡️</span>Nível 4: Box Model – a armadura dos elementos</h2>
+
+      <div class="card conceito">
+        <h4>Entendendo a caixa</h4>
+        <p>
+          Todo elemento é uma caixa com conteúdo, padding, borda e margem; isso é o <strong>box model</strong>.[web:36][web:46]
+        </p>
+        <pre>.carta {
+  width: 300px;
+  padding: 16px;
+  border: 2px solid #01571E;
+  margin: 20px;
+  background-color: #FFFFFF;
+}</pre>
+      </div>
+
+      <div class="card conceito">
+        <h4>box-sizing: border-box</h4>
+        <p>
+          Com <code>border-box</code>, largura/altura incluem padding e borda, facilitando layout responsivo.[web:36][web:37]
+        </p>
+        <pre>* {
+  box-sizing: border-box;
+}</pre>
+      </div>
+
+      <h3>Exemplo de carta de personagem</h3>
+      <pre>.carta-personagem {
+  width: 260px;
+  padding: 16px;
+  margin: 10px;
+  border: 3px solid #01571E;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Criar a Carta do Herói</h4>
+        <ol>
+          <li>Crie um <code>div</code> com classe <code>carta-personagem</code>.</li>
+          <li>Dentro, coloque nome, classe, nível e atributos.</li>
+          <li>Use padding, margin, border e background da paleta para parecer uma carta física.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +60 XP de Defesa Layout.
+      </div>
+    </div>
+
+    <!-- NÍVEL 5 -->
+    <div class="nivel" id="nivel5">
+      <h2><span class="emoji">📦</span>Nível 5: Display, Layout Básico e Flexbox</h2>
+
+      <div class="card conceito">
+        <h4>display: block vs inline vs inline-block</h4>
+        <pre>h1, p, div {
+  display: block;   /* quebra linha */
+}
+
+a, span {
+  display: inline;  /* não quebra linha */
+}</pre>
+        <p>Use <code>inline-block</code> para itens em linha com width/height.[web:44]</p>
+      </div>
+
+      <div class="card conceito">
+        <h4>Introdução ao Flexbox</h4>
+        <p>
+          Flexbox é um modelo de layout unidimensional para alinhar e distribuir espaço entre itens flexíveis.[web:33][web:42]
+        </p>
+        <pre>.container {
+  display: flex;
+  gap: 16px;
+}
+
+.container .carta-personagem {
+  flex: 1;
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Linha de Heróis</h4>
+        <ol>
+          <li>Crie um <code>div</code> <code>.linha-herois</code>.</li>
+          <li>Dentro, 3 cartas de personagem.</li>
+          <li>No CSS, use <code>display: flex</code> e <code>gap</code> para alinhá-las lado a lado.</li>
+        </ol>
+      </div>
+
+      <div class="card armadilha">
+        <h4>⚠️ Armadilhas Flexíveis</h4>
+        <ul>
+          <li>Esquecer <code>display: flex</code> no container pai.[web:33]</li>
+          <li>Exagerar em margens em vez de usar <code>gap</code> para espaçamento.[web:34]</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +70 XP de Arquitetura de Layout.
+      </div>
+    </div>
+
+    <!-- NÍVEL 6 -->
+    <div class="nivel" id="nivel6">
+      <h2><span class="emoji">📱</span>Nível 6: Responsividade e Media Queries</h2>
+
+      <div class="card conceito">
+        <h4>O que é responsividade?</h4>
+        <p>
+          Um site responsivo se adapta a diferentes telas (celular, tablet, desktop) usando unidades flexíveis e media queries.[web:16][web:44]
+        </p>
+      </div>
+
+      <h3>Media queries</h3>
+      <pre>@media (max-width: 768px) {
+  body {
+    background-color: #FFFBDC;
+  }
+
+  .linha-herois {
+    flex-direction: column;
+  }
+}</pre>
+      <p>
+        Isso significa: “se a largura da tela for menor que 768px, aplique estas regras”.[web:16]
+      </p>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Layout que vira coluna no celular</h4>
+        <ol>
+          <li>Use a seção com suas cartas alinhadas em linha.</li>
+          <li>Adicione uma media query <code>(max-width: 768px)</code> e altere para <code>flex-direction: column</code>.</li>
+          <li>Teste diminuindo a largura da janela.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +75 XP de Adaptação Móvel.
+      </div>
+    </div>
+
+    <!-- BOSS FINAL -->
+    <div class="nivel" id="boss">
+      <h2><span class="emoji">🐉</span>Boss Final: Landing Page Medieval da Marca</h2>
+
+      <div class="card conceito">
+        <h4>Missão: Landing Page do Reino</h4>
+        <p>
+          Crie uma landing page de um “Reino de Cursos” usando apenas HTML + CSS e a paleta da marca.
+        </p>
+      </div>
+
+      <h3>Requisitos mínimos</h3>
+      <ul>
+        <li>Header com título, logo e navegação.</li>
+        <li>Seção hero com título, texto e botão (CTA) verde principal.</li>
+        <li>Seção com cards de cursos usando flexbox.</li>
+        <li>Seção de depoimentos ou ranking de heróis.</li>
+        <li>Formulário de “inscrição do aventureiro”.</li>
+        <li>Layout responsivo em telas pequenas.[web:16]</li>
+      </ul>
+
+      <div class="card desafio">
+        <h4>🎯 Boss Mission</h4>
+        <ol>
+          <li>Desenhe o layout em papel.</li>
+          <li>Monte o HTML semântico.</li>
+          <li>Crie um <code>style.css</code> usando apenas as cores da marca.</li>
+          <li>Teste no desktop e no celular (ou modo responsivo do DevTools).</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa Final:</strong> +120 XP – Arquiteto Visual do Reino Web.
+      </div>
+    </div>
+
+    <!-- RESUMO -->
+    <div class="nivel" id="resumo">
+      <h2><span class="emoji">📚</span>Resumo da Jornada CSS</h2>
+
+      <table>
+        <tr>
+          <th>Nível</th>
+          <th>Tema</th>
+          <th>XP</th>
+        </tr>
+        <tr><td>Intro</td><td>Prólogo & Conceito</td><td>20</td></tr>
+        <tr><td>1</td><td>Como invocar CSS</td><td>30</td></tr>
+        <tr><td>2</td><td>Seletores & Especificidade</td><td>40</td></tr>
+        <tr><td>3</td><td>Cores & Tipografia</td><td>40</td></tr>
+        <tr><td>4</td><td>Box Model</td><td>60</td></tr>
+        <tr><td>5</td><td>Display & Flexbox</td><td>70</td></tr>
+        <tr><td>6</td><td>Responsividade</td><td>75</td></tr>
+        <tr><td>Boss</td><td>Landing Page</td><td>120</td></tr>
+        <tr style="background:#01571E;color:#FFFBDC;">
+          <td><strong>Total</strong></td><td></td><td><strong>365 XP</strong></td>
+        </tr>
+      </table>
+
+      <h3>Próximos Passos</h3>
+      <ul>
+        <li>Aprofundar em seletores, unidade e cascata em MDN.[web:39][web:41]</li>
+        <li>Estudar layout moderno (flexbox e grid) em web.dev.[web:16]</li>
+        <li>Começar JavaScript para adicionar comportamento.</li>
+      </ul>
+
+      <p style="text-align:center;margin-top:20px;">
+        Que seus estilos nunca quebrem e seus layouts sejam sempre responsivos.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Capacitação de Desenvolvimento Web Medieval | CSS</p>
+    <p><em>Livro 2 da aventura: A Magia do CSS</em></p>
+  </footer>
+
+  <script>
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const niveles = document.querySelectorAll('.nivel');
+    const xpMap = {
+      intro: 0,
+      conceito: 20,
+      nivel1: 50,
+      nivel2: 90,
+      nivel3: 130,
+      nivel4: 190,
+      nivel5: 260,
+      nivel6: 335,
+      boss: 365,
+      resumo: 365
+    };
+
+    function updateProgress(xp) {
+      const total = 365;
+      const progressBar = document.getElementById('progressBar');
+      const xpCounter = document.getElementById('xpCounter');
+      const perc = Math.round((xp / total) * 100);
+      progressBar.style.width = perc + '%';
+      progressBar.textContent = perc + '%';
+      xpCounter.textContent = xp;
+    }
+
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        navButtons.forEach(b => b.classList.remove('active'));
+        niveles.forEach(n => n.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        updateProgress(xpMap[target] || 0);
+        window.scrollTo(0, 0);
+      });
+    });
+
+    updateProgress(0);
+  </script>
+</body>
+</html>

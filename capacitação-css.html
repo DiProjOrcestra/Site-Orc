@@ -272,8 +272,11 @@
   <div class="reino">
     <header>
       <h1>🎨 CSS: A Magia Visual do Reino Web</h1>
-      <p class="subtitulo">Do pergaminho cru ao site épico</p>
-      <p style="margin-top:10px;">HTML é o esqueleto do seu site. CSS é a magia que dá cor, forma e estilo a tudo.[web:15][web:41]</p>
+      <p class="subtitulo">Vestindo o Portfólio do Herói com as Cores da Marca</p>
+      <p style="margin-top:10px;">
+        No Livro 1 você criou o esqueleto do seu portfólio com HTML. Agora, com CSS, 
+        vai transformar esse pergaminho cru em um site épico com a identidade visual do reino.[web:44][web:16]
+      </p>
     </header>
 
     <div class="nav-tabs">
@@ -300,6 +303,12 @@
         CSS (<strong>Cascading Style Sheets</strong>) é a linguagem usada para estilizar e organizar o 
         layout de páginas web: cores, fontes, espaçamentos, tamanhos, colunas, sombras e até animações.[web:15][web:41]
       </p>
+
+      <div class="card conceito">
+        <strong>Importante:</strong> Em todo este livro você vai trabalhar em cima do mesmo 
+        <code>portfolio.html</code> criado no treinamento de HTML, adicionando um arquivo <code>style.css</code> 
+        para aplicar o tema medieval da marca.
+      </div>
 
       <h3>Sistema de Gamificação</h3>
       <ul>
@@ -357,9 +366,9 @@
       <div class="card desafio">
         <h4>🎯 Missão Rápida</h4>
         <ol>
-          <li>Abra uma página qualquer no navegador.</li>
+          <li>Abra seu <code>portfolio.html</code> no navegador.</li>
           <li>Use <code>F12</code> e vá na aba “Elements” / “Inspecionar”.</li>
-          <li>Observe o painel “Styles” e veja as regras CSS aplicadas.[web:44][web:47]</li>
+          <li>Observe o painel “Styles” e veja que, por enquanto, quase não há regras CSS suas.[web:44][web:47]</li>
         </ol>
       </div>
 
@@ -400,16 +409,17 @@ body {
       </div>
 
       <div class="card desafio">
-        <h4>🎯 Missão: Primeiro feitiço CSS</h4>
+        <h4>🎯 Missão: Ligando o Portfólio ao CSS</h4>
         <ol>
-          <li>Use seu <code>index.html</code> do módulo de HTML.</li>
-          <li>Crie <code>style.css</code> na mesma pasta.</li>
-          <li>Linke o CSS com <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</li>
-          <li>No <code>style.css</code>, altere:
+          <li>Na mesma pasta do <code>portfolio.html</code>, crie um arquivo <code>style.css</code>.</li>
+          <li>No <code>&lt;head&gt;</code> do <code>portfolio.html</code>, adicione:
+            <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+          </li>
+          <li>No <code>style.css</code>, defina:
             <ul>
-              <li>Cor de fundo do <code>body</code> para <code>#FFFBDC</code>.</li>
+              <li>Cor de fundo do <code>body</code> usando a paleta da marca.</li>
               <li>Fonte padrão do site.</li>
-              <li>Cor do <code>h1</code> para <code>#01571E</code>.</li>
+              <li>Uma cor para o <code>&lt;header&gt;</code> e o <code>&lt;footer&gt;</code>.</li>
             </ul>
           </li>
         </ol>
@@ -442,45 +452,31 @@ p {
 }
 
 /* Seletor por classe */
-.destaque {
-  color: #2EB600;
-  font-weight: bold;
+.card-projeto {
+  background-color: #FFFFFF;
+  border: 1px solid #01571E;
 }
 
 /* Seletor por id */
-#titulo-principal {
-  font-size: 32px;
+#painel-heroi {
+  border: 2px dashed #2EB600;
 }</pre>
         <p>Use <code>class</code> para estilos que se repetem e <code>id</code> para algo único na página.[web:37]</p>
       </div>
 
       <h3>Combinando seletores</h3>
-      <pre>/* Todos os &lt;p&gt; dentro de .card */
-.card p {
-  font-size: 0.95rem;
-}
-
-/* Links dentro do nav */
+      <pre>/* Links dentro do nav do portfólio */
 nav a {
   color: #01571E;
+  text-decoration: none;
 }</pre>
 
-      <div class="card armadilha">
-        <h4>⚠️ Especificidade (quem ganha o duelo?)</h4>
-        <p>CSS usa uma hierarquia chamada <strong>especificidade</strong>.[web:15][web:41]</p>
-        <ul>
-          <li>Inline &gt; id &gt; classe &gt; tag.</li>
-          <li>Regras mais específicas vencem as genéricas.</li>
-          <li>Empate: a regra mais abaixo no arquivo ganha.[web:15]</li>
-        </ul>
-      </div>
-
       <div class="card desafio">
-        <h4>🎯 Missão: Brasões de Classe</h4>
+        <h4>🎯 Missão: Destacando Seções do Portfólio</h4>
         <ol>
-          <li>Crie 3 parágrafos com classes: <code>mago</code>, <code>guerreiro</code>, <code>arqueiro</code>.</li>
-          <li>Pinte cada um com uma cor da paleta.</li>
-          <li>Adicione um <code>id</code> em um deles e sobrescreva a cor com seletor de id.</li>
+          <li>No <code>portfolio.html</code>, garanta que seções tenham ids: <code>#sobre</code>, <code>#projetos</code>, <code>#contato</code>, <code>#painel-heroi</code>.</li>
+          <li>No <code>style.css</code>, crie estilos para cada seção (fundos levemente diferentes, espaçamento, etc.).</li>
+          <li>Crie uma classe <code>.botao-primario</code> para estilizar botões com as cores da marca e aplique ao botão do formulário.</li>
         </ol>
       </div>
 
@@ -494,15 +490,16 @@ nav a {
       <h2><span class="emoji">🎨</span>Nível 3: Cores, Fontes e Texto</h2>
 
       <div class="card conceito">
-        <h4>Cores – tingindo o reino</h4>
+        <h4>Cores – tingindo o portfólio</h4>
         <p>Você pode usar nomes, <code>rgb()</code>, <code>hex</code> ou <code>hsl()</code>.[web:15][web:48]</p>
         <pre>body {
   background-color: #FFFBDC;
   color: #003D0D;
 }
 
-h1 {
-  color: #01571E;
+header, footer {
+  background-color: #01571E;
+  color: #FFFBDC;
 }
 
 a {
@@ -518,29 +515,28 @@ a {
   line-height: 1.5;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'Cinzel', serif;
-  text-align: center;
 }</pre>
         <p>Você pode importar fontes do Google Fonts via <code>&lt;link&gt;</code> ou <code>@import</code>.[web:41]</p>
       </div>
 
       <h3>Outras propriedades de texto</h3>
-      <pre>p {
+      <pre>#sobre p {
   text-align: justify;
 }
 
-h2 {
+#projetos h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }</pre>
 
       <div class="card desafio">
-        <h4>🎯 Missão: Carta de Apresentação Épica</h4>
+        <h4>🎯 Missão: Deixando o Portfólio Legível e Bonito</h4>
         <ol>
-          <li>Crie um texto com sua “história de herói dev”.</li>
-          <li>Defina uma fonte para o corpo e outra para títulos.</li>
-          <li>Use cores da paleta e <code>text-align</code> adequado.</li>
+          <li>Defina uma fonte agradável para o texto geral e uma mais “medieval” para títulos.</li>
+          <li>Use cores da paleta para links e títulos.</li>
+          <li>Ajuste <code>line-height</code> para melhorar a leitura do texto “Sobre mim”.</li>
         </ol>
       </div>
 
@@ -558,11 +554,10 @@ h2 {
         <p>
           Todo elemento é uma caixa com conteúdo, padding, borda e margem; isso é o <strong>box model</strong>.[web:36][web:46]
         </p>
-        <pre>.carta {
-  width: 300px;
-  padding: 16px;
-  border: 2px solid #01571E;
-  margin: 20px;
+        <pre>#sobre, #projetos, #contato, #painel-heroi {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
   background-color: #FFFFFF;
 }</pre>
       </div>
@@ -577,22 +572,12 @@ h2 {
 }</pre>
       </div>
 
-      <h3>Exemplo de carta de personagem</h3>
-      <pre>.carta-personagem {
-  width: 260px;
-  padding: 16px;
-  margin: 10px;
-  border: 3px solid #01571E;
-  border-radius: 8px;
-  background-color: #FFFFFF;
-}</pre>
-
       <div class="card desafio">
-        <h4>🎯 Missão: Criar a Carta do Herói</h4>
+        <h4>🎯 Missão: Emoldurando Seções do Portfólio</h4>
         <ol>
-          <li>Crie um <code>div</code> com classe <code>carta-personagem</code>.</li>
-          <li>Dentro, coloque nome, classe, nível e atributos.</li>
-          <li>Use padding, margin, border e background da paleta para parecer uma carta física.</li>
+          <li>Use padding para criar “respiro” interno nas seções do portfólio.</li>
+          <li>Use margin para separar as seções entre si.</li>
+          <li>Adicione borda ou sombra leve em <code>#projetos</code> e <code>#painel-heroi</code> para destaque.</li>
         </ol>
       </div>
 
@@ -606,47 +591,40 @@ h2 {
       <h2><span class="emoji">📦</span>Nível 5: Display, Layout Básico e Flexbox</h2>
 
       <div class="card conceito">
-        <h4>display: block vs inline vs inline-block</h4>
-        <pre>h1, p, div {
-  display: block;   /* quebra linha */
-}
-
-a, span {
-  display: inline;  /* não quebra linha */
+        <h4>display e layout básico</h4>
+        <pre>header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }</pre>
-        <p>Use <code>inline-block</code> para itens em linha com width/height.[web:44]</p>
+        <p>Use <code>display: flex</code> para organizar itens de navegação e cards de projetos.[web:33][web:42]</p>
       </div>
 
       <div class="card conceito">
-        <h4>Introdução ao Flexbox</h4>
-        <p>
-          Flexbox é um modelo de layout unidimensional para alinhar e distribuir espaço entre itens flexíveis.[web:33][web:42]
-        </p>
-        <pre>.container {
+        <h4>Projetos em cards</h4>
+        <pre>.lista-projetos {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
-.container .carta-personagem {
-  flex: 1;
+.card-projeto {
+  flex: 1 1 250px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #01571E;
+  background-color: #FFFFFF;
 }</pre>
       </div>
 
       <div class="card desafio">
-        <h4>🎯 Missão: Linha de Heróis</h4>
+        <h4>🎯 Missão: Layout do Portfólio</h4>
         <ol>
-          <li>Crie um <code>div</code> <code>.linha-herois</code>.</li>
-          <li>Dentro, 3 cartas de personagem.</li>
-          <li>No CSS, use <code>display: flex</code> e <code>gap</code> para alinhá-las lado a lado.</li>
+          <li>Transforme a lista de projetos em cards usando flexbox.</li>
+          <li>Faça o header com logo/nome e navegação em linha usando flex.</li>
+          <li>Garanta que o layout funcione bem em telas médias (tablet).</li>
         </ol>
-      </div>
-
-      <div class="card armadilha">
-        <h4>⚠️ Armadilhas Flexíveis</h4>
-        <ul>
-          <li>Esquecer <code>display: flex</code> no container pai.[web:33]</li>
-          <li>Exagerar em margens em vez de usar <code>gap</code> para espaçamento.[web:34]</li>
-        </ul>
       </div>
 
       <div class="card recompensa">
@@ -665,26 +643,26 @@ a, span {
         </p>
       </div>
 
-      <h3>Media queries</h3>
+      <h3>Media queries aplicadas ao portfólio</h3>
       <pre>@media (max-width: 768px) {
-  body {
-    background-color: #FFFBDC;
+  header nav ul {
+    flex-direction: column;
   }
 
-  .linha-herois {
+  .lista-projetos {
     flex-direction: column;
   }
 }</pre>
       <p>
-        Isso significa: “se a largura da tela for menor que 768px, aplique estas regras”.[web:16]
+        Isso significa: “se a largura da tela for menor que 768px, reorganize navegação e projetos em coluna”.[web:16]
       </p>
 
       <div class="card desafio">
-        <h4>🎯 Missão: Layout que vira coluna no celular</h4>
+        <h4>🎯 Missão: Portfólio que funciona no celular</h4>
         <ol>
-          <li>Use a seção com suas cartas alinhadas em linha.</li>
-          <li>Adicione uma media query <code>(max-width: 768px)</code> e altere para <code>flex-direction: column</code>.</li>
-          <li>Teste diminuindo a largura da janela.</li>
+          <li>Adicione uma media query para reorganizar o header e os projetos em coluna no mobile.</li>
+          <li>Ajuste fontes e espaçamentos para telas pequenas.</li>
+          <li>Teste no celular ou no modo responsivo do DevTools.</li>
         </ol>
       </div>
 
@@ -695,37 +673,49 @@ a, span {
 
     <!-- BOSS FINAL -->
     <div class="nivel" id="boss">
-      <h2><span class="emoji">🐉</span>Boss Final: Landing Page Medieval da Marca</h2>
+      <h2><span class="emoji">🐉</span>Boss Final: Portfólio do Herói (HTML + CSS)</h2>
 
       <div class="card conceito">
-        <h4>Missão: Landing Page do Reino</h4>
+        <h4>Missão: Vestir o Portfólio do Herói</h4>
         <p>
-          Crie uma landing page de um “Reino de Cursos” usando apenas HTML + CSS e a paleta da marca.
+          Agora você vai transformar o <strong>portfolio.html</strong> criado no Livro 1 
+          em um site completo visualmente, usando a paleta da marca e tudo que aprendeu de CSS.
         </p>
       </div>
 
       <h3>Requisitos mínimos</h3>
       <ul>
-        <li>Header com título, logo e navegação.</li>
-        <li>Seção hero com título, texto e botão (CTA) verde principal.</li>
-        <li>Seção com cards de cursos usando flexbox.</li>
-        <li>Seção de depoimentos ou ranking de heróis.</li>
-        <li>Formulário de “inscrição do aventureiro”.</li>
-        <li>Layout responsivo em telas pequenas.[web:16]</li>
+        <li>Usar o mesmo <code>portfolio.html</code> da capacitação de HTML (não criar outro arquivo).</li>
+        <li>Manter um único <code>style.css</code> bem organizado (por seções ou por tipo de componente).</li>
+        <li>Aplicar a paleta da marca em:
+          <ul>
+            <li>Header, footer e botões principais.</li>
+            <li>Links, destaques e cartões de projeto.</li>
+          </ul>
+        </li>
+        <li>Criar layout agradável para:
+          <ul>
+            <li>Seção “Sobre mim” com imagem e texto lado a lado (em telas maiores).</li>
+            <li>Lista de projetos em cards com flexbox.</li>
+            <li>Formulário de contato com inputs alinhados.</li>
+            <li>“Painel do Herói” com caixa destacada (que será interativa com JS depois).</li>
+          </ul>
+        </li>
+        <li>Tornar o portfólio responsivo em telas pequenas (uma coluna, fontes legíveis).[web:16]</li>
       </ul>
 
       <div class="card desafio">
-        <h4>🎯 Boss Mission</h4>
+        <h4>🎯 Boss Mission (Livro 2)</h4>
         <ol>
-          <li>Desenhe o layout em papel.</li>
-          <li>Monte o HTML semântico.</li>
-          <li>Crie um <code>style.css</code> usando apenas as cores da marca.</li>
-          <li>Teste no desktop e no celular (ou modo responsivo do DevTools).</li>
+          <li>Refine o layout do <code>portfolio.html</code> até ficar apresentável como seu cartão de visitas.</li>
+          <li>Use apenas as cores definidas no manual da marca nesta etapa.</li>
+          <li>Garanta que tudo continue legível e utilizável em celular.</li>
+          <li>Deixe IDs e classes prontos para o JavaScript (por exemplo <code>#hero-xp</code>, <code>.btn-xp</code>, etc.).</li>
         </ol>
       </div>
 
       <div class="card recompensa">
-        <strong>🏆 Recompensa Final:</strong> +120 XP – Arquiteto Visual do Reino Web.
+        <strong>🏆 Recompensa Final:</strong> +120 XP – Seu portfólio agora tem uma armadura visual completa.
       </div>
     </div>
 
@@ -746,7 +736,7 @@ a, span {
         <tr><td>4</td><td>Box Model</td><td>60</td></tr>
         <tr><td>5</td><td>Display & Flexbox</td><td>70</td></tr>
         <tr><td>6</td><td>Responsividade</td><td>75</td></tr>
-        <tr><td>Boss</td><td>Landing Page</td><td>120</td></tr>
+        <tr><td>Boss</td><td>Portfólio do Herói (HTML + CSS)</td><td>120</td></tr>
         <tr style="background:#01571E;color:#FFFBDC;">
           <td><strong>Total</strong></td><td></td><td><strong>365 XP</strong></td>
         </tr>
@@ -756,7 +746,7 @@ a, span {
       <ul>
         <li>Aprofundar em seletores, unidade e cascata em MDN.[web:39][web:41]</li>
         <li>Estudar layout moderno (flexbox e grid) em web.dev.[web:16]</li>
-        <li>Começar JavaScript para adicionar comportamento.</li>
+        <li>Seguir para o Livro 3 – JavaScript – e dar vida ao portfólio com interatividade.[web:21][web:15]</li>
       </ul>
 
       <p style="text-align:center;margin-top:20px;">
@@ -767,7 +757,7 @@ a, span {
 
   <footer>
     <p>&copy; 2024 Capacitação de Desenvolvimento Web Medieval | CSS</p>
-    <p><em>Livro 2 da aventura: A Magia do CSS</em></p>
+    <p><em>Livro 2 da aventura: A Magia do CSS (Portfólio integrado com HTML e JS)</em></p>
   </footer>
 
   <script>

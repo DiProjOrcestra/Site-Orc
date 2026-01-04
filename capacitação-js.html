@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript: A Magia Viva do Reino Web</title>
+  <style>
+    /* PALETA DA MARCA
+      Verde principal:      #2EB600
+      Verde auxiliar:       #3FCC10
+      Verde escuro:         #003D0D
+      Verde escuro aux.:    #01571E
+      Branco principal:     #FFFBDC
+      Branco auxiliar:      #FFFFFF
+    */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #FFFBDC 0, #FFFFFF 40%, #FFFBDC 100%);
+      font-family: 'IM Fell English', serif;
+      color: #003D0D;
+      line-height: 1.6;
+    }
+
+    .reino {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 26px;
+      background: #FFFBDC;
+      border: 5px solid #01571E;
+      box-shadow: 0 0 18px rgba(0, 61, 13, 0.25);
+      border-radius: 10px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      color: #003D0D;
+      margin-bottom: 8px;
+      text-shadow: 1px 1px 2px rgba(0, 61, 13, 0.2);
+    }
+
+    .subtitulo {
+      font-size: 1.2em;
+      color: #01571E;
+      font-style: italic;
+    }
+
+    .icone-orbe {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #3FCC10 0, #2EB600 60%, #01571E 100%);
+      box-shadow: 0 0 15px rgba(63, 204, 16, 0.7);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-tabs button {
+      padding: 9px 16px;
+      background: #2EB600;
+      color: #FFFFFF;
+      border: 2px solid #003D0D;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.95em;
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .nav-tabs button:hover,
+    .nav-tabs button.active {
+      background: #01571E;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 61, 13, 0.3);
+    }
+
+    .nivel {
+      display: none;
+      background: #FFFBDC;
+      padding: 24px;
+      margin: 16px 0;
+      border: 7px solid #01571E;
+      box-shadow: 0 0 18px rgba(0, 61, 13, 0.25);
+      border-radius: 6px;
+      animation: fadeIn 0.35s ease-in;
+    }
+
+    .nivel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 1.7em;
+      color: #01571E;
+      margin: 6px 0 12px;
+      border-bottom: 2px solid #01571E;
+      padding-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3 {
+      font-size: 1.25em;
+      color: #01571E;
+      margin: 16px 0 8px;
+    }
+
+    h4 {
+      font-size: 1.05em;
+      margin: 10px 0 4px;
+      color: #003D0D;
+    }
+
+    p {
+      margin-bottom: 8px;
+      font-size: 1em;
+    }
+
+    ul, ol {
+      margin-left: 22px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    ul li::marker {
+      color: #2EB600;
+    }
+
+    ol li::marker {
+      color: #2EB600;
+      font-weight: bold;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border-left: 4px solid #01571E;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 3px;
+      box-shadow: 0 2px 5px rgba(0, 61, 13, 0.12);
+      font-size: 0.97em;
+    }
+
+    .conceito   { border-left-color: #2EB600; background: rgba(46, 182, 0, 0.06); }
+    .desafio    { border-left-color: #3FCC10; background: rgba(63, 204, 16, 0.07); }
+    .recompensa { border-left-color: #01571E; background: rgba(1, 87, 30, 0.06); }
+    .armadilha  { border-left-color: #003D0D; background: rgba(0, 61, 13, 0.06); }
+
+    pre {
+      background: #FFFBDC;
+      padding: 10px;
+      border-left: 4px solid #01571E;
+      margin: 10px 0;
+      overflow-x: auto;
+      border-radius: 3px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+      color: #003D0D;
+    }
+
+    code {
+      background: #FFFBDC;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+      color: #003D0D;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 0.93em;
+    }
+
+    th, td {
+      border: 1px solid #01571E;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #01571E;
+      color: #FFFBDC;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(46, 182, 0, 0.06);
+    }
+
+    .progress-section {
+      margin: 18px 0;
+      text-align: center;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 22px;
+      background: #FFFBDC;
+      border: 2px solid #01571E;
+      border-radius: 11px;
+      overflow: hidden;
+      margin: 6px 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(to right, #2EB600, #3FCC10);
+      width: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 0.85em;
+      transition: width 0.3s;
+    }
+
+    .xp-counter {
+      text-align: right;
+      font-size: 0.95em;
+      color: #01571E;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 14px;
+      margin-top: 20px;
+      border-top: 2px solid #01571E;
+      color: #003D0D;
+      font-size: 0.9em;
+      background: #FFFBDC;
+    }
+
+    .emoji { font-size: 1.12em; }
+
+    /* Mini "desenhos" com CSS (emojis + formas simples) */
+    .personagem-demo {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      background: linear-gradient(to bottom, #2EB600, #01571E);
+      margin-right: 10px;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0, 61, 13, 0.4);
+    }
+
+    .personagem-demo::before {
+      content: "🧙";
+      position: absolute;
+      font-size: 38px;
+      top: 14px;
+      left: 21px;
+    }
+
+    .bau-xp {
+      display: inline-block;
+      width: 70px;
+      height: 45px;
+      border-radius: 4px;
+      background: #3FCC10;
+      border: 3px solid #01571E;
+      position: relative;
+      margin-left: 8px;
+      box-shadow: 0 0 8px rgba(1, 87, 30, 0.5);
+    }
+
+    .bau-xp::before {
+      content: "XP";
+      position: absolute;
+      font-weight: bold;
+      color: #FFFBDC;
+      font-size: 18px;
+      top: 10px;
+      left: 18px;
+    }
+
+    .orbe-mana {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #3FCC10 0, #2EB600 60%, #01571E 100%);
+      box-shadow: 0 0 10px rgba(63, 204, 16, 0.7);
+      margin: 0 3px;
+    }
+
+    .painel-demo {
+      border: 2px dashed #01571E;
+      padding: 10px;
+      border-radius: 6px;
+      background: rgba(255, 251, 220, 0.9);
+      margin-top: 8px;
+      text-align: center;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      .nav-tabs { flex-direction: column; }
+      .nav-tabs button { width: 100%; }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.4em; }
+      .nivel { padding: 18px; }
+      pre { font-size: 0.8em; }
+      .icone-orbe { display: none; }
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap');
+  </style>
+</head>
+<body>
+  <div class="reino">
+    <header>
+      <div class="icone-orbe"></div>
+      <h1>🧙‍♂️ JavaScript: A Magia Viva do Reino Web</h1>
+      <p class="subtitulo">Dando vida ao Portfólio do Herói</p>
+      <p style="margin-top:8px;">
+        HTML constrói o castelo, CSS o deixa bonito, e <strong>JavaScript</strong> faz as portas abrirem, 
+        as tochas acenderem e os botões reagirem.[web:21][web:15]
+      </p>
+      <p style="margin-top:4px;font-size:0.95em;">
+        Neste livro você vai conectar um arquivo <code>main.js</code> ao seu <code>portfolio.html</code> 
+        e transformar o “Painel do Herói” em algo vivo.[web:24][web:46]
+      </p>
+    </header>
+
+    <div class="nav-tabs">
+      <button class="nav-btn active" data-target="intro">Prólogo</button>
+      <button class="nav-btn" data-target="nivel1">Nível 1</button>
+      <button class="nav-btn" data-target="nivel2">Nível 2</button>
+      <button class="nav-btn" data-target="nivel3">Nível 3</button>
+      <button class="nav-btn" data-target="nivel4">Nível 4</button>
+      <button class="nav-btn" data-target="nivel5">Nível 5</button>
+      <button class="nav-btn" data-target="nivel6">Nível 6</button>
+      <button class="nav-btn" data-target="boss">Boss Final</button>
+      <button class="nav-btn" data-target="resumo">Resumo</button>
+    </div>
+
+    <!-- INTRO -->
+    <div class="nivel active" id="intro">
+      <h2><span class="emoji">📖</span>Prólogo: O Feiticeiro do Reino</h2>
+      <p>
+        JavaScript é a linguagem que permite que a página <strong>reaja</strong> a cliques, teclas, 
+        envios de formulários, animações e qualquer outro evento no navegador.[web:24][web:22]
+      </p>
+      <p>
+        Nesta jornada, você vai aprender a usar JavaScript para controlar o DOM, lidar com eventos 
+        e criar pequenas magias interativas dentro do seu próprio <code>portfolio.html</code>.[web:46][web:43]
+      </p>
+
+      <div class="card conceito">
+        <h4>Onde JavaScript roda?</h4>
+        <ul>
+          <li>No navegador (Chrome, Firefox, etc.), manipulando páginas web.[web:43][web:37]</li>
+          <li>No servidor, com Node.js (não é foco aqui, mas será útil em NestJS depois).[web:12]</li>
+        </ul>
+      </div>
+
+      <div class="card conceito">
+        <strong>Importante:</strong> Em todo este livro você vai trabalhar sobre o mesmo 
+        <code>portfolio.html</code> estilizado no livro de CSS, adicionando um arquivo <code>main.js</code> ligado a ele.
+      </div>
+
+      <div class="progress-section">
+        <h3>Seu Progresso na Magia JavaScript</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressBar">0%</div>
+        </div>
+        <div class="xp-counter">XP: <span id="xpCounter">0</span> / 400</div>
+      </div>
+
+      <div class="painel-demo">
+        <span class="personagem-demo"></span>
+        <span>Você é um aprendiz com um grimório vazio. Cada nível adiciona novos feitiços ao seu livro.</span>
+      </div>
+    </div>
+
+    <!-- NÍVEL 1: PRIMEIRO SCRIPT -->
+    <div class="nivel" id="nivel1">
+      <h2><span class="emoji">🔮</span>Nível 1: Invocando o Primeiro Feitiço</h2>
+
+      <div class="card conceito">
+        <h4>Ligando um arquivo JavaScript à página</h4>
+        <p>
+          JavaScript aparece em um arquivo <code>.js</code>, que você conecta no HTML com a tag <code>&lt;script&gt;</code>.[web:21][web:18]
+        </p>
+        <p>Para o seu portfólio, o objetivo é ligar um <code>main.js</code> ao <code>portfolio.html</code>.</p>
+        <pre>&lt;!-- Dentro de portfolio.html --&gt;
+&lt;body&gt;
+  ...
+  &lt;script src="main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <pre>// main.js
+console.log("Portfólio do Herói: magia JavaScript iniciada!");
+</pre>
+        <p>
+          Use o DevTools (F12) e a aba Console para verificar mensagens de log.[web:21]
+        </p>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Conectando o Portfólio</h4>
+        <ol>
+          <li>Na mesma pasta do seu <code>portfolio.html</code>, crie <code>main.js</code>.</li>
+          <li>Adicione a tag <code>&lt;script src="main.js"&gt;&lt;/script&gt;</code> antes de <code>&lt;/body&gt;</code>.</li>
+          <li>Escreva um <code>console.log</code> de teste e confirme no console do navegador.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +40 XP – Você ligou JavaScript ao seu portfólio.
+      </div>
+
+      <div class="card armadilha">
+        <h4>⚠️ Armadilhas</h4>
+        <ul>
+          <li>Nome do arquivo JS diferente do que está em <code>src</code>.</li>
+          <li>Colocar o <code>&lt;script&gt;</code> no <code>&lt;head&gt;</code> sem <code>defer</code> e tentar acessar elementos que ainda não existem.[web:46]</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NÍVEL 2: VARIÁVEIS E TIPOS -->
+    <div class="nivel" id="nivel2">
+      <h2><span class="emoji">🧾</span>Nível 2: Atributos do Herói (Variáveis e Tipos)</h2>
+
+      <div class="card conceito">
+        <h4>Variáveis: slots de inventário</h4>
+        <p>
+          Variáveis são “espaços” onde você guarda informações que podem mudar ao longo do jogo.[web:18][web:12]
+        </p>
+        <pre>let nomeDoHeroi = "Arkan, o Verde";
+const nivelInicial = 1;
+let pontosDeVida = 100;
+let possuiCajado = true;</pre>
+        <p>
+          Use <code>let</code> para valores que mudam e <code>const</code> para valores fixos.[web:18][web:8]
+        </p>
+      </div>
+
+      <h3>Tipos básicos</h3>
+      <pre>let nome     = "Arkan";      // string
+let nivel    = 5;            // number
+let vivo     = true;         // boolean
+let mana;                    // undefined
+let nada     = null;         // null</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Ficha do Herói (dados em JS)</h4>
+        <ol>
+          <li>No <code>main.js</code>, crie variáveis para: nome, classe, nível, vida, mana e ouro.</li>
+          <li>Imprima no console uma frase com esses dados.</li>
+          <li>Guarde a ideia: depois esses valores vão alimentar o <code>#painel-heroi</code> do portfólio.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +50 XP – Seu inventário de variáveis está criado.
+      </div>
+    </div>
+
+    <!-- NÍVEL 3: IF, LAÇOS -->
+    <div class="nivel" id="nivel3">
+      <h2><span class="emoji">⚔️</span>Nível 3: Decisões e Ciclos (if, else, loops)</h2>
+
+      <div class="card conceito">
+        <h4>if/else: escolhas na história</h4>
+        <p>Você usa <code>if</code> para tomar decisões com base em condições.[web:18][web:15]</p>
+        <pre>let nivel = 8;
+
+if (nivel >= 10) {
+  console.log("Você pode entrar na Masmorra Épica!");
+} else {
+  console.log("Você ainda é fraco para este desafio...");
+}</pre>
+      </div>
+
+      <h3>Laços: repetindo feitiços</h3>
+      <pre>for (let i = 1; i <= 3; i++) {
+  console.log("Lançando bola de fogo nº " + i);
+}
+
+let mana = 3;
+while (mana > 0) {
+  console.log("Você ainda tem " + mana + " de mana.");
+  mana--;
+}</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Cálculo de Nível</h4>
+        <ol>
+          <li>Crie uma variável <code>xp</code> e use um <code>if</code> para decidir o “título” do herói conforme o XP.</li>
+          <li>Use um <code>for</code> para simular 10 batalhas somando XP.</li>
+          <li>Guarde a lógica: ela será aproveitada no contador de XP visual do Painel do Herói.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +60 XP – Você controla o fluxo da história.
+      </div>
+    </div>
+
+    <!-- NÍVEL 4: FUNÇÕES -->
+    <div class="nivel" id="nivel4">
+      <h2><span class="emoji">📜</span>Nível 4: Tomos de Magia (Funções)</h2>
+
+      <div class="card conceito">
+        <h4>Funções: feitiços reutilizáveis</h4>
+        <p>
+          Funções são blocos de código que você pode “invocar” várias vezes, com parâmetros diferentes.[web:18][web:15]
+        </p>
+        <pre>function saudarHeroi(nome) {
+  console.log("Saudações, " + nome + "!");
+}
+
+saudarHeroi("Arkan");
+saudarHeroi("Luna");</pre>
+      </div>
+
+      <h3>Funções com retorno</h3>
+      <pre>function calcularDano(base, forca) {
+  const dano = base + forca * 2;
+  return dano;
+}
+
+const danoFinal = calcularDano(10, 5);
+console.log("Dano causado: " + danoFinal);</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Funções do Painel</h4>
+        <ol>
+          <li>Crie uma função <code>subirNivel(xpAtual)</code> que retorna o novo nível com base no XP.</li>
+          <li>Crie uma função <code>formatarFicha(heroi)</code> que recebe um objeto e devolve uma string com a ficha.</li>
+          <li>Mais tarde, essas funções vão ser chamadas ao clicar em botões no portfólio.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +60 XP – Seu grimório agora tem feitiços reutilizáveis.
+      </div>
+    </div>
+
+    <!-- NÍVEL 5: ARRAYS E OBJETOS -->
+    <div class="nivel" id="nivel5">
+      <h2><span class="emoji">🎒</span>Nível 5: Inventário e Bestiário (Arrays e Objetos)</h2>
+
+      <div class="card conceito">
+        <h4>Arrays: listas de itens</h4>
+        <p>Arrays são como um inventário com vários slots numerados.[web:18][web:8]</p>
+        <pre>const mochila = ["Poção de Vida", "Poção de Mana", "Chave Enferrujada"];
+
+console.log(mochila[0]); // Poção de Vida
+mochila.push("Mapa do Calabouço");</pre>
+      </div>
+
+      <div class="card conceito">
+        <h4>Objetos: ficha de personagem</h4>
+        <pre>const heroi = {
+  nome: "Arkan",
+  classe: "Mago",
+  nivel: 10,
+  vida: 120,
+  mana: 80
+};
+
+console.log(heroi.nome);
+console.log(heroi["classe"]);</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Dados para o Portfólio</h4>
+        <ol>
+          <li>Crie um objeto <code>heroi</code> com dados que você quer exibir em <code>#painel-heroi</code> (nome, classe, nível, xp).</li>
+          <li>Crie um array <code>projetos</code> com objetos contendo título e link.</li>
+          <li>Mais tarde, o DOM vai ler esses dados e colocar na página automaticamente.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +70 XP – Você domina coleções de dados.
+      </div>
+    </div>
+
+    <!-- NÍVEL 6: DOM + EVENTOS -->
+    <div class="nivel" id="nivel6">
+      <h2><span class="emoji">🏰</span>Nível 6: Manipulando o Mundo (DOM e Eventos)</h2>
+
+      <div class="card conceito">
+        <h4>DOM: o mapa do castelo</h4>
+        <p>
+          O DOM é a representação da página que o navegador expõe para o JavaScript como uma árvore de nós.[web:43][web:37]
+        </p>
+        <p>
+          Você pode buscar elementos, mudar textos, classes, estilos e reagir a eventos como cliques e envios de formulário.[web:24][web:49]
+        </p>
+      </div>
+
+      <h3>Exemplo: botão que aumenta XP</h3>
+      <pre>&lt;!-- Em portfolio.html (dentro do painel-heroi) --&gt;
+&lt;p&gt;XP: &lt;span id="hero-xp"&gt;0&lt;/span&gt;&lt;/p&gt;
+&lt;button id="btn-xp"&gt;+10 XP&lt;/button&gt;</pre>
+
+      <pre>// Em main.js
+let xp = 0;
+const btnXp = document.querySelector("#btn-xp");
+const spanXp = document.querySelector("#hero-xp");
+
+btnXp.addEventListener("click", function () {
+  xp += 10;
+  spanXp.textContent = xp;
+});</pre>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Painel do Herói Dinâmico</h4>
+        <ol>
+          <li>No <code>portfolio.html</code>, garanta que existam elementos com ids <code>hero-nome</code>, <code>hero-classe</code>, <code>hero-nivel</code>, <code>hero-xp</code> e um botão <code>btn-xp</code>.</li>
+          <li>No <code>main.js</code>, use <code>document.querySelector</code> para buscar esses elementos.[web:46][web:49]</li>
+          <li>Ao carregar a página, preencha os spans com os dados do objeto <code>heroi</code> criado no Nível 5.</li>
+          <li>Ao clicar no botão, aumente o XP e, se passar de certo valor, aumente o nível.</li>
+        </ol>
+      </div>
+
+      <div class="painel-demo" id="painel-demo-js">
+        <p><strong>Mini Demo:</strong> Clique para ver a “magia” deste próprio material.</p>
+        <button id="btn-demo" style="padding:6px 12px;border-radius:4px;border:2px solid #01571E;background:#2EB600;color:#FFFFFF;font-weight:bold;cursor:pointer;">
+          Lançar Encantamento
+        </button>
+        <p id="texto-demo" style="margin-top:6px;">Nada aconteceu... ainda.</p>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +80 XP – Você manipula o mundo visível.
+      </div>
+    </div>
+
+    <!-- BOSS FINAL -->
+    <div class="nivel" id="boss">
+      <h2><span class="emoji">🐉</span>Boss Final: Portfólio do Herói (HTML + CSS + JS)</h2>
+
+      <div class="card conceito">
+        <h4>Mini aplicação: Portfólio Vivo</h4>
+        <p>
+          Projeto final: transformar o seu <strong>portfolio.html</strong> em uma página interativa completa, 
+          com ficha dinâmica no “Painel do Herói”, contador de XP, e um formulário de contato com validação simples.[web:24][web:46]
+        </p>
+      </div>
+
+      <h3>Requisitos mínimos</h3>
+      <ul>
+        <li>Usar o mesmo <code>portfolio.html</code> e <code>style.css</code> dos livros anteriores (não criar outro HTML).</li>
+        <li>Criar <code>main.js</code> e importá-lo no final do <code>body</code>.</li>
+        <li>No “Painel do Herói”:
+          <ul>
+            <li>Preencher automaticamente nome, classe, nível e XP lendo um objeto <code>heroi</code> em JS.</li>
+            <li>Implementar um botão “+XP” que aumenta o XP na tela e sobe o nível ao atingir limiares.</li>
+          </ul>
+        </li>
+        <li>No formulário de contato:
+          <ul>
+            <li>Impedir envio se nome ou email estiverem vazios.</li>
+            <li>Mostrar uma mensagem de sucesso/erro abaixo do formulário sem recarregar a página.</li>
+          </ul>
+        </li>
+        <li>Adicionar pelo menos um efeito visual de classe ativa (por exemplo, destacar o link do menu da seção atual) controlado por JS.</li>
+      </ul>
+
+      <div class="card desafio">
+        <h4>🎯 Boss Mission (Livro 3)</h4>
+        <ol>
+          <li>Organize o <code>main.js</code> em funções (inicialização, atualização de XP, validação de formulário).</li>
+          <li>Garanta que todo acesso ao DOM use <code>querySelector</code> / <code>querySelectorAll</code> de forma clara.[web:46][web:50]</li>
+          <li>Teste todos os fluxos: aumentar XP, subir nível, enviar formulário válido e inválido.</li>
+          <li>Considere extrair valores em constantes para facilitar manutenção (ids, mensagens etc.).</li>
+        </ol>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎮 Missão Extra: Treinos Externos</h4>
+        <ul>
+          <li>Brinque com plataformas que ensinam eventos e DOM para reforçar o conteúdo.[web:45][web:39]</li>
+          <li>Leia os módulos de eventos e DOM scripting em MDN.[web:24][web:46]</li>
+        </ul>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa Final:</strong> +100 XP – Seu portfólio virou uma aplicação viva e você é um Mago JavaScript do Reino Web.
+      </div>
+    </div>
+
+    <!-- RESUMO -->
+    <div class="nivel" id="resumo">
+      <h2><span class="emoji">📚</span>Resumo da Jornada JavaScript</h2>
+
+      <table>
+        <tr>
+          <th>Nível</th>
+          <th>Tema</th>
+          <th>XP</th>
+        </tr>
+        <tr><td>Intro</td><td>Prólogo & Conceitos</td><td>20</td></tr>
+        <tr><td>1</td><td>Primeiro Script / ligação com portfolio.html</td><td>40</td></tr>
+        <tr><td>2</td><td>Variáveis & Tipos</td><td>50</td></tr>
+        <tr><td>3</td><td>Decisões & Laços</td><td>60</td></tr>
+        <tr><td>4</td><td>Funções</td><td>60</td></tr>
+        <tr><td>5</td><td>Arrays & Objetos</td><td>70</td></tr>
+        <tr><td>6</td><td>DOM & Eventos</td><td>80</td></tr>
+        <tr><td>Boss</td><td>Portfólio do Herói (HTML + CSS + JS)</td><td>120</td></tr>
+        <tr style="background:#01571E;color:#FFFBDC;">
+          <td><strong>Total</strong></td><td></td><td><strong>400 XP</strong></td>
+        </tr>
+      </table>
+
+      <h3>Próximos passos</h3>
+      <ul>
+        <li>Aprofundar em DOM, eventos e boas práticas em MDN.[web:43][web:24]</li>
+        <li>Estudar módulos modernos (ES6, módulos, classes) e depois bibliotecas como React.</li>
+        <li>Usar o seu portfólio como base para experimentar novas features JS (tema escuro, filtros de projeto, etc.).</li>
+      </ul>
+
+      <p style="text-align:center;margin-top:16px;">
+        Que seus consoles fiquem limpos e seus bugs sejam apenas goblins facilmente derrotados.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Capacitação de Desenvolvimento Web Medieval | JavaScript</p>
+    <p><em>Livro 3 da aventura: A Magia Viva do JavaScript (Portfólio integrado)</em></p>
+  </footer>
+
+  <script>
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const niveles = document.querySelectorAll('.nivel');
+    const xpMap = {
+      intro: 0,
+      nivel1: 40,
+      nivel2: 90,
+      nivel3: 150,
+      nivel4: 210,
+      nivel5: 280,
+      nivel6: 360,
+      boss: 400,
+      resumo: 400
+    };
+
+    function updateProgress(xp) {
+      const total = 400;
+      const progressBar = document.getElementById('progressBar');
+      const xpCounter = document.getElementById('xpCounter');
+      const perc = Math.round((xp / total) * 100);
+      progressBar.style.width = perc + '%';
+      progressBar.textContent = perc + '%';
+      xpCounter.textContent = xp;
+    }
+
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        navButtons.forEach(b => b.classList.remove('active'));
+        niveles.forEach(n => n.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        updateProgress(xpMap[target] || 0);
+        window.scrollTo(0, 0);
+      });
+    });
+
+    // Mini demo DOM + evento
+    const btnDemo = document.getElementById('btn-demo');
+    const textoDemo = document.getElementById('texto-demo');
+    if (btnDemo && textoDemo) {
+      let manaClicks = 0;
+      btnDemo.addEventListener('click', () => {
+        manaClicks++;
+        textoDemo.textContent = "✨ Encantamento lançado " + manaClicks + "x! O orbe brilha mais forte.";
+      });
+    }
+
+    updateProgress(0);
+  </script>
+</body>
+</html>

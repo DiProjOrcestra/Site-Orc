@@ -268,7 +268,7 @@
 
     .emoji { font-size: 1.12em; }
 
-    /* Mini "desenhos" com CSS (emojis + formas simples) */
+    /* Mini "desenhos" com CSS */
     .personagem-demo {
       display: inline-block;
       width: 80px;
@@ -286,38 +286,6 @@
       font-size: 38px;
       top: 14px;
       left: 21px;
-    }
-
-    .bau-xp {
-      display: inline-block;
-      width: 70px;
-      height: 45px;
-      border-radius: 4px;
-      background: #3FCC10;
-      border: 3px solid #01571E;
-      position: relative;
-      margin-left: 8px;
-      box-shadow: 0 0 8px rgba(1, 87, 30, 0.5);
-    }
-
-    .bau-xp::before {
-      content: "XP";
-      position: absolute;
-      font-weight: bold;
-      color: #FFFBDC;
-      font-size: 18px;
-      top: 10px;
-      left: 18px;
-    }
-
-    .orbe-mana {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #3FCC10 0, #2EB600 60%, #01571E 100%);
-      box-shadow: 0 0 10px rgba(63, 204, 16, 0.7);
-      margin: 0 3px;
     }
 
     .painel-demo {
@@ -351,11 +319,11 @@
       <p class="subtitulo">Dando vida ao Portfólio do Herói</p>
       <p style="margin-top:8px;">
         HTML constrói o castelo, CSS o deixa bonito, e <strong>JavaScript</strong> faz as portas abrirem, 
-        as tochas acenderem e os botões reagirem.[web:21][web:15]
+        as tochas acenderem e os botões reagirem.
       </p>
       <p style="margin-top:4px;font-size:0.95em;">
         Neste livro você vai conectar um arquivo <code>main.js</code> ao seu <code>portfolio.html</code> 
-        e transformar o “Painel do Herói” em algo vivo.[web:24][web:46]
+        e transformar o “Painel do Herói” em algo vivo.
       </p>
     </header>
 
@@ -367,6 +335,7 @@
       <button class="nav-btn" data-target="nivel4">Nível 4</button>
       <button class="nav-btn" data-target="nivel5">Nível 5</button>
       <button class="nav-btn" data-target="nivel6">Nível 6</button>
+      <button class="nav-btn" data-target="nivel7">Nível 7</button>
       <button class="nav-btn" data-target="boss">Boss Final</button>
       <button class="nav-btn" data-target="resumo">Resumo</button>
     </div>
@@ -376,18 +345,18 @@
       <h2><span class="emoji">📖</span>Prólogo: O Feiticeiro do Reino</h2>
       <p>
         JavaScript é a linguagem que permite que a página <strong>reaja</strong> a cliques, teclas, 
-        envios de formulários, animações e qualquer outro evento no navegador.[web:24][web:22]
+        envios de formulários, animações e qualquer outro evento no navegador.
       </p>
       <p>
         Nesta jornada, você vai aprender a usar JavaScript para controlar o DOM, lidar com eventos 
-        e criar pequenas magias interativas dentro do seu próprio <code>portfolio.html</code>.[web:46][web:43]
+        e criar pequenas magias interativas dentro do seu próprio <code>portfolio.html</code>.
       </p>
 
       <div class="card conceito">
         <h4>Onde JavaScript roda?</h4>
         <ul>
-          <li>No navegador (Chrome, Firefox, etc.), manipulando páginas web.[web:43][web:37]</li>
-          <li>No servidor, com Node.js (não é foco aqui, mas será útil em NestJS depois).[web:12]</li>
+          <li>No navegador (Chrome, Firefox, etc.), manipulando páginas web.</li>
+          <li>No servidor, com Node.js (não é foco aqui, mas será útil em NestJS depois).</li>
         </ul>
       </div>
 
@@ -401,7 +370,7 @@
         <div class="progress-bar">
           <div class="progress-fill" id="progressBar">0%</div>
         </div>
-        <div class="xp-counter">XP: <span id="xpCounter">0</span> / 400</div>
+        <div class="xp-counter">XP: <span id="xpCounter">0</span> / 460</div>
       </div>
 
       <div class="painel-demo">
@@ -410,14 +379,14 @@
       </div>
     </div>
 
-    <!-- NÍVEL 1: PRIMEIRO SCRIPT -->
+    <!-- NÍVEL 1: PRIMEIRO SCRIPT + ALERT -->
     <div class="nivel" id="nivel1">
       <h2><span class="emoji">🔮</span>Nível 1: Invocando o Primeiro Feitiço</h2>
 
       <div class="card conceito">
         <h4>Ligando um arquivo JavaScript à página</h4>
         <p>
-          JavaScript aparece em um arquivo <code>.js</code>, que você conecta no HTML com a tag <code>&lt;script&gt;</code>.[web:21][web:18]
+          JavaScript aparece em um arquivo <code>.js</code>, que você conecta no HTML com a tag <code>&lt;script&gt;</code>.
         </p>
         <p>Para o seu portfólio, o objetivo é ligar um <code>main.js</code> ao <code>portfolio.html</code>.</p>
         <pre>&lt;!-- Dentro de portfolio.html --&gt;
@@ -429,9 +398,10 @@
 
         <pre>// main.js
 console.log("Portfólio do Herói: magia JavaScript iniciada!");
-</pre>
+alert("Bem-vindo ao Painel do Herói!");</pre>
         <p>
-          Use o DevTools (F12) e a aba Console para verificar mensagens de log.[web:21]
+          Use o DevTools (F12) e a aba Console para verificar mensagens de log e veja o <code>alert</code> 
+          ao abrir a página.
         </p>
       </div>
 
@@ -440,54 +410,54 @@ console.log("Portfólio do Herói: magia JavaScript iniciada!");
         <ol>
           <li>Na mesma pasta do seu <code>portfolio.html</code>, crie <code>main.js</code>.</li>
           <li>Adicione a tag <code>&lt;script src="main.js"&gt;&lt;/script&gt;</code> antes de <code>&lt;/body&gt;</code>.</li>
-          <li>Escreva um <code>console.log</code> de teste e confirme no console do navegador.</li>
+          <li>Escreva um <code>console.log</code> e um <code>alert</code> de teste e confirme no navegador.</li>
         </ol>
       </div>
 
       <div class="card recompensa">
-        <strong>🏆 Recompensa:</strong> +40 XP – Você ligou JavaScript ao seu portfólio.
+        <strong>🏆 Recompensa:</strong> +40 XP – Você ligou JavaScript ao seu portfólio e despertou o primeiro alerta mágico.
       </div>
 
       <div class="card armadilha">
         <h4>⚠️ Armadilhas</h4>
         <ul>
           <li>Nome do arquivo JS diferente do que está em <code>src</code>.</li>
-          <li>Colocar o <code>&lt;script&gt;</code> no <code>&lt;head&gt;</code> sem <code>defer</code> e tentar acessar elementos que ainda não existem.[web:46]</li>
+          <li>Colocar o <code>&lt;script&gt;</code> no <code>&lt;head&gt;</code> sem <code>defer</code> e tentar acessar elementos que ainda não existem.</li>
         </ul>
       </div>
     </div>
 
-    <!-- NÍVEL 2: VARIÁVEIS E TIPOS -->
+    <!-- NÍVEL 2: VARIÁVEIS E TIPOS (CONST/LET) -->
     <div class="nivel" id="nivel2">
       <h2><span class="emoji">🧾</span>Nível 2: Atributos do Herói (Variáveis e Tipos)</h2>
 
       <div class="card conceito">
         <h4>Variáveis: slots de inventário</h4>
         <p>
-          Variáveis são “espaços” onde você guarda informações que podem mudar ao longo do jogo.[web:18][web:12]
+          Variáveis são “espaços” onde você guarda informações que podem mudar ao longo do jogo.
         </p>
-        <pre>let nomeDoHeroi = "Arkan, o Verde";
-const nivelInicial = 1;
+        <pre>let nomeDoHeroi = "Arkan, o Verde"; // pode mudar
+const nivelInicial = 1;             // não muda
 let pontosDeVida = 100;
 let possuiCajado = true;</pre>
         <p>
-          Use <code>let</code> para valores que mudam e <code>const</code> para valores fixos.[web:18][web:8]
+          Use <code>let</code> para valores que mudam e <code>const</code> para valores fixos.
         </p>
       </div>
 
       <h3>Tipos básicos</h3>
-      <pre>let nome     = "Arkan";      // string
-let nivel    = 5;            // number
-let vivo     = true;         // boolean
-let mana;                    // undefined
-let nada     = null;         // null</pre>
+      <pre>const nome   = "Arkan";   // string
+let nivel    = 5;          // number
+let vivo     = true;       // boolean
+let mana;                  // undefined
+const nada   = null;       // null</pre>
 
       <div class="card desafio">
         <h4>🎯 Missão: Ficha do Herói (dados em JS)</h4>
         <ol>
-          <li>No <code>main.js</code>, crie variáveis para: nome, classe, nível, vida, mana e ouro.</li>
-          <li>Imprima no console uma frase com esses dados.</li>
-          <li>Guarde a ideia: depois esses valores vão alimentar o <code>#painel-heroi</code> do portfólio.</li>
+          <li>No <code>main.js</code>, crie variáveis com <code>let</code> e <code>const</code> para: nome, classe, nível, vida, mana e ouro.</li>
+          <li>Use <code>console.log</code> para montar uma frase com esses dados.</li>
+          <li>Depois use <code>alert</code> para mostrar essa ficha em uma janelinha.</li>
         </ol>
       </div>
 
@@ -496,13 +466,13 @@ let nada     = null;         // null</pre>
       </div>
     </div>
 
-    <!-- NÍVEL 3: IF, LAÇOS -->
+    <!-- NÍVEL 3: IF, ELSE, LAÇOS -->
     <div class="nivel" id="nivel3">
       <h2><span class="emoji">⚔️</span>Nível 3: Decisões e Ciclos (if, else, loops)</h2>
 
       <div class="card conceito">
         <h4>if/else: escolhas na história</h4>
-        <p>Você usa <code>if</code> para tomar decisões com base em condições.[web:18][web:15]</p>
+        <p>Você usa <code>if</code> e <code>else</code> para tomar decisões com base em condições.</p>
         <pre>let nivel = 8;
 
 if (nivel >= 10) {
@@ -526,9 +496,9 @@ while (mana > 0) {
       <div class="card desafio">
         <h4>🎯 Missão: Cálculo de Nível</h4>
         <ol>
-          <li>Crie uma variável <code>xp</code> e use um <code>if</code> para decidir o “título” do herói conforme o XP.</li>
+          <li>Crie uma variável <code>xp</code> e use <code>if/else</code> para decidir o “título” do herói conforme o XP.</li>
           <li>Use um <code>for</code> para simular 10 batalhas somando XP.</li>
-          <li>Guarde a lógica: ela será aproveitada no contador de XP visual do Painel do Herói.</li>
+          <li>Ao final, use <code>alert</code> para mostrar o nível e o título final do herói.</li>
         </ol>
       </div>
 
@@ -544,10 +514,11 @@ while (mana > 0) {
       <div class="card conceito">
         <h4>Funções: feitiços reutilizáveis</h4>
         <p>
-          Funções são blocos de código que você pode “invocar” várias vezes, com parâmetros diferentes.[web:18][web:15]
+          Funções são blocos de código que você pode “invocar” várias vezes, com parâmetros diferentes.
         </p>
         <pre>function saudarHeroi(nome) {
   console.log("Saudações, " + nome + "!");
+  alert("Saudações, " + nome + "!");
 }
 
 saudarHeroi("Arkan");
@@ -568,7 +539,7 @@ console.log("Dano causado: " + danoFinal);</pre>
         <ol>
           <li>Crie uma função <code>subirNivel(xpAtual)</code> que retorna o novo nível com base no XP.</li>
           <li>Crie uma função <code>formatarFicha(heroi)</code> que recebe um objeto e devolve uma string com a ficha.</li>
-          <li>Mais tarde, essas funções vão ser chamadas ao clicar em botões no portfólio.</li>
+          <li>Use <code>alert(formatarFicha(heroi))</code> para ver a ficha completa.</li>
         </ol>
       </div>
 
@@ -583,7 +554,7 @@ console.log("Dano causado: " + danoFinal);</pre>
 
       <div class="card conceito">
         <h4>Arrays: listas de itens</h4>
-        <p>Arrays são como um inventário com vários slots numerados.[web:18][web:8]</p>
+        <p>Arrays são como um inventário com vários slots numerados.</p>
         <pre>const mochila = ["Poção de Vida", "Poção de Mana", "Chave Enferrujada"];
 
 console.log(mochila[0]); // Poção de Vida
@@ -609,7 +580,7 @@ console.log(heroi["classe"]);</pre>
         <ol>
           <li>Crie um objeto <code>heroi</code> com dados que você quer exibir em <code>#painel-heroi</code> (nome, classe, nível, xp).</li>
           <li>Crie um array <code>projetos</code> com objetos contendo título e link.</li>
-          <li>Mais tarde, o DOM vai ler esses dados e colocar na página automaticamente.</li>
+          <li>Use <code>console.log</code> para conferir e prepare esses dados para o DOM.</li>
         </ol>
       </div>
 
@@ -625,10 +596,10 @@ console.log(heroi["classe"]);</pre>
       <div class="card conceito">
         <h4>DOM: o mapa do castelo</h4>
         <p>
-          O DOM é a representação da página que o navegador expõe para o JavaScript como uma árvore de nós.[web:43][web:37]
+          O DOM é a representação da página que o navegador expõe para o JavaScript como uma árvore de nós.
         </p>
         <p>
-          Você pode buscar elementos, mudar textos, classes, estilos e reagir a eventos como cliques e envios de formulário.[web:24][web:49]
+          Você pode buscar elementos, mudar textos, classes, estilos e reagir a eventos como cliques e envios de formulário.
         </p>
       </div>
 
@@ -651,9 +622,9 @@ btnXp.addEventListener("click", function () {
         <h4>🎯 Missão: Painel do Herói Dinâmico</h4>
         <ol>
           <li>No <code>portfolio.html</code>, garanta que existam elementos com ids <code>hero-nome</code>, <code>hero-classe</code>, <code>hero-nivel</code>, <code>hero-xp</code> e um botão <code>btn-xp</code>.</li>
-          <li>No <code>main.js</code>, use <code>document.querySelector</code> para buscar esses elementos.[web:46][web:49]</li>
+          <li>No <code>main.js</code>, use <code>document.querySelector</code> para buscar esses elementos.</li>
           <li>Ao carregar a página, preencha os spans com os dados do objeto <code>heroi</code> criado no Nível 5.</li>
-          <li>Ao clicar no botão, aumente o XP e, se passar de certo valor, aumente o nível.</li>
+          <li>Ao clicar no botão, aumente o XP e, se passar de certo valor, use <code>if/else</code> para subir o nível e mostrar um <code>alert</code> de evolução.</li>
         </ol>
       </div>
 
@@ -670,6 +641,45 @@ btnXp.addEventListener("click", function () {
       </div>
     </div>
 
+    <!-- NÍVEL 7: FUNÇÕES ASSÍNCRONAS E GET -->
+    <div class="nivel" id="nivel7">
+      <h2><span class="emoji">🌐</span>Nível 7: Magia Assíncrona (async/await e GET)</h2>
+
+      <div class="card conceito">
+        <h4>Chamadas assíncronas: buscar dados no reino</h4>
+        <p>
+          Com <code>fetch</code> e <code>async/await</code> você faz requisições <strong>GET</strong> para APIs, 
+          busca dados externos e atualiza a página sem recarregar.
+        </p>
+        <pre>// Exemplo simples de GET assíncrono
+async function buscarPiada() {
+  try {
+    const resposta = await fetch("https://api.chucknorris.io/jokes/random");
+    const dados = await resposta.json();
+    console.log(dados.value);
+    alert("Piada mágica: " + dados.value);
+  } catch (erro) {
+    console.error("Erro ao buscar piada", erro);
+    alert("Falha ao invocar a magia remota.");
+  }
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Chamado ao Oráculo (GET)</h4>
+        <ol>
+          <li>Crie um botão no seu <code>portfolio.html</code> chamado “Consultar Oráculo”.</li>
+          <li>No <code>main.js</code>, crie uma função <code>async function consultarOraculo()</code> que faz um <strong>GET</strong> usando <code>fetch</code>.</li>
+          <li>Mostre o resultado com <code>alert</code> ou inserindo texto em um elemento do DOM.</li>
+          <li>Use <code>const</code> para a URL da API e <code>let</code> para dados que mudam.</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 Recompensa:</strong> +60 XP – Você domina a magia assíncrona e está pronto para falar com APIs.
+      </div>
+    </div>
+
     <!-- BOSS FINAL -->
     <div class="nivel" id="boss">
       <h2><span class="emoji">🐉</span>Boss Final: Portfólio do Herói (HTML + CSS + JS)</h2>
@@ -678,7 +688,8 @@ btnXp.addEventListener("click", function () {
         <h4>Mini aplicação: Portfólio Vivo</h4>
         <p>
           Projeto final: transformar o seu <strong>portfolio.html</strong> em uma página interativa completa, 
-          com ficha dinâmica no “Painel do Herói”, contador de XP, e um formulário de contato com validação simples.[web:24][web:46]
+          com ficha dinâmica no “Painel do Herói”, contador de XP, um formulário de contato com validação simples
+          e pelo menos uma chamada assíncrona GET simulando uma API.
         </p>
       </div>
 
@@ -689,7 +700,7 @@ btnXp.addEventListener("click", function () {
         <li>No “Painel do Herói”:
           <ul>
             <li>Preencher automaticamente nome, classe, nível e XP lendo um objeto <code>heroi</code> em JS.</li>
-            <li>Implementar um botão “+XP” que aumenta o XP na tela e sobe o nível ao atingir limiares.</li>
+            <li>Implementar um botão “+XP” que aumenta o XP na tela e sobe o nível ao atingir limiares, usando <code>if/else</code> e <code>alert</code> quando o herói evoluir.</li>
           </ul>
         </li>
         <li>No formulário de contato:
@@ -698,29 +709,20 @@ btnXp.addEventListener("click", function () {
             <li>Mostrar uma mensagem de sucesso/erro abaixo do formulário sem recarregar a página.</li>
           </ul>
         </li>
-        <li>Adicionar pelo menos um efeito visual de classe ativa (por exemplo, destacar o link do menu da seção atual) controlado por JS.</li>
+        <li>Adicionar uma função <strong>assíncrona</strong> que faça um <strong>GET</strong> (API real ou mock) e exiba o resultado.</li>
       </ul>
 
       <div class="card desafio">
         <h4>🎯 Boss Mission (Livro 3)</h4>
         <ol>
-          <li>Organize o <code>main.js</code> em funções (inicialização, atualização de XP, validação de formulário).</li>
-          <li>Garanta que todo acesso ao DOM use <code>querySelector</code> / <code>querySelectorAll</code> de forma clara.[web:46][web:50]</li>
-          <li>Teste todos os fluxos: aumentar XP, subir nível, enviar formulário válido e inválido.</li>
-          <li>Considere extrair valores em constantes para facilitar manutenção (ids, mensagens etc.).</li>
+          <li>Organize o <code>main.js</code> em funções (inicialização, atualização de XP, validação de formulário, consultas assíncronas).</li>
+          <li>Garanta que todo acesso ao DOM use <code>querySelector</code> / <code>querySelectorAll</code> de forma clara.</li>
+          <li>Teste todos os fluxos: aumentar XP, subir nível, alertas, enviar formulário válido e inválido, chamar a função assíncrona.</li>
         </ol>
       </div>
 
-      <div class="card desafio">
-        <h4>🎮 Missão Extra: Treinos Externos</h4>
-        <ul>
-          <li>Brinque com plataformas que ensinam eventos e DOM para reforçar o conteúdo.[web:45][web:39]</li>
-          <li>Leia os módulos de eventos e DOM scripting em MDN.[web:24][web:46]</li>
-        </ul>
-      </div>
-
       <div class="card recompensa">
-        <strong>🏆 Recompensa Final:</strong> +100 XP – Seu portfólio virou uma aplicação viva e você é um Mago JavaScript do Reino Web.
+        <strong>🏆 Recompensa Final:</strong> +100 XP – Seu portfólio virou uma aplicação viva e conectada, e você é um Mago JavaScript do Reino Web.
       </div>
     </div>
 
@@ -735,23 +737,24 @@ btnXp.addEventListener("click", function () {
           <th>XP</th>
         </tr>
         <tr><td>Intro</td><td>Prólogo & Conceitos</td><td>20</td></tr>
-        <tr><td>1</td><td>Primeiro Script / ligação com portfolio.html</td><td>40</td></tr>
-        <tr><td>2</td><td>Variáveis & Tipos</td><td>50</td></tr>
-        <tr><td>3</td><td>Decisões & Laços</td><td>60</td></tr>
+        <tr><td>1</td><td>Primeiro Script / alert / ligação com portfolio.html</td><td>40</td></tr>
+        <tr><td>2</td><td>Variáveis (const/let) & Tipos</td><td>50</td></tr>
+        <tr><td>3</td><td>Decisões (if/else) & Laços</td><td>60</td></tr>
         <tr><td>4</td><td>Funções</td><td>60</td></tr>
         <tr><td>5</td><td>Arrays & Objetos</td><td>70</td></tr>
         <tr><td>6</td><td>DOM & Eventos</td><td>80</td></tr>
+        <tr><td>7</td><td>Funções assíncronas & GET</td><td>60</td></tr>
         <tr><td>Boss</td><td>Portfólio do Herói (HTML + CSS + JS)</td><td>120</td></tr>
         <tr style="background:#01571E;color:#FFFBDC;">
-          <td><strong>Total</strong></td><td></td><td><strong>400 XP</strong></td>
+          <td><strong>Total</strong></td><td></td><td><strong>460 XP</strong></td>
         </tr>
       </table>
 
       <h3>Próximos passos</h3>
       <ul>
-        <li>Aprofundar em DOM, eventos e boas práticas em MDN.[web:43][web:24]</li>
-        <li>Estudar módulos modernos (ES6, módulos, classes) e depois bibliotecas como React.</li>
-        <li>Usar o seu portfólio como base para experimentar novas features JS (tema escuro, filtros de projeto, etc.).</li>
+        <li>Aprofundar em DOM, eventos, assíncrono e boas práticas em MDN.</li>
+        <li>Estudar ES6+ (módulos, classes) e depois bibliotecas como React.</li>
+        <li>Usar o seu portfólio como base para experimentar novas features JS (tema escuro, filtros de projeto, consumo de APIs reais).</li>
       </ul>
 
       <p style="text-align:center;margin-top:16px;">
@@ -776,12 +779,13 @@ btnXp.addEventListener("click", function () {
       nivel4: 210,
       nivel5: 280,
       nivel6: 360,
-      boss: 400,
-      resumo: 400
+      nivel7: 420,
+      boss: 460,
+      resumo: 460
     };
 
     function updateProgress(xp) {
-      const total = 400;
+      const total = 460;
       const progressBar = document.getElementById('progressBar');
       const xpCounter = document.getElementById('xpCounter');
       const perc = Math.round((xp / total) * 100);

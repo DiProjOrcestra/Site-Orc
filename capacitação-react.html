@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚛️ React: A Arte da Invocação Avançada</title>
+  <style>
+    /* PALETA DA MARCA - Evolução para React */
+    /* Roxo arcano para representar a magia avançada */
+    :root {
+      --roxo-arcano: #6A0DAD;
+      --roxo-claro: #A78BFA;
+      --roxo-escuro: #4C1D95;
+      --branco-mistico: #F8FAFC;
+      --branco-puro: #FFFFFF;
+      --dourado-runico: #FCD34D;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 50%, #F1F5F9 100%);
+      font-family: 'IM Fell English', serif;
+      color: #1E293B;
+      line-height: 1.6;
+    }
+
+    .reino {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 35px;
+      background: linear-gradient(145deg, #F8FAFC, #E2E8F0);
+      border: 5px solid var(--roxo-arcano);
+      box-shadow: 0 0 25px rgba(106, 13, 173, 0.3);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "⚛️";
+      position: absolute;
+      font-size: 3em;
+      top: -20px;
+      right: -20px;
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 2.6em;
+      background: linear-gradient(45deg, var(--roxo-arcano), var(--roxo-claro));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+      text-shadow: 1px 1px 3px rgba(106, 13, 173, 0.3);
+      font-family: 'Cinzel', serif;
+    }
+
+    .subtitulo {
+      font-size: 1.4em;
+      color: var(--roxo-escuro);
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 12px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-tabs button {
+      padding: 12px 22px;
+      background: linear-gradient(145deg, var(--roxo-arcano), var(--roxo-claro));
+      color: var(--branco-puro);
+      border: 2px solid var(--roxo-escuro);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-tabs button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .nav-tabs button:hover::before {
+      left: 100%;
+    }
+
+    .nav-tabs button:hover,
+    .nav-tabs button.active {
+      background: var(--roxo-escuro);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(106, 13, 173, 0.4);
+    }
+
+    .nivel {
+      display: none;
+      background: linear-gradient(145deg, var(--branco-puro), #F8FAFC);
+      padding: 35px;
+      margin: 25px 0;
+      border: 6px solid var(--roxo-arcano);
+      box-shadow: 0 0 25px rgba(106, 13, 173, 0.2);
+      border-radius: 12px;
+      animation: fadeInMagic 0.6s ease-in;
+      position: relative;
+    }
+
+    .nivel::before {
+      content: "✨";
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.5em;
+      animation: sparkle 2s infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .nivel.active {
+      display: block;
+    }
+
+    @keyframes fadeInMagic {
+      from { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.95);
+        filter: blur(5px);
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    h2 {
+      font-size: 2em;
+      background: linear-gradient(45deg, var(--roxo-arcano), var(--dourado-runico));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 20px 0;
+      border-bottom: 3px solid var(--roxo-arcano);
+      padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Cinzel', serif;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      color: var(--roxo-escuro);
+      margin: 25px 0 15px;
+      padding-left: 15px;
+      border-left: 4px solid var(--roxo-claro);
+    }
+
+    h4 {
+      font-size: 1.15em;
+      color: var(--roxo-arcano);
+      margin: 15px 0 8px;
+    }
+
+    .card {
+      background: var(--branco-puro);
+      border-left: 5px solid var(--roxo-claro);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.15);
+    }
+
+    .conceito { 
+      border-left-color: var(--roxo-claro); 
+      background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(106, 13, 173, 0.05)); 
+    }
+    .desafio { 
+      border-left-color: var(--dourado-runico); 
+      background: linear-gradient(135deg, rgba(252, 211, 77, 0.12), rgba(252, 211, 77, 0.08)); 
+    }
+    .recompensa { 
+      border-left-color: var(--roxo-escuro); 
+      background: linear-gradient(135deg, rgba(76, 29, 149, 0.1), rgba(106, 13, 173, 0.08)); 
+    }
+    .armadilha { 
+      border-left-color: #EF4444; 
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.05)); 
+    }
+
+    pre {
+      background: linear-gradient(145deg, #F8FAFC, #E2E8F0);
+      padding: 20px;
+      border: 2px solid var(--roxo-escuro);
+      margin: 15px 0;
+      overflow-x: auto;
+      border-radius: 8px;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 0.92em;
+      color: #1E293B;
+      position: relative;
+    }
+
+    pre::before {
+      content: "🔮";
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.2em;
+    }
+
+    code {
+      background: rgba(106, 13, 173, 0.1);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: 'Fira Code', monospace;
+      color: var(--roxo-escuro);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.95em;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 15px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(106, 13, 173, 0.2);
+    }
+
+    th {
+      background: linear-gradient(135deg, var(--roxo-arcano), var(--roxo-claro));
+      color: var(--branco-puro);
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(167, 139, 250, 0.05);
+    }
+
+    tr:hover {
+      background: rgba(252, 211, 77, 0.15);
+    }
+
+    .progress-section {
+      margin: 30px 0;
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(145deg, var(--branco-puro), #F8FAFC);
+      border: 3px solid var(--roxo-claro);
+      border-radius: 15px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 35px;
+      background: linear-gradient(145deg, #F1F5F9, #E2E8F0);
+      border: 3px solid var(--roxo-arcano);
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 15px 0;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--roxo-arcano), var(--dourado-runico), var(--roxo-claro));
+      width: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco-puro);
+      font-weight: bold;
+      font-size: 1em;
+      transition: width 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-fill::after {
+      content: '⚡';
+      margin-left: 10px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.3); }
+    }
+
+    .xp-counter {
+      font-size: 1.2em;
+      color: var(--roxo-escuro);
+      font-weight: bold;
+      font-family: 'Cinzel', serif;
+    }
+
+    .emoji { font-size: 1.3em; margin-right: 8px; }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+      border-top: 4px solid var(--roxo-arcano);
+      color: var(--roxo-escuro);
+      background: linear-gradient(145deg, var(--branco-puro), #F8FAFC);
+      border-radius: 12px;
+      box-shadow: 0 -4px 20px rgba(106, 13, 173, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .nav-tabs { flex-direction: column; }
+      .nav-tabs button { width: 100%; }
+      h1 { font-size: 2.1em; }
+      h2 { font-size: 1.6em; }
+      .nivel { padding: 25px 20px; }
+      pre { font-size: 0.85em; }
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&family=Fira+Code:wght@400;500&display=swap');
+  </style>
+</head>
+<body>
+  <div class="reino">
+    <header>
+      <h1>⚛️ React: A Arte da Invocação Avançada</h1>
+      <p class="subtitulo">Construindo o futuro do site da Orcestra</p>
+      <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.7;">
+        Você dominou HTML (estrutura), CSS (beleza) e JavaScript (magia viva). Agora aprende 
+        <strong>React</strong>: a arte de criar <em>componentes reutilizáveis</em> para erguer 
+        castelos digitais como o futuro site da <strong>Orcestra</strong>.<br><br>
+        <strong>Objetivo secreto:</strong> Preparar todos para transformar nosso site atual 
+        (WordPress) em React moderno, escalável e medível.
+      </p>
+    </header>
+
+    <div class="nav-tabs">
+      <button class="nav-btn active" data-target="intro">🌀 Prólogo</button>
+      <button class="nav-btn" data-target="nivel0">Nível 0: Ritual</button>
+      <button class="nav-btn" data-target="nivel1">Nível 1: Componentes</button>
+      <button class="nav-btn" data-target="nivel2">Nível 2: Estado</button>
+      <button class="nav-btn" data-target="nivel3">Nível 3: Rotas</button>
+      <button class="nav-btn" data-target="nivel4">Nível 4: Formulários</button>
+      <button class="nav-btn" data-target="nivel5">Nível 5: API</button>
+      <button class="nav-btn" data-target="nivel6">Nível 6: Arquitetura</button>
+      <button class="nav-btn" data-target="boss">🐉 Boss Orcestra</button>
+      <div class="nav-btn" data-target="resumo">📜 Resumo Final</div>
+    </div>
+
+    <!-- PRÓLOGO -->
+    <div class="nivel active" id="intro">
+      <h2><span class="emoji">📜</span>Prólogo: Por que React para a Orcestra?</h2>
+      
+      <div class="card conceito">
+        <h4>🔮 O problema do WordPress atual</h4>
+        <p><strong>Repetição manual:</strong> Header, footer, cards de serviço, estrutura de blog – tudo copiado/colado entre páginas.</p>
+        <p><strong>Estado espalhado:</strong> Formulários, modais, filtros – cada página gerencia seu próprio JavaScript.</p>
+        <p><strong>Crescimento difícil:</strong> Adicionar novas seções, A/B tests, personalização – tudo é rebuild manual.</p>
+      </div>
+
+      <div class="card conceito">
+        <h4>⚛️ O que React resolve (para nosso caso)</h4>
+        <ul>
+          <li><strong>Componentes reutilizáveis:</strong> <code>&lt;Header /&gt;</code>, <code>&lt;ServicoCard /&gt;</code>, <code>&lt;BlogPost /&gt;</code> – uma vez, usa em todo lugar.</li>
+          <li><strong>Estado centralizado:</strong> Um <code>useState</code> controla formulário, modal, filtros – tudo re-renderiza automaticamente.</li>
+          <li><strong>Escalabilidade:</strong> WordPress como "headless CMS" + React SPA = velocidade + liberdade total de design.</li>
+        </ul>
+      </div>
+
+      <div class="progress-section">
+        <h3>Progresso da Invocação React</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressBar">0%</div>
+        </div>
+        <div class="xp-counter">XP Arcano: <span id="xpCounter">0</span> / 520</div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(106,13,173,0.1), rgba(167,139,250,0.2)); border-radius: 12px; border: 2px dashed var(--roxo-claro);">
+        <h3 style="color: var(--roxo-escuro); margin-bottom: 15px;">🎯 Missão da Trilha</h3>
+        <p style="font-size: 1.1em; margin-bottom: 15px;"><strong>Criar um protótipo da Landing Page da Orcestra em React</strong>, usando:</p>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto; font-size: 1em;">
+          <li>Componentes para header, hero, serviços, depoimentos</li>
+          <li>Formulário de contato funcional</li>
+          <li>Lista de conteúdos dinâmicos (simulando blog)</li>
+          <li>Estado global para leads e interações</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NÍVEL 0: SETUP -->
+    <div class="nivel" id="nivel0">
+      <h2><span class="emoji">🔮</span>Nível 0: O Ritual de Invocação (Setup)</h2>
+
+      <div class="card conceito">
+        <h4>npm create vite@latest orcestra-react -- --template react</h4>
+        <pre>npm install
+npm run dev</pre>
+        <p>Em 30 segundos você tem um ambiente React moderno, mais rápido que Create React App.</p>
+      </div>
+
+      <div class="card conceito">
+        <h4>JSX = HTML turbinado com JavaScript</h4>
+        <pre>function Header() {
+  return (
+    &lt;header&gt;
+      &lt;h1&gt;Orcestra&lt;/h1&gt;
+      &lt;nav&gt;Home | Serviços | Blog&lt;/nav&gt;
+    &lt;/header&gt;
+  );
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Portal React</h4>
+        <ol>
+          <li>Crie projeto: <code>npm create vite@latest meu-orcestra -- --template react</code></li>
+          <li>Substitua <code>App.jsx</code> por um <code>&lt;Header /&gt;</code> + <code>&lt;Hero /&gt;</code> simples</li>
+          <li>Veja funcionando em <code>http://localhost:5173</code></li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 +35 XP:</strong> Portal React aberto! O grimório arcano está pronto.
+      </div>
+    </div>
+
+    <!-- NÍVEL 1: COMPONENTES E PROPS -->
+    <div class="nivel" id="nivel1">
+      <h2><span class="emoji">🧩</span>Nível 1: Componentes e Props (Orcestra Edition)</h2>
+
+      <div class="card conceito">
+        <h4>Componentes = Legos do futuro site</h4>
+        <pre>function ServicoCard({ titulo, descricao, icone }) {
+  return (
+    &lt;div className="servico"&gt;
+      &lt;{icone} /&gt;
+      &lt;h3&gt;{titulo}&lt;/h3&gt;
+      &lt;p&gt;{descricao}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Cards de Serviços Orcestra</h4>
+        <ol>
+          <li>Crie <code>ServicoCard.jsx</code> com props</li>
+          <li>Crie array <code>servicosOrcestra</code> com 4 serviços reais da empresa</li>
+          <li>Renderize com <code>{servicos.map(ServicoCard)}</code></li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 +50 XP:</strong> Componentização dominada! Agora header, footer, cards são reutilizáveis.
+      </div>
+    </div>
+
+    <!-- NÍVEL 2: ESTADO -->
+    <div class="nivel" id="nivel2">
+      <h2><span class="emoji">🔄</span>Nível 2: Estado e Eventos (useState)</h2>
+
+      <div class="card conceito">
+        <h4>useState = memória mágica do componente</h4>
+        <pre>function HeroSection() {
+  const [showCta, setShowCta] = useState(false);
+  
+  return (
+    &lt;&gt;
+      &lt;h1&gt;Transformamos negócios&lt;/h1&gt;
+      &lt;button onClick={() => setShowCta(!showCta)}&gt;
+        {showCta ? "✨ Obrigado!" : "Fale conosco"}
+      &lt;/button&gt;
+    &lt;/&gt;
+  );
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: CTA Interativo Orcestra</h4>
+        <ol>
+          <li>Crie <code>HeroOrcestra.jsx</code> com botão que alterna mensagem</li>
+          <li>Adicione contador de cliques ("Você clicou X vezes")</li>
+          <li>Salve leads em array local (simulando banco)</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 +60 XP:</strong> Estado reativo! Formulários e interações agora têm memória.
+      </div>
+    </div>
+
+    <!-- NÍVEL 3: ROTAS -->
+    <div class="nivel" id="nivel3">
+      <h2><span class="emoji">🗺️</span>Nível 3: Navegação (React Router)</h2>
+
+      <div class="card conceito">
+        <h4>npm install react-router-dom</h4>
+        <pre>import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;nav&gt;
+        &lt;Link to="/"&gt;Home&lt;/Link&gt;
+        &lt;Link to="/servicos"&gt;Serviços&lt;/Link&gt;
+      &lt;/nav&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+        &lt;Route path="/servicos" element={&lt;Servicos /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Site Multi-página Orcestra</h4>
+        <ol>
+          <li>Configure 4 rotas: Home, Sobre, Serviços, Contato</li>
+          <li>Crie <code>Layout.jsx</code> com header/footer compartilhados</li>
+          <li>Menu de navegação funcional</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 +65 XP:</strong> Navegação SPA! URLs limpas sem reload.
+      </div>
+    </div>
+
+    <!-- NÍVEL 4: FORMULÁRIOS -->
+    <div class="nivel" id="nivel4">
+      <h2><span class="emoji">📝</span>Nível 4: Formulários Controlados</h2>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Formulário de Leads Orcestra</h4>
+        <ol>
+          <li>Crie <code>ContatoForm.jsx</code> com validação em tempo real</li>
+          <li>Estado para nome, email, telefone, mensagem</li>
+          <li>Botão habilita só com campos obrigatórios</li>
+          <li>Lista de leads capturados na mesma página</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 +70 XP:</strong> Leads sendo capturados! Forms funcionais como no site real.
+      </div>
+    </div>
+
+    <!-- NÍVEL 5: API -->
+    <div class="nivel" id="nivel5">
+      <h2><span class="emoji">🌐</span>Nível 5: Dados do WordPress (useEffect + fetch)</h2>
+
+      <div class="card conceito">
+        <h4>useEffect = "quando a tela carregar, busque dados"</h4>
+        <pre>function BlogList() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    fetch('https://orcestra.com.br/wp-json/wp/v2/posts')
+      .then(res => res.json())
+      .then(setPosts)
+      .finally(() => setLoading(false));
+  }, []);
+}</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Blog Dinâmico</h4>
+        <ol>
+          <li>Crie JSON local simulando posts do WordPress</li>
+          <li><code>BlogPostList.jsx</code> com loading + lista + erro</li>
+          <li>Página de detalhes <code>/blog/:id</code></li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 +75 XP:</strong> Headless CMS simulado! Preparado para WordPress real.
+      </div>
+    </div>
+
+    <!-- NÍVEL 6: ARQUITETURA -->
+    <div class="nivel" id="nivel6">
+      <h2><span class="emoji">🏛️</span>Nível 6: Arquitetura Profissional</h2>
+
+      <div class="card conceito">
+        <h4>Estrutura de pastas Orcestra</h4>
+        <pre>src/
+├── components/
+│   ├── common/     (Button, Card, Modal)
+│   ├── layout/     (Header, Footer, Layout)
+│   └── sections/   (Hero, Services, Testimonials)
+├── pages/
+├── hooks/
+├── services/
+├── data/
+└── utils/</pre>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Missão: Design System Orcestra</h4>
+        <ol>
+          <li>Crie <code>Button.jsx</code>, <code>Card.jsx</code>, <code>Section.jsx</code></li>
+          <li>Refatore todo app usando só componentes compartilhados</li>
+          <li>Adicione propTypes ou TypeScript básico</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa">
+        <strong>🏆 +80 XP:</strong> Arquitetura sênior! Código pronto para time grande.
+      </div>
+    </div>
+
+    <!-- BOSS FINAL: MINI ORCESTRA -->
+    <div class="nivel" id="boss">
+      <h2><span class="emoji">🐲</span>Boss Final: Landing Page Orcestra em React</h2>
+
+      <div class="card conceito">
+        <h4>Especificação completa (exatamente como o site real)</h4>
+        <ul>
+          <li>Header fixo com logo + menu responsivo + CTA</li>
+          <li>Hero com título + subtítulo + 2 CTAs + mockups</li>
+          <li>6 cards de serviços com ícones e hover effects</li>
+          <li>Seção depoimentos com carrossel simples</li>
+          <li>Blog preview (4 posts) com link para página completa</li>
+          <li>Formulário de contato com validação + lista de leads</li>
+          <li>Footer com links + copyright + redes sociais</li>
+        </ul>
+      </div>
+
+      <div class="card desafio">
+        <h4>🎯 Boss Mission: Clone funcional</h4>
+        <ol>
+          <li><strong>HTML/CSS/JS do portfólio</strong> → <strong>React completo</strong></li>
+          <li>Todas as rotas funcionando (Home, Serviços, Blog, Contato)</li>
+          <li>Design system com 8+ componentes reutilizáveis</li>
+          <li>Formulário salvando leads localmente</li>
+          <li>Blog mockado com navegação para detalhes</li>
+          <li>Mobile-first responsivo</li>
+          <li><strong>Deploy no Vercel/Netlify</strong> e compartilhar link</li>
+        </ol>
+      </div>
+
+      <div class="card recompensa" style="background: linear-gradient(135deg, var(--dourado-runico), #FBBF24); border-left-color: var(--branco-puro); color: var(--roxo-escuro);">
+        <h4 style="color: var(--roxo-escuro); margin-bottom: 15px;">🏆 GRANDE FINAL: +120 XP ARCANO</h4>
+        <p><strong>Você criou um protótipo funcional do site da Orcestra em React!</strong></p>
+        <p>Este código pode servir de <em>base real</em> para a migração oficial.</p>
+      </div>
+    </div>
+
+    <!-- RESUMO FINAL -->
+    <div class="nivel" id="resumo">
+      <h2><span class="emoji">👑</span>Epílogo: Mestre React da Orcestra</h2>
+
+      <table>
+        <tr><th>Nível</th><th>Missão</th><th>XP</th></tr>
+        <tr><td>0</td><td>Ritual (Vite)</td><td>35</td></tr>
+        <tr><td>1</td><td>Componentes/Props</td><td>50</td></tr>
+        <tr><td>2</td><td>Estado (useState)</td><td>60</td></tr>
+        <tr><td>3</td><td>React Router</td><td>65</td></tr>
+        <tr><td>4</td><td>Formulários</td><td>70</td></tr>
+        <tr><td>5</td><td>API + useEffect</td><td>75</td></tr>
+        <tr><td>6</td><td>Arquitetura</td><td>80</td></tr>
+        <tr><td>🐲</td><td><strong>Mini Orcestra</strong></td><td><strong>120</strong></td></tr>
+        <tr style="background: linear-gradient(135deg, var(--roxo-arcano), var(--roxo-claro)); color: var(--branco-puro);">
+          <td><strong>TOTAL</strong></td><td></td><td><strong>520 XP ARCANO</strong></td>
+        </tr>
+      </table>
+
+      <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, var(--roxo-claro), var(--dourado-runico)); border-radius: 12px; color: var(--branco-puro);">
+        <h3 style="margin-bottom: 20px;">🚀 Próximos Passos (Carreira Senior)</h3>
+        <ul style="font-size: 1.1em;">
+          <li><strong>Next.js:</strong> SSR + SEO para produção real</li>
+          <li><strong>State Global:</strong> Zustand ou Context API para app maior</li>
+          <li><strong>Design System:</strong> Storybook + Tailwind configurado</li>
+          <li><strong>WordPress Headless:</strong> Integração real com API do site atual</li>
+          <li><strong>Performance:</strong> Lazy loading, memoização, code splitting</li>
+          <li><strong>CI/CD:</strong> GitHub Actions + deploy automático</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, rgba(252,211,77,0.2), rgba(106,13,173,0.2)); border: 3px solid var(--dourado-runico); border-radius: 15px;">
+        <h3 style="color: var(--roxo-escuro);">🎖️ CERTIFICADO: ARQUITETO REACT DA ORCESTRA</h3>
+        <p style="font-size: 1.3em; margin-top: 15px; font-family: 'Cinzel', serif;">
+          Você está <strong>pronto para a migração real</strong> do site da Orcestra.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Capacitação Orcestra | Livro 4: React – A Invocação Avançada</p>
+    <p><em>Preparando a refatoração oficial do orcestra.com.br para React ⚛️</em></p>
+  </footer>
+
+  <script>
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const niveles = document.querySelectorAll('.nivel');
+    const xpMap = {
+      intro: 0,
+      nivel0: 35,
+      nivel1: 85,
+      nivel2: 145,
+      nivel3: 210,
+      nivel4: 280,
+      nivel5: 355,
+      nivel6: 435,
+      boss: 520,
+      resumo: 520
+    };
+
+    function updateProgress(xp) {
+      const total = 520;
+      const progressBar = document.getElementById('progressBar');
+      const xpCounter = document.getElementById('xpCounter');
+      const perc = Math.round((xp / total) * 100);
+      progressBar.style.width = perc + '%';
+      progressBar.textContent = perc + '%';
+      xpCounter.textContent = xp;
+    }
+
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        navButtons.forEach(b => b.classList.remove('active'));
+        niveles.forEach(n => n.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(target).classList.add('active');
+        updateProgress(xpMap[target] || 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    updateProgress(0);
+  </script>
+</body>
+</html>

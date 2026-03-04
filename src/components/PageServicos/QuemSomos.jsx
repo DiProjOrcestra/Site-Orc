@@ -6,7 +6,7 @@ const SobreInstitucional = () => {
     <section className="institucional-section">
 
       <div className="decor-images left">
-        <img src="" alt="" className="img-1" />
+        <img src="../../img/Frame-78.webp" alt="Imagem decorativa esquerda da Orc'estra" className="img-1" />
       </div>
 
       <div className="institucional-container">
@@ -27,7 +27,7 @@ const SobreInstitucional = () => {
 
       
       <div className="decor-images right">
-        <img src="" alt="" className="img-2" />
+        <img src="../../img/Frame-84.webp" alt="Imagem decorativa direita da Orc'estra" className="img-2" />
       </div>
     </section>
   );

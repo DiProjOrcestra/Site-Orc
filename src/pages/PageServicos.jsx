@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { SERVICOS } from '../data/servicos';
-import Hero from '../components/Hero';
-import ComoFunciona from '../components/ComoFunciona';
+import Hero from '../components/PageServicos/Hero';
+import ComoFunciona from '../components/PageServicos/ComoFunciona';
 import SecaoExtra from '../components/SecaoExtra'; 
-import Beneficios from '../components/Beneficios';
+import Beneficios from '../components/PageServicos/Beneficios';
 import SobreInstitucional from '../components/SobreInstitucional';
 import Projetos from '../components/Projetos';
 import Contato from '../components/Contato';

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { SERVICOS } from '../data/servicos';
+import { SERVICOS } from '../data/services';
 import Hero from '../components/PageServicos/Hero';
 import ComoFunciona from '../components/PageServicos/ComoFunciona';
 import SecaoExtra from '../components/SecaoExtra'; 

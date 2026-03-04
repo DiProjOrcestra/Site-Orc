@@ -3,6 +3,7 @@ export const SERVICOS = {
 
     
     name: "Desenvolvimento Gamificado",
+    imageHero: "../assets/imagem2orc.svg",
     texto1:"Transforme seu projeto de Desenvolvimento em uma experiência divertida e envolvente!",
     texto2:"Construa o seu site ou aplicativo utilizando técnicas de um desenvolvimento gamificado que vão trazer mais motivação e engajamento para os usuários da sua aplicação. Tudo isso feito por profissionais especializados no assunto e capacitados para atender a sua necessidade.",
     
@@ -64,6 +65,7 @@ export const SERVICOS = {
   "consultoria-gamificada": {
             
     name: "Consultoria Gamificada",
+    imageHero: "../assets/Imagem1orc.svg",
     texto1:"Torne sua gamificação mais eficiente",
     texto2:"Tenha a garantia de que a sua gamificação está funcionando com o seu potencial máximo e sem trazer o efeito contrário, por meio de uma consultoria com profissionais especializados na área.",
     
@@ -123,6 +125,7 @@ export const SERVICOS = {
 
     
     name: "Concepção de Software",
+    imageHero: "../assets/imagem3orc.svg",
     texto1:"Deixe a sua ideia pronta para o desenvolvimento!",
     texto2:"Tenha um olhar profissional sobre sua solução e receba todo o material necessário para tirar a sua ideia do papel usando uma técnica inovadora.Tudo isso por um custo mais acessível!",
     
@@ -170,6 +173,7 @@ export const SERVICOS = {
 
     
     name: "Treinamentos Gamificados",
+    imageHero: "../assets/imagem4orc.svg",
     texto1:"Traga novos aprendizados para a sua equipe!",
     texto2:"Forneça à sua equipe um treinamento gamificado que reúne conceitos teóricos e práticos com o intuito de aumentar o engajamento e potencializar resultados. Para isso, utilize já técnicas validadas pelo mercado e melhore o desempenho do seu time.",
 
@@ -236,6 +240,7 @@ export const SERVICOS = {
 
     
     name: "Desenvolvimento Gamificado",
+    imageHero: "../assets/imagem5orc.svg",
     texto1:"Motive mais o seu público para alcançar o seu objetivo",
     texto2:"Construímos uma Gamificação totalmente personalizada e original, com técnicas inovadoras que vão trazer mais motivação para seu público. Tudo isso por um custo que você consegue arcar!",
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 
-const Hero = ({ name, texto1, texto2, image, buttonText }) => {
+const Hero = ({ name, texto1, texto2}) => {
   return (
     <section className="hero-container">
       <div className="hero-content">
@@ -14,7 +14,7 @@ const Hero = ({ name, texto1, texto2, image, buttonText }) => {
       </div>
       
       <div className="hero-image-container">
-        <img src={image} alt={`Ilustração de ${name}`} />
+        <img src="" alt={`Ilustração de ${name}`} />
       </div>
     </section>
   );

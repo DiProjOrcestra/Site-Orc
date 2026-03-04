@@ -36,7 +36,7 @@ const ServicePage = () => {
         name={dados.name}
         texto1={dados.texto1}
         texto2={dados.texto2}
-        image={dados.image}
+        image={dados.imageHero}
       />
 
       <ComoFunciona 

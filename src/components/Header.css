@@ -1,7 +1,6 @@
 .header {
   background-color: #2EB600;
-  padding-left: 1rem;
-  padding-right: 2rem;
+  padding: 0.25rem 2rem 0.25rem 1rem;
   font-family: 'Ubuntu', sans-serif;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
@@ -16,7 +15,7 @@
 }
 
 .logo {
-  max-width: 150px; /* ajuste conforme o tamanho da sua logo */
+  max-width: 150px; 
   height: auto;
 }
 
@@ -40,4 +39,49 @@
   transform: scale(1.2);
 }
 
+.nav-menu .dropdown{
+  position: relative;
+}
 
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 100%;
+  left: -30%;
+  background-color: #2EB600;
+  min-width: 240px;
+  min-height: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 1rem 0.5rem 1rem 0.5rem ;
+  margin: 0;
+  z-index: 1000;
+}
+
+.nav-menu .dropdown-menu li {
+  width: 100%;
+}
+
+.nav-menu .dropdown-menu a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: #003D0D;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  font-weight: bold; /* ou o peso desejado */
+  transform: none; /* remove o scale do hover global */
+  line-height: 1.5;
+}
+
+.nav-menu .dropdown-menu a:hover {
+  color: #fff;
+  transform: none; /* mantém sem escala */
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: flex;
+}

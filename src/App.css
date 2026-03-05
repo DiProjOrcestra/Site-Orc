@@ -17,6 +17,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  width: 100%;
 }
 
 .overlay {
@@ -39,11 +40,15 @@
 /* Os cubos (retangulos, n sei) --> (Filho)*/
 .metric-card {
   border: 1px solid #3bc90c;
-  padding: 30px 50px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: center;
   color: white;
   backdrop-filter: blur(4px);
   transition: 0.4s ease;
+  width: 280px;
 }
 
 .metric-card:hover {
@@ -52,10 +57,17 @@
 }
 
 .metric-card h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 32px;
 }
 
 .metric-card p {
-  font-size: 1.1rem;
+  font-size: 20px;
+}
+
+@media (max-width: 768px){
+  .metrics-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

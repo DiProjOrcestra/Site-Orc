@@ -27,6 +27,8 @@ const ServicePage = ({ DadosManuais }) => {
 
   return (
     <main className="service-page-wrapper">
+      <Header></Header>
+
       <Hero 
         name={dados.name}
         texto1={dados.texto1}

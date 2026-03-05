@@ -6,7 +6,6 @@ import ComoFunciona from '../components/PageServicos/ComoFunciona';
 import Beneficios from '../components/PageServicos/Beneficios';
 import SobreInstitucional from '../components/PageServicos/QuemSomos';
 import Projetos from '../components/PageServicos/Projetos';
-import Header from '../components/Header';
 
 
 
@@ -17,7 +16,7 @@ const ServicePage = ({ DadosManuais }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id, DadosManuais]);
+  }, [id]);
 
   if (!dados) {
     return (
@@ -29,7 +28,6 @@ const ServicePage = ({ DadosManuais }) => {
 
   return (
     <main className="service-page-wrapper">
-      <Header></Header>
 
       <Hero 
         name={dados.name}

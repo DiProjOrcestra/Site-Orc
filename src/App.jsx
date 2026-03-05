@@ -4,7 +4,7 @@ import { SERVICOS } from './data/services'; // Importe seus dados
 
 function App() {
   // Simulamos o que o useParams faria, pegando um serviço direto do objeto
-  const servicoParaTeste = SERVICOS["desenvolvimento-gamificado"]; // Substitua pela chave do serviço que deseja testar
+  const servicoParaTeste = SERVICOS["design-de-gamificacao"]; // Substitua pela chave do serviço que deseja testar
 
   return (
     <div className="App">

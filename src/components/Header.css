@@ -1,0 +1,43 @@
+.header {
+  background-color: #2EB600;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 150px; /* ajuste conforme o tamanho da sua logo */
+  height: auto;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  padding: 0;
+  margin: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #003D0D;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block; 
+}
+
+.nav-menu a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+

@@ -1,20 +1,26 @@
 import React from "react";
-import "./Hero.css";
+import "../../css/Hero.css";
 
-const Hero = ({ name, texto1, texto2}) => {
+const Hero = ({ name, texto1, texto2, image }) => {
   return (
     <section className="hero-container">
       <div className="hero-content">
+    
         <h1 className="hero-name">{name}</h1>
+        
         <p className="hero-subtitle">{texto1}</p>
         <p className="hero-description">{texto2}</p>
-        <button onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}>
-            Entre em Contato
+        
+        <button 
+          className="hero-btn-contato"
+          onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}
+        >
+          Entre em Contato
         </button>
       </div>
       
       <div className="hero-image-container">
-        <img src="" alt={`Ilustração de ${name}`} />
+        <img src={image} alt={`Ilustração de ${name}`} className="hero-main-image" />
       </div>
     </section>
   );

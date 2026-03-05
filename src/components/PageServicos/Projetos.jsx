@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Projetos.css';
+import '../../css/Projetos.css';
 
 const Projetos = ({ titulo, lista }) => {
   return (

@@ -1,0 +1,88 @@
+:root {
+  /* Cores oficiais extraídas do Elementor da Orc'estra */
+  --e-global-color-primary: #3BC90C; /* Verde vibrante oficial */
+  --e-global-color-text: #032100;    /* Verde quase preto para textos */
+  
+  /* Tipografia oficial */
+  --e-global-typography-primary-font-family: "Ubuntu"; /* */
+  --e-global-typography-primary-font-weight: 600;      /* */
+}
+
+.hero-container {
+  display: flex; /* */
+  flex-direction: row; /* */
+  align-items: center; /* */
+  justify-content: center; /* */
+  min-height: 600px; /* */
+  gap: 5%; /* Espaçamento exato entre texto e imagem */
+  padding: 0 10%;
+  
+  /* Cores aplicadas conforme o kit Elementor */
+  background-color: var(--e-global-color-primary); /* #3BC90C */
+  color: var(--e-global-color-text); /* #032100 */
+  font-family: var(--e-global-typography-primary-font-family), sans-serif; /* Ubuntu */
+}
+
+.hero-name {
+  font-size: 4rem; /* Tamanho aproximado para h1 */
+  font-weight: var(--e-global-typography-primary-font-weight); /* 600 */
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  font-size: 1rem; /* Baseado no 15px/1rem do CSS extraído */
+  line-height: 1.65em; /* */
+  max-width: 550px;
+  margin-bottom: 40px;
+}
+
+.hero-content button {
+  /* Cores oficiais extraídas do kit */
+  background-color: #032100; /* Verde escuro do texto global */
+  color: #3BC90C;            /* Verde primário vibrante */
+  
+  /* Tipografia e Espaçamento */
+  font-family: "Ubuntu", sans-serif; /* */
+  font-weight: 600;                 /* */
+  font-size: 1rem;
+  line-height: 1.85;                /* */
+  
+  /* Formato e Estilo */
+  padding: 15px 45px;
+  border-radius: 50px;              /* Bordas arredondadas do site oficial */
+  border: none;
+  cursor: pointer;
+  
+  /* Efeitos Interativos */
+  transition: all 0.3s ease;
+  text-transform: none;             /* Mantém o texto como digitado */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content button:hover {
+  /* Efeito de inversão ou brilho comum em botões da Orc'estra */
+  background-color: #052d00;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content button:active {
+  transform: translateY(0);
+}
+
+/* Ajuste para mobile conforme a regra wrap-mobile identificada */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-wrap: wrap; /* */
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

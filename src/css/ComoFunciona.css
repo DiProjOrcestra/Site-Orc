@@ -1,0 +1,40 @@
+.detalhamento-container {
+  padding: 80px 10%;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.detalhamento-titulo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.passos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas como no print */
+  gap: 30px;
+}
+
+.passo-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: -6px 0px 10px 0px rgba(38.891868737262236, 243.9234375, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+}
+
+.passo-numero {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #4dbb3e;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.passo-texto h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
-import './SobreInstitucional.css';
+import '../../css/QuemSomos.css';
 
 const SobreInstitucional = () => {
   return (
     <section className="institucional-section">
 
       <div className="decor-images left">
-        <img src="../../img/Frame-78.webp" alt="Imagem decorativa esquerda da Orc'estra" className="img-1" />
+        <img src="/img/Frame-78.jpg" alt="Imagem decorativa esquerda da Orc'estra" className="img-1" />
       </div>
 
       <div className="institucional-container">
@@ -27,7 +27,7 @@ const SobreInstitucional = () => {
 
       
       <div className="decor-images right">
-        <img src="../../img/Frame-84.webp" alt="Imagem decorativa direita da Orc'estra" className="img-2" />
+        <img src="/img/Frame-84.jpg" alt="Imagem decorativa direita da Orc'estra" className="img-2" />
       </div>
     </section>
   );

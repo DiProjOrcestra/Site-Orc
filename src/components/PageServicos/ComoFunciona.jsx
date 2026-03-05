@@ -1,5 +1,5 @@
 import React from 'react';
-import './ComoFunciona.css';
+import '../../css/ComoFunciona.css';
 
 const ComoFunciona = ({ titulo, funcionamento, passos }) => {
   return (

@@ -1,0 +1,41 @@
+.beneficios-section {
+  padding: 80px 10%;
+}
+
+.beneficios-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.beneficios-left {
+  flex: 1;
+  max-width: 450px;
+}
+
+.beneficios-titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.beneficios-left button {
+  background-color: #4dbb3e;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.beneficios-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.beneficio-item p {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+}

@@ -1,0 +1,44 @@
+.institucional-section {
+  background-color: #4dbb3e;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.institucional-container {
+  max-width: 700px;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+}
+
+.institucional-block h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.institucional-block p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+/* As imagens "Frames" das laterais */
+.decor-images {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+}
+
+.decor-images.left { left: -50px; }
+.decor-images.right { right: -50px; }
+
+.decor-images img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.2));
+}

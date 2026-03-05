@@ -1,5 +1,5 @@
 import React from 'react';
-import './Beneficios.css';
+import '../../css/Beneficios.css';
 
 const Beneficios = ({ titulo, intro, lista }) => {
   return (

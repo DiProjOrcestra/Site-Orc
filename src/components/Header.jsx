@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Header.css';
-import logo from '../../public/assets/logo.png';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,16 +12,19 @@ const Header = () => {
     <header className="header">
       <div className="logo-container">
         <a href="/">
-          <img src={logo} alt="Orcestra Gamificação" className="logo" />
+          <img src="/assets/logo.png" alt="Orcestra Gamificação" className="logo" />
         </a>
       </div>
 
-      {/* Botão Hambúrguer */}
-      <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        
+      {/* Botão Hambúrguer com imagem PNG */}
+      <button className="hamburger" onClick={toggleMenu}>
+        <img 
+          src={menuOpen ? "/assets/close.png" : "/assets/hamburguer.png"} 
+          alt={menuOpen ? "Fechar menu" : "Abrir menu"}
+          className="hamburger-icon"
+        />
       </button>
 
-      {/* Menu de navegação */}
       <nav className={`nav-menu ${menuOpen ? 'show' : ''}`}>
         <ul>
           <li><a href="/">Início</a></li>

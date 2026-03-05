@@ -6,6 +6,8 @@ import ComoFunciona from '../components/PageServicos/ComoFunciona';
 import Beneficios from '../components/PageServicos/Beneficios';
 import SobreInstitucional from '../components/PageServicos/QuemSomos';
 import Projetos from '../components/PageServicos/Projetos';
+import Header from '../components/Header';
+
 
 
 const ServicePage = ({ DadosManuais }) => {

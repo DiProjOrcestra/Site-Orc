@@ -71,3 +71,8 @@
     align-items: center;
   }
 }
+@media (max-width: 390px) {
+  .metric-card{
+    width: 220px;
+  }
+}

@@ -1,0 +1,176 @@
+.header {
+  background-color: #2EB600;
+  padding: 0.25rem 2rem 0.25rem 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 150px; 
+  height: auto;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  padding: 0;
+  margin: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #003D0D;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block; 
+}
+
+.nav-menu a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.nav-menu .dropdown{
+  position: relative;
+}
+
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 100%;
+  left: -30%;
+  background-color: #2EB600;
+  min-width: 240px;
+  min-height: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 1rem 0.5rem 1rem 0.5rem ;
+  margin: 0;
+  z-index: 1000;
+}
+
+.nav-menu .dropdown-menu li {
+  width: 100%;
+}
+
+.nav-menu .dropdown-menu a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: #003D0D;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  font-weight: bold; /* ou o peso desejado */
+  transform: none; /* remove o scale do hover global */
+  line-height: 1.5;
+}
+
+.nav-menu .dropdown-menu a:hover {
+  color: #fff;
+  transform: none; /* mantém sem escala */
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Botão Hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #003D0D;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger.open span:first-child {
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Media Query para telas pequenas (mobile) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* exibe o botão */
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2EB600;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 5;
+  }
+
+  .nav-menu.show {
+    transform: translateX(0);
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  /* Ajustes para o dropdown em mobile */
+  .nav-menu .dropdown {
+    position: static;
+  }
+
+  .nav-menu .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    min-height: auto;
+    background-color: transparent;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    display: none;
+  }
+
+  /* Mantém o hover para telas que suportam (opcional) */
+  .nav-menu .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}

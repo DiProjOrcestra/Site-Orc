@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../css/Projetos.css';
 
 const Projetos = ({ titulo, lista }) => {
@@ -16,25 +16,15 @@ const Projetos = ({ titulo, lista }) => {
 };
 
 const ProjetoCard = ({ projeto }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div 
       className="projeto-card"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       style={{ backgroundImage: `url(${projeto.image})` }}
     >
-
-      <h3 className={`projeto-name ${isHovered ? 'hidden' : ''}`}>
-        {projeto.name}
-      </h3>
-
-      {isHovered && (
-        <div className="projeto-overlay">
-          <p className="projeto-resumo">{projeto.resumo}</p>
-        </div>
-      )}
+      <div className="projeto-overlay">
+        <h3 className="projeto-name">{projeto.name}</h3>
+        <p className="projeto-resumo">{projeto.resumo}</p>
+      </div>
     </div>
   );
 };

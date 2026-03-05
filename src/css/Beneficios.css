@@ -96,7 +96,7 @@
   position: relative;
 }
 
-/* Linha verde decorativa para TODOS os itens */
+
 .beneficio-item p::after {
   content: '';
   position: absolute;
@@ -109,17 +109,17 @@
   transition: width 0.4s ease-in-out;
 }
 
-/* Efeito hover - linha expande até 100% para TODOS os itens */
+
 .beneficio-item:hover p::after {
   width: 100%;
 }
 
-/* Remove a borda do último item (opcional - se quiser manter com borda, é só remover esta regra) */
+
 .beneficio-item:last-child p {
-  border-bottom: 1px solid #f0f0f0; /* Mantém a borda no último item */
+  border-bottom: 1px solid #f0f0f0; 
 }
 
-/* Responsividade */
+
 @media (max-width: 992px) {
   .beneficios-section {
     padding: 60px 5%;

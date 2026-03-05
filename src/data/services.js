@@ -45,19 +45,19 @@ export const SERVICOS = {
         id: 1, 
         name: "Adote um postinho", 
         resumo: "O Adote um Postinho foi um projeto voltado para a fiscalização e verificação do andamento das resoluções de problemas dentro das UBS. Nosso avatar postinho é um cara amigável que incentiva o usuário a se tornar um voluntário para acompanhar o surgimento novos problemas e ajudar em soluções, buscando ter uma comunidade mais colaborativa e transparente com o sistema de saúde.",
-        image: "/caminho/para/imagem.jpg"
+        image: "/img/Adote-um-postinho.png"
       },
       {
         id: 2, 
         name: "Hakuna Matata", 
         resumo: "O Hakuna consistiu em uma plataforma de educação gamificada na qual os usuários poderiam ter acessos a diversos conteúdos voltados para a área de gerenciamento de projetos. A plataforma tem como tema central uma savana, onde foram criadas várias trilhas de conteúdo com temáticas diferentes para aumentar o engajamento dos usuários e sua motivação para avançar e terminar essas trilhas.",
-        image: "/caminho/para/imagem.jpg"
+        image: "/img/Hakuna-Matata.png"
       },
       {
         id: 3, 
         name: "Four Seasons", 
         resumo: "O objetivo do projeto foi trabalhar a temática de Educação Ambiental de uma forma mais lúdica e divertida, para isso a equipe do projeto desenvolveu uma plataforma web em formato de jogo de tabuleiro trazendo em cada uma das casas do jogo perguntas sobre a temática, assim proporcionando mais comprometimento dos membros da empresa a estarem se capacitando para ganhar cada vez mais pontos.",
-        image: "/caminho/para/imagem.jpg"
+        image: "/img/Four-seasons.png"
       }
     ]
 

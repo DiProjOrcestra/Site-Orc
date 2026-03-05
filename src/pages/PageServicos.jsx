@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom'; 
 import { SERVICOS } from '../data/services';
 import Hero from '../components/PageServicos/Hero';
 import ComoFunciona from '../components/PageServicos/ComoFunciona';
@@ -8,19 +9,18 @@ import Projetos from '../components/PageServicos/Projetos';
 
 
 const ServicePage = ({ DadosManuais }) => {
+  const { id } = useParams();
   
-  // CORREÇÃO: Remova a referência ao 'id', use apenas o que vem da Prop
-  const dados = DadosManuais;
+  const dados = DadosManuais || SERVICOS[id];
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [id, DadosManuais]);
 
   if (!dados) {
     return (
-      <div style={{ padding: '100px', textAlign: 'center' }}>
-        <h1>Aguardando dados de teste...</h1>
-        <p>Certifique-se de que o App.jsx está passando o serviço corretamente.</p>
+      <div style={{ padding: '100px', textAlign: 'center', color: '#032100' }}>
+        <h1>Serviço não encontrado!</h1>
       </div>
     );
   }
@@ -53,7 +53,6 @@ const ServicePage = ({ DadosManuais }) => {
         lista={dados.projetos}
       />
 
-      
     </main>
   );
 };

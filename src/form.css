@@ -104,6 +104,19 @@ input:focus, select:focus, textarea:focus {
   margin-top: 5px;
   border-color: #ff4d4d;
 }
+
+.field-error {
+  border-color: #ff4d4d !important;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #3bc90c !important; 
+    box-shadow: 0 0 5px rgba(59, 201, 12, 0.5) !important;
+}
+
 ::placeholder{
     color: #bcbaba;
     opacity: 1; 

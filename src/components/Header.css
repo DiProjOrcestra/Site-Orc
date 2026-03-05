@@ -85,3 +85,92 @@
 .nav-menu .dropdown:hover .dropdown-menu {
   display: flex;
 }
+
+/* Botão Hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #003D0D;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger.open span:first-child {
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Media Query para telas pequenas (mobile) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* exibe o botão */
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2EB600;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 5;
+  }
+
+  .nav-menu.show {
+    transform: translateX(0);
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  /* Ajustes para o dropdown em mobile */
+  .nav-menu .dropdown {
+    position: static;
+  }
+
+  .nav-menu .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    min-height: auto;
+    background-color: transparent;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    display: none;
+  }
+
+  /* Mantém o hover para telas que suportam (opcional) */
+  .nav-menu .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}

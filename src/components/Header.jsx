@@ -1,16 +1,29 @@
+import React, { useState } from 'react';
 import './Header.css';
-import logo from '../assets/logo.png'; 
+import logo from '../assets/logo.png';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
-        <div className="logo-container">
-            <a href="/">
-              <img src={logo} alt="Orcestra Gamificação" className="logo" />
-            </a>
-        </div>
-      <nav className="nav-menu">
-       
+      <div className="logo-container">
+        <a href="/">
+          <img src={logo} alt="Orcestra Gamificação" className="logo" />
+        </a>
+      </div>
+
+      {/* Botão Hambúrguer */}
+      <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        
+      </button>
+
+      {/* Menu de navegação */}
+      <nav className={`nav-menu ${menuOpen ? 'show' : ''}`}>
         <ul>
           <li><a href="/">Início</a></li>
           <li className='dropdown'>
@@ -29,7 +42,6 @@ const Header = () => {
           <li><a href="/blog">Blog</a></li>
         </ul>
       </nav>
-
     </header>
   );
 };

@@ -26,6 +26,13 @@ const ContactForm = () => {
 
 
       <form onSubmit={handleSubmit(onSubmit)} className="react-form-styled">
+
+        {Object.keys(errors).length > 0 && (
+          <div className="form-error-style">
+            Ocorreu um problema com o seu formulário. Erros marcados abaixo.
+          </div>
+        )}
+
         <div className="fields-grid">
           <div className="field-group width-50">
             <label>Qual o seu nome? <span>*</span></label>

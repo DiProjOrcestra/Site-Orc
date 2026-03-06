@@ -1,3 +1,4 @@
+/* ========== ESTILOS BASE (DESKTOP) ========== */
 .header {
   background-color: #2EB600;
   padding: 0.25rem 2rem 0.25rem 1rem;
@@ -7,6 +8,8 @@
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
+  position: relative; 
+  z-index: 10;
 }
 
 .logo-container {
@@ -80,12 +83,12 @@
 }
 
 .hamburger {
-  display: none; 
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 20; 
 }
 
 .hamburger-icon {
@@ -93,62 +96,100 @@
   height: 40px;
 }
 
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    z-index: 30;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 15; 
+    animation: fadeIn 0.3s ease;
   }
 
   .nav-menu {
-    display: none;
-    position: absolute; /* muda para absolute em relação ao header */
-    top: 100%;          /* fica exatamente abaixo do header */
-    left: 0;
-    width: 100%;
-    height: calc(100vh - [altura do header]); /* opcional: ocupar o resto da tela */
-    background-color: rgba(46, 182, 0, 0.95);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    z-index: 1000;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -280px; 
+    width: 280px;
+    height: 100%;
+    background-color: #2EB600;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    z-index: 20;
+    transition: right 0.3s ease-in-out;
+    padding: 2rem 1rem;
+    overflow-y: auto; 
   }
 
   .nav-menu.show {
-    display: flex;
+    right: 0; 
   }
 
   .nav-menu ul {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     width: 100%;
-    text-align: center;
-    margin: 0;
+    margin: 4rem 0 0 0;
     padding: 0;
+    text-align: left;
   }
 
   .nav-menu a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: #003D0D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
   }
 
   .nav-menu .dropdown {
-    position: static;
+    display: none;
+    position: relative;
   }
 
   .nav-menu .dropdown-menu {
+    display: none;
     position: static;
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.1);
     box-shadow: none;
     min-height: auto;
-    padding: 1rem 0;
-    display: none; /* escondido por padrão */
+    padding: 0.5rem 0 0.5rem 1rem;
+    margin-top: 0.5rem;
   }
 
-  .nav-menu .dropdown:hover .dropdown-menu {
-    display: flex; /* ainda funciona para mouse */
+  .nav-menu .dropdown.open .dropdown-menu {
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-menu .dropdown-menu a {
-    justify-content: center;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .nav-menu .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .nav-menu .dropdown span {
+    display: block;
+    padding: 0.5rem 0;
+    color: #003D0D;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 }

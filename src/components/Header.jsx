@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importação necessária
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false); // Fecha o menu ao clicar num link
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setDropdownOpen(false);
+  };
+
+  const toggleDropdown = (e) => {
+    e.stopPropagation();
+    if (window.innerWidth <= 768) {
+      setDropdownOpen(!dropdownOpen);
+    }
+  };
 
   return (
     <header className="header">
@@ -18,18 +29,20 @@ const Header = () => {
 
       <button className="hamburger" onClick={toggleMenu}>
         <img 
-          src={menuOpen ? "/assets/close.png" : "/assets/hamburguer.png"} 
-          alt={menuOpen ? "Fechar menu" : "Abrir menu"}
+          src="/assets/hamburguer.png" 
+          alt="Abrir menu"
           className="hamburger-icon"
         />
       </button>
 
+      {menuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
+
       <nav className={`nav-menu ${menuOpen ? 'show' : ''}`}>
         <ul>
           <li><Link to="/" onClick={closeMenu}>Início</Link></li>
-          <li className='dropdown'>
-            <span>Serviços</span>
-            <ul className='dropdown-menu'>
+          <li className={`dropdown ${dropdownOpen ? 'open' : ''}`}>
+            <span onClick={toggleDropdown}>Serviços</span>
+            <ul className="dropdown-menu">
               <li><Link to="/servicos/consultoria-gamificada" onClick={closeMenu}>Consultoria Gamificada</Link></li>
               <li><Link to="/servicos/desenvolvimento-gamificado" onClick={closeMenu}>Desenvolvimento Gamificado</Link></li>
               <li><Link to="/servicos/concepção-de-software" onClick={closeMenu}>Concepção de Software</Link></li>

@@ -154,6 +154,8 @@
   .hamburger {
     display: block;
     z-index: 30;
+    position: fixed;
+    right: 2rem;
   }
 
   .menu-overlay {

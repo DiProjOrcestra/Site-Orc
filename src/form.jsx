@@ -37,7 +37,7 @@ const ContactForm = () => {
           <div className="field-group width-50">
             <label>Qual o seu nome? <span>*</span></label>
             <input
-              {...register("nome", { required: "Esse campo é obrigatório." })}
+              {...register("nome", { required: "Esse campo é obrigatório.", validate: (value) => value.trim().split(" ").length >= 2 || "Preencha nome e sobrenome"})}
               placeholder="Nome"
               className={errors.nome ? "field-error" : ""}
             />

@@ -9,17 +9,11 @@ import Header from './components/Header'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      {/* O Header fica aqui para ser fixo em todas as páginas */}
       <Header /> 
       
       <Routes>
-        {/* Rota para a sua Home ou componente App atual */}
         <Route path="/" element={<App />} />
-        
-        {/* Rota dinâmica para as páginas de serviço da Orc'estra */}
         <Route path="/servicos/:id" element={<ServicePage />} />
-        
-        {/* Rota de fallback caso o usuário digite algo errado */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>

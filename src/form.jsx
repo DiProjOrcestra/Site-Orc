@@ -55,7 +55,7 @@ const ContactForm = () => {
           <div className="field-group width-50">
             <label>Qual o seu nome? <span>*</span></label>
             <input
-              {...register("nome", { required: "Esse campo é obrigatório.", validate: (value) => value.trim().split(" ").length >= 2 || "Preencha nome e sobrenome"})}
+              {...register("nome", { required: "Esse campo é obrigatório.", validate: (value) => value.trim().split(" ").length >= 2 || "Preencha nome e sobrenome", maxLength: {value: 100, message: "O nome deve conter no máximo 100 caracteres."} })}
               placeholder="Nome"
               className={errors.nome ? "field-error" : ""}
             />
@@ -71,7 +71,7 @@ const ContactForm = () => {
                 pattern: {
                   value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                   message: "Por favor, insira um e-mail válido."
-                }
+                }, maxLength: {value: 250, message: "O e-mail deve conter no máximo 250 caracteres."} 
               })}
               placeholder="E-mail"
               className={errors.email ? "field-error" : ""}
@@ -116,11 +116,14 @@ const ContactForm = () => {
             <label>Qual seu telefone? <span>*</span></label>
             <input
               type="tel"
-              {...register("telefone", { required: "Esse campo é obrigatório.",
+              {...register("telefone", { required: "Esse campo é obrigatório.", onChange: (e) => {
+                const value = e.target.value.replace(/\D/g, "");
+                e.target.value = value;
+              },
                   pattern: {
-                    value: /^[0-9]{10,11}$/,
+                    value: /^\d{10,11}$/,
                     message: "Insira o DDD seguido do número, sem espaços ou caracteres especiais. Ex: 11987654321"
-                  }
+                  }, maxLength: {value: 11, message: "O telefone deve conter no máximo 11 dígitos."}
               })}
               placeholder="Telefone"
               className={errors.telefone ? "field-error" : ""}
@@ -132,7 +135,7 @@ const ContactForm = () => {
           <div className="field-group width-100">
             <label>Nos conte um pouco sobre sua necessidade <span>*</span></label>
             <textarea
-              {...register("mensagem", { required: "Esse campo não pode estar em branco." })}
+              {...register("mensagem", { required: "Esse campo não pode estar em branco.", maxLength: {value: 1000 , message: "A mensagem não pode exceder 1000 caracteres."} })}
               placeholder="Mensagem"
               className={errors.mensagem ? "field-error" : ""}
             />

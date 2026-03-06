@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@300;400;500;700&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
+  font-family: "Ubuntu", Sans-serif;
 }
 
 .form-container-main {
@@ -22,6 +25,7 @@
   flex-direction: column;
   align-items: initial;
   padding: 10px 0px;
+  width: 60%;
 }
 
 .h2 {
@@ -50,6 +54,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  padding-top: 50px;
 }
 
 .field-group {

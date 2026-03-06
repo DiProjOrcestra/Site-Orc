@@ -194,6 +194,9 @@ textarea:focus {
   background-color: #3bc90c;
   opacity: 0.9;
 }
+.btn-submit:focus{
+  outline: none;
+}
 
 textarea {
   width: 100%;

@@ -20,7 +20,7 @@
   flex-direction: column;
   gap: 30px; 
   width: 100%;
-  padding: 40px 20px; 
+  padding: 40px 60px;
 }
 
 .institucional-block h2 {
@@ -40,7 +40,7 @@
   margin-bottom: 15px; 
   opacity: 0.9;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 
@@ -91,10 +91,12 @@
 
 .decor-images.left {
   left: 0;
+  margin-right: 50px;
 }
 
 .decor-images.right {
   right: 0;
+  margin-left: 50px;
 }
 
 .decor-images img {
@@ -108,6 +110,18 @@
   .decor-images {
     width: 350px;
   }
+  
+  .decor-images.left {
+    margin-right: 40px;
+  }
+  
+  .decor-images.right {
+    margin-left: 40px;
+  }
+  
+  .institucional-container {
+    padding: 40px 50px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -115,9 +129,17 @@
     width: 300px;
   }
   
+  .decor-images.left {
+    margin-right: 30px;
+  }
+  
+  .decor-images.right {
+    margin-left: 30px;
+  }
+  
   .institucional-container {
     max-width: 600px;
-    padding: 35px 20px;
+    padding: 35px 40px;
   }
   
   .institucional-block p {
@@ -125,11 +147,30 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .decor-images {
+    width: 240px;
+  }
+  
+  .decor-images.left {
+    margin-right: 35px;
+  }
+  
+  .decor-images.right {
+    margin-left: 35px;
+  }
+  
+  .institucional-container {
+    max-width: 550px;
+    padding: 35px 50px;
+  }
+}
+
 @media (max-width: 992px) {
   .institucional-container {
     max-width: 550px;
     gap: 25px; 
-    padding: 30px 20px; 
+    padding: 30px 50px;
   }
 
   .institucional-block h2 {
@@ -143,7 +184,15 @@
   }
 
   .decor-images {
-    width: 250px;
+    width: 220px;
+  }
+  
+  .decor-images.left {
+    margin-right: 25px;
+  }
+  
+  .decor-images.right {
+    margin-left: 25px;
   }
   
   .institucional-container button {
@@ -157,11 +206,21 @@
   }
 }
 
+@media (max-width: 850px) {
+  .decor-images {
+    display: none;
+  }
+  
+  .institucional-container {
+    padding: 30px 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .institucional-container {
     max-width: 100%;
     gap: 20px; 
-    padding: 25px 20px; 
+    padding: 25px 30px;
   }
 
   .institucional-block h2 {
@@ -173,10 +232,6 @@
     font-size: 1.1rem;
     margin-bottom: 10px; 
     line-height: 1.5; 
-  }
-
-  .decor-images {
-    display: none;
   }
 
   .institucional-container button {

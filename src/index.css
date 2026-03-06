@@ -4,7 +4,8 @@ html, body {
   padding: 0;
   width: 100%;
   overflow-x: hidden; 
-  background-color: #ffffff; 
+  background-color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
 }
 
 * {

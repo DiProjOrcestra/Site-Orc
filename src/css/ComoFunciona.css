@@ -18,6 +18,7 @@
 
 .detalhamento-titulo {
   color: #032100;
+  font-family: "Ubuntu", sans-serif;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
@@ -28,10 +29,11 @@
 
 .detalhamento-intro {
   color: #032100;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.25rem;
   line-height: 1.7;
   max-width: 800px;
-  font-weight: 400;
+  font-weight: 600;
   opacity: 0.95;
   border-left: 4px solid #3BC90C;
   padding-left: 20px;
@@ -102,6 +104,7 @@
   line-height: 1.6;
   opacity: 0.8;
   margin: 0;
+  font-weight: 600;
 }
 
 /* Responsividade */

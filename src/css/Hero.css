@@ -1,7 +1,7 @@
 :root {
   --e-global-color-primary: #3BC90C; 
   --e-global-color-text: #032100;   
-  --e-global-typography-primary-font-family: "Ubuntu";
+  --e-global-typography-primary-font-family: "Ubuntu", sans-serif;
   --e-global-typography-primary-font-weight: 600;     
 }
 
@@ -15,7 +15,7 @@
   padding: 0 10%;
   background-color: var(--e-global-color-primary); 
   color: var(--e-global-color-text); 
-  font-family: var(--e-global-typography-primary-font-family), sans-serif; 
+  font-family: var(--e-global-typography-primary-font-family); 
 }
 
 .hero-content {
@@ -44,12 +44,12 @@
   max-width: 550px;
   margin-bottom: 40px;
   word-wrap: break-word;
+  font-weight: 600;
 }
 
 .hero-content button {
   background-color: #032100; 
-  color: #3BC90C;           
-  font-family: "Ubuntu", sans-serif;
+  color: #3BC90C;
   font-weight: 600;                 
   font-size: clamp(0.9rem, 1.5vw, 1rem); /* ADICIONADO: responsivo */
   line-height: 1.85;                

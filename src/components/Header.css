@@ -2,7 +2,7 @@
 .header {
   background-color: #3BC90C;
   padding: 0.25rem 2rem 0.25rem 1rem;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +74,7 @@
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   list-style: none;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   margin: 0.5rem 0 0 0;
   z-index: 1000;
   animation: fadeInDown 0.2s ease;
@@ -90,10 +90,10 @@
 
 .nav-menu .dropdown-menu a {
   display: block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   color: #032100;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 0.95rem;
   transition: all 0.2s ease;
   transform: none !important;
@@ -261,10 +261,13 @@
  
   .nav-menu .dropdown-menu a {
     padding: 0.75rem 1rem 0.75rem 2rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
     border-left: none;
     color: #032100;
     background-color: transparent;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.4;
   }
 
  

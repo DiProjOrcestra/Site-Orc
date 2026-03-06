@@ -53,10 +53,10 @@
 
 .projeto-card {
   position: relative;
-  height: 400px; 
   width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
   padding: 10px;
-  max-width: 400px; 
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -178,8 +178,7 @@
   }
   
   .projeto-card {
-    height: 520px;
-    width: 350px;
+    max-width: 350px;
   }
   
   .projeto-name {
@@ -208,8 +207,7 @@
   }
   
   .projeto-card {
-    height: 500px;
-    width: 340px;
+    max-width: 340px;
   }
   
   .projeto-name {
@@ -243,7 +241,6 @@
   }
   
   .projeto-card {
-    height: 480px;
     width: 100%;
     max-width: 400px;
   }
@@ -263,10 +260,6 @@
 }
 
 @media (max-width: 480px) {
-  .projeto-card {
-    height: 500px;
-  }
-  
   .projeto-name {
     font-size: 1.7rem;
   }

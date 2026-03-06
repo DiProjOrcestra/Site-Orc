@@ -1,4 +1,5 @@
 .beneficios-section {
+  font-family: "Ubuntu", sans-serif;
   background-color: #FFFFFF;
   padding: 80px 10%;
   width: 100%;
@@ -38,6 +39,7 @@
   line-height: 1.6;
   margin-bottom: 30px;
   opacity: 0.9;
+  font-weight: 600;
 }
 
 .beneficios-left button {
@@ -94,6 +96,7 @@
   padding-bottom: 25px;
   border-bottom: 1px solid #f0f0f0;
   position: relative;
+  font-weight: 600;
 }
 
 

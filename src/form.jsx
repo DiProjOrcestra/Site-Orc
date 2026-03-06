@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import './form.css';
 
 
@@ -7,9 +8,26 @@ const ContactForm = () => {
     mode: "onSubmit",
   });
 
-  const onSubmit = (pessoa) => {
-    console.log(pessoa);
-    reset();
+  const sendEmail = (pessoa) => {
+    const templateParams = {
+      nome: pessoa.nome,
+      email: pessoa.email,
+      cargo: pessoa.cargo,
+      origem: pessoa.origem,
+      telefone: pessoa.telefone,
+      mensagem: pessoa.mensagem,
+    };
+
+    emailjs.send("service_zlb3che", "template_dxdnhd1", templateParams, "8jSEifL5olFHjXCeJ")
+      .then((response) => {
+        console.log("E-mail enviado com sucesso!", response.status, response.text);
+        /* mandar para a página de agradecimento que ainda não foi feita */
+        alert("Obrigado! Agradecemos o interesse e não se preocupe que em breve entraremos em contato!");
+        reset();
+      },(error) => {
+        console.error("Erro ao enviar o e-mail:", error);
+        alert("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.");
+      });
   };
 
   return (
@@ -25,7 +43,7 @@ const ContactForm = () => {
       </div>
 
 
-      <form onSubmit={handleSubmit(onSubmit)} className="react-form-styled">
+      <form onSubmit={handleSubmit(sendEmail)} className="react-form-styled">
 
         {Object.keys(errors).length > 0 && (
           <div className="form-error-style">

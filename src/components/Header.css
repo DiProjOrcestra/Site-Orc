@@ -3,7 +3,6 @@
   background-color: #2EB600;
   padding: 0.25rem 2rem 0.25rem 1rem;
   font-family: 'Ubuntu', sans-serif;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +53,7 @@
   left: -30%;
   background-color: #2EB600;
   min-width: 240px;
-  min-height: 400px;
+  min-height: 350px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   list-style: none;
   padding: 1rem 0.5rem;
@@ -191,5 +190,11 @@
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-menu ul {
+    gap: 2rem;
   }
 }

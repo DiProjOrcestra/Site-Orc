@@ -78,19 +78,11 @@
   margin: 0.5rem 0 0 0;
   z-index: 1000;
   animation: fadeInDown 0.2s ease;
+  margin: 0; 
+  top: 100%;
 }
 
 
-.nav-menu .dropdown-menu::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #3BC90C;
-}
 
 .nav-menu .dropdown:hover .dropdown-menu {
   display: flex;

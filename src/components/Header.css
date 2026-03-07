@@ -86,11 +86,12 @@ body {
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   list-style: none;
-  padding: 0.5rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   z-index: 1000;
   animation: fadeInDown 0.2s ease;
   margin: 0; 
-  top: 100%;
+  gap: 2rem;
 }
 
 .nav-menu .dropdown:hover .dropdown-menu {

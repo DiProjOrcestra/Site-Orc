@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/Beneficios.css';
 
-const Beneficios = ({ titulo, intro, lista }) => {
+const Beneficios = ({ titulo, intro, lista, textButao }) => {
   return (
     <section className="beneficios-section">
       <div className="beneficios-container">
@@ -9,7 +9,7 @@ const Beneficios = ({ titulo, intro, lista }) => {
             <h2 className="beneficios-titulo">{titulo}</h2>
             <p className="beneficios-intro">{intro}</p>
             <button onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}>
-                Entre em Contato
+                {textButao || 'Entre em Contato'}
             </button>
         </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/Hero.css";
 
-const Hero = ({ name, texto1, texto2, image }) => {
+const Hero = ({ name, texto1, texto2, image, textButao }) => {
   return (
     <section className="hero-container">
       <div className="hero-content">
@@ -15,7 +15,7 @@ const Hero = ({ name, texto1, texto2, image }) => {
           className="hero-btn-contato"
           onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}
         >
-          Entre em Contato
+          {textButao || 'Entre em Contato'}
         </button>
       </div>
       

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/QuemSomos.css';
 
-const SobreInstitucional = () => {
+const SobreInstitucional = ({ textButao }) => {
   return (
     <section className="institucional-section">
 
@@ -22,7 +22,7 @@ const SobreInstitucional = () => {
         </div>
 
         <button onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })} className="institucional-button">
-            Entrar em Contato
+            {textButao || 'Fale Conosco'}
         </button>
       </div>
 

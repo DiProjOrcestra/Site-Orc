@@ -34,6 +34,7 @@ const ServicePage = ({ DadosManuais }) => {
         texto1={dados.texto1}
         texto2={dados.texto2}
         image={dados.imageHero}
+        textButao={dados.textButao}
       />
 
       <ComoFunciona 
@@ -46,9 +47,10 @@ const ServicePage = ({ DadosManuais }) => {
         titulo={dados.tituloBeneficios}
         intro={dados.ajudaIntro}
         lista={dados.beneficios}
+        textButao={dados.textButao}
       />
 
-      <SobreInstitucional />
+      <SobreInstitucional textButao={dados.textButao} />
 
       <Projetos 
         titulo={dados.tituloProjetos}

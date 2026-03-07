@@ -18,7 +18,7 @@
 /* Ajuste para o conteúdo não ficar escondido atrás do header fixo */
 body {
   margin: 0;
-  padding-top: 70px; /* Altura aproximada do header */
+  padding-top: 70px;
 }
 
 .logo-container {
@@ -89,6 +89,8 @@ body {
   padding: 0.5rem 0;
   z-index: 1000;
   animation: fadeInDown 0.2s ease;
+  margin: 0; 
+  top: 100%;
 }
 
 .nav-menu .dropdown:hover .dropdown-menu {

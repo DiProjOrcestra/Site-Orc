@@ -8,6 +8,7 @@ const ContactForm = () => {
     mode: "onSubmit",
   });
 
+
   const sendEmail = (pessoa) => {
     const templateParams = {
       nome: pessoa.nome,
@@ -29,6 +30,9 @@ const ContactForm = () => {
         alert("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.");
       });
   };
+
+
+  
 
   return (
     <footer className="form-container-main" id="forms">
@@ -82,9 +86,9 @@ const ContactForm = () => {
 
           <div className="field-group width-33">
             <label>Qual o seu cargo? <span>*</span></label>
-            <select
+            <select 
               {...register("cargo", { required: "Esse campo não pode estar em branco." })}
-              className={errors.cargo ? "field-error" : ""}
+              className={errors.cargo ? "field-error" : "select-styled"}
             >
               <option value="">Seu cargo</option>
               <option value="CEO/Sócio/Diretor">CEO/Sócio/Diretor</option>
@@ -100,7 +104,7 @@ const ContactForm = () => {
 
           <div className="field-group width-33">
             <label>Por onde nos conheceu?</label>
-            <select {...register("origem")} className={errors.origem ? "field-error" : ""}>
+            <select {...register("origem")} className={errors.origem ? "field-error" : "select-styled"}>
               <option value="">...</option>
               <option value="Anúncios do Google">Anúncios do Google</option>
               <option value="Mídias Sociais">Mídias Sociais (Instagram, Facebook, Linkedin)</option>

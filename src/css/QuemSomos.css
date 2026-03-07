@@ -5,10 +5,11 @@
   font-family: "Ubuntu", sans-serif;
   position: relative;
   overflow: hidden;
-  min-height: 500px; 
+  min-height: 500px;
   display: flex;
   align-items: center;
   padding: 0;
+  margin-top: 0; /* Removido margem pois o body já tem padding-top */
 }
 
 .institucional-container {
@@ -18,7 +19,7 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 30px; 
+  gap: 30px;
   width: 100%;
   padding: 40px 60px;
 }
@@ -28,7 +29,7 @@
   font-weight: 800;
   color: #032100;
   line-height: 1.2;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
   letter-spacing: -0.02em;
   text-align: center;
 }
@@ -36,17 +37,16 @@
 .institucional-block p {
   color: #032100;
   font-size: 1.3rem;
-  line-height: 1.6; 
-  margin-bottom: 15px; 
+  line-height: 1.6;
+  margin-bottom: 15px;
   opacity: 0.9;
   text-align: center;
   font-weight: 600;
 }
 
-
 .institucional-block:first-child {
   position: relative;
-  padding-bottom: 25px; 
+  padding-bottom: 25px;
 }
 
 .institucional-block:first-child::after {
@@ -61,25 +61,27 @@
 }
 
 /* Botão */
-.institucional-container button {
+.institucional-container .institucional-button {
   background-color: #4dbb3e;
   color: #fff;
   border: none;
-  padding: 14px 35px; 
+  padding: 14px 35px;
   border-radius: 30px;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: fit-content;
-  margin: 10px auto 0; 
+  margin: 10px auto 0;
+  display: block;
+  text-decoration: none;
 }
 
-.institucional-container button:hover {
+.institucional-container .institucional-button:hover {
   background-color: #3da32e;
 }
 
-
+/* Imagens decorativas */
 .decor-images {
   position: absolute;
   top: 50%;
@@ -91,32 +93,23 @@
 
 .decor-images.left {
   left: 0;
-  margin-right: 50px;
 }
 
 .decor-images.right {
   right: 0;
-  margin-left: 50px;
 }
 
 .decor-images img {
   width: 100%;
   height: auto;
   display: block;
+  max-width: 100%;
 }
 
-
+/* Media Queries */
 @media (max-width: 1400px) {
   .decor-images {
     width: 350px;
-  }
-  
-  .decor-images.left {
-    margin-right: 40px;
-  }
-  
-  .decor-images.right {
-    margin-left: 40px;
   }
   
   .institucional-container {
@@ -127,14 +120,6 @@
 @media (max-width: 1200px) {
   .decor-images {
     width: 300px;
-  }
-  
-  .decor-images.left {
-    margin-right: 30px;
-  }
-  
-  .decor-images.right {
-    margin-left: 30px;
   }
   
   .institucional-container {
@@ -152,14 +137,6 @@
     width: 240px;
   }
   
-  .decor-images.left {
-    margin-right: 35px;
-  }
-  
-  .decor-images.right {
-    margin-left: 35px;
-  }
-  
   .institucional-container {
     max-width: 550px;
     padding: 35px 50px;
@@ -169,40 +146,32 @@
 @media (max-width: 992px) {
   .institucional-container {
     max-width: 550px;
-    gap: 25px; 
+    gap: 25px;
     padding: 30px 50px;
   }
 
   .institucional-block h2 {
     font-size: 2.2rem;
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
   }
 
   .institucional-block p {
     font-size: 1.15rem;
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
   }
 
   .decor-images {
     width: 220px;
   }
   
-  .decor-images.left {
-    margin-right: 25px;
-  }
-  
-  .decor-images.right {
-    margin-left: 25px;
-  }
-  
-  .institucional-container button {
+  .institucional-container .institucional-button {
     padding: 12px 30px;
     font-size: 1rem;
-    margin-top: 5px; /
+    margin-top: 5px;
   }
   
   .institucional-block:first-child {
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
   }
 }
 
@@ -219,28 +188,28 @@
 @media (max-width: 768px) {
   .institucional-container {
     max-width: 100%;
-    gap: 20px; 
+    gap: 20px;
     padding: 25px 30px;
   }
 
   .institucional-block h2 {
     font-size: 2rem;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   .institucional-block p {
     font-size: 1.1rem;
-    margin-bottom: 10px; 
-    line-height: 1.5; 
+    margin-bottom: 10px;
+    line-height: 1.5;
   }
 
-  .institucional-container button {
+  .institucional-container .institucional-button {
     padding: 10px 25px;
     font-size: 0.95rem;
   }
   
   .institucional-block:first-child {
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
   }
   
   .institucional-block:first-child::after {
@@ -254,6 +223,10 @@
   }
   
   .institucional-container {
-    padding: 20px 15px; 
+    padding: 20px 15px;
+  }
+  
+  .institucional-block h2 {
+    font-size: 1.8rem;
   }
 }

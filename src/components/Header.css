@@ -1,4 +1,3 @@
-
 .header {
   background-color: #3BC90C;
   padding: 0.25rem 2rem 0.25rem 1rem;
@@ -7,8 +6,19 @@
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  position: relative; 
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9996;
+  box-sizing: border-box;
+}
+
+/* Ajuste para o conteúdo não ficar escondido atrás do header fixo */
+body {
+  margin: 0;
+  padding-top: 70px; /* Altura aproximada do header */
 }
 
 .logo-container {
@@ -19,8 +29,10 @@
 .logo {
   max-width: 150px;
   height: auto;
+  display: block;
 }
 
+/* Navegação Desktop */
 .nav-menu ul {
   display: flex;
   list-style: none;
@@ -29,7 +41,8 @@
   margin: 1rem;
 }
 
-.nav-menu a, .nav-menu .dropdown > span {
+.nav-menu a, 
+.nav-menu .dropdown > span {
   text-decoration: none;
   color: #032100;
   transition: all 0.3s ease;
@@ -38,16 +51,16 @@
   font-weight: bold;
 }
 
-.nav-menu a:hover, .nav-menu .dropdown > span:hover {
+.nav-menu a:hover, 
+.nav-menu .dropdown > span:hover {
   color: #fff;
   transform: scale(1.2);
 }
 
-
+/* Dropdown Desktop */
 .nav-menu .dropdown {
   position: relative;
 }
-
 
 .nav-menu .dropdown > span::after {
   content: '▼';
@@ -61,7 +74,6 @@
   transform: rotate(180deg);
 }
 
-
 .nav-menu .dropdown-menu {
   display: none;
   position: absolute;
@@ -69,20 +81,15 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #3BC90C; 
+  background-color: #3BC90C;
   min-width: 260px;
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   list-style: none;
   padding: 0.5rem 0;
-  margin: 0.5rem 0 0 0;
   z-index: 1000;
   animation: fadeInDown 0.2s ease;
-  margin: 0; 
-  top: 100%;
 }
-
-
 
 .nav-menu .dropdown:hover .dropdown-menu {
   display: flex;
@@ -96,20 +103,19 @@
   font-weight: 800;
   font-size: 0.95rem;
   transition: all 0.2s ease;
-  transform: none !important;
   white-space: nowrap;
   border-left: 3px solid transparent;
 }
 
-
 .nav-menu .dropdown-menu a:hover {
-  background-color: #3BC90C;
+  background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
   border-left-color: #032100;
-  transform: none !important;
   padding-left: 2rem;
+  transform: none !important;
 }
 
+/* Animações */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -121,21 +127,33 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Botão Hamburguer */
 .hamburger {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 20; 
+  z-index: 9999;
 }
 
 .hamburger-icon {
   width: 40px;
   height: 40px;
+  display: block;
 }
 
+/* Overlay para mobile */
+.menu-overlay {
+  display: none;
+}
 
+/* Media Queries */
 @media (max-width: 992px) {
   .nav-menu ul {
     gap: 2rem;
@@ -143,21 +161,29 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
   .hamburger {
     display: block;
-    z-index: 30;
-    position: fixed;
-    right: 2rem;
+    position: relative;
+    right: auto;
   }
 
   .menu-overlay {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 15; 
+    z-index: 9997;
     animation: fadeIn 0.3s ease;
   }
 
@@ -165,31 +191,32 @@
     display: block;
     position: fixed;
     top: 0;
-    right: -280px; 
+    right: -280px;
     width: 280px;
     height: 100%;
     background-color: #3BC90C;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-    z-index: 20;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9998;
     transition: right 0.3s ease-in-out;
-    padding: 2rem 1rem;
-    overflow-y: auto; 
+    padding: 5rem 1rem 2rem;
+    overflow-y: auto;
   }
 
   .nav-menu.show {
-    right: 0; 
+    right: 0;
   }
 
   .nav-menu ul {
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
-    margin: 4rem 0 0 0;
+    margin: 0;
     padding: 0;
     text-align: left;
   }
 
-  .nav-menu a, .nav-menu .dropdown > span {
+  .nav-menu a, 
+  .nav-menu .dropdown > span {
     font-size: 1.2rem;
     color: #032100;
     display: block;
@@ -197,17 +224,21 @@
     width: 100%;
   }
 
- 
+  .nav-menu a:hover, 
+  .nav-menu .dropdown > span:hover {
+    color: #fff;
+    transform: none;
+  }
+
+  /* Dropdown Mobile */
   .nav-menu .dropdown {
     width: 100%;
   }
 
-  
   .nav-menu .dropdown:hover .dropdown-menu {
     display: none;
   }
 
- 
   .nav-menu .dropdown > span {
     display: flex;
     justify-content: space-between;
@@ -217,50 +248,38 @@
     padding: 0.5rem 0;
   }
 
- 
   .nav-menu .dropdown > span::after {
     content: '▼';
     font-size: 0.8rem;
     margin-left: 5px;
     transition: transform 0.3s ease;
-    float: none; 
-    margin-right: 0;
   }
 
-  
   .nav-menu .dropdown.open > span::after {
     transform: rotate(180deg);
   }
 
-  
   .nav-menu .dropdown-menu {
     display: none;
     position: static;
-    background-color: rgba(0, 0, 0, 0.1); 
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: none;
     min-width: 100%;
     transform: none;
     border-radius: 5px;
     padding: 0.5rem 0;
-    margin: 0.5rem 0 0 0;
+    margin: 0.5rem 0 0 1rem;
     animation: none;
     border-left: 2px solid #032100;
   }
 
-  
-  .nav-menu .dropdown-menu::before {
-    display: none;
-  }
-
-  
   .nav-menu .dropdown.open .dropdown-menu {
     display: flex;
     flex-direction: column;
   }
 
- 
   .nav-menu .dropdown-menu a {
-    padding: 0.75rem 1rem 0.75rem 2rem;
+    padding: 0.75rem 1rem;
     font-size: 0.95rem;
     border-left: none;
     color: #032100;
@@ -270,31 +289,41 @@
     line-height: 1.4;
   }
 
- 
   .nav-menu .dropdown-menu a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     color: #032100;
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
     border-left: none;
   }
+}
 
- 
-  .nav-menu .dropdown-menu a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-weight: bold;
-    border-left: 3px solid #fff;
-    padding-left: calc(2rem - 3px);
+@media (max-width: 480px) {
+  .header {
+    padding: 0.25rem 0.75rem;
   }
 
- 
-  .nav-menu a:hover, 
-  .nav-menu .dropdown > span:hover {
-    transform: none;
+  .logo {
+    max-width: 120px;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  .nav-menu {
+    width: 250px;
+    right: -250px;
+  }
+
+  .nav-menu a, 
+  .nav-menu .dropdown > span {
+    font-size: 1rem;
+    padding: 0.6rem 0;
+  }
+
+  .nav-menu .dropdown-menu a {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .hamburger-icon {
+    width: 35px;
+    height: 35px;
   }
 }

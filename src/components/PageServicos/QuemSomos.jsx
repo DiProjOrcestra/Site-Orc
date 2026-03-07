@@ -21,7 +21,7 @@ const SobreInstitucional = () => {
           <p>A Gamificação é a aplicação de elementos e conceitos de jogos no mundo real com o intuito de mudar o comportamento das pessoas.Para nós, a Gamificação é muito mais que uma técnica, é uma forma de motivar e engajar pessoas ressignificando suas vidas e transformando obrigações em desafios a serem superados para que o trabalho seja visto como algo prazeroso e divertido de se fazer.</p>
         </div>
 
-        <button onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}>
+        <button onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })} className="institucional-button">
             Entrar em Contato
         </button>
       </div>

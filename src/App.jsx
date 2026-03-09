@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import ContactForm from './form' 
+import React from 'react';
+import PageServicos from './pages/PageServicos';
+import { SERVICOS } from './data/services'; // Importe seus dados
 
 function App() {
+  // Simulamos o que o useParams faria, pegando um serviço direto do objeto
+  const servicoParaTeste = SERVICOS["design-de-gamificacao"]; // Substitua pela chave do serviço que deseja testar
+
   return (
-    <>
-      <ContactForm />
-    </>
-  )
+    <div className="App">
+      {/* Ajustamos o componente para aceitar os dados diretamente via props 
+          em vez de buscar pelo ID da URL
+      */}
+      <PageServicos DadosManuais={servicoParaTeste} />
+    </div>
+  );
 }
 
-export default App
+export default App;

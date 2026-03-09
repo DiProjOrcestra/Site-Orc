@@ -1,0 +1,251 @@
+:root {
+  --e-global-color-primary: #3BC90C; 
+  --e-global-color-text: #032100;   
+  --e-global-typography-primary-font-family: "Ubuntu", sans-serif;
+  --e-global-typography-primary-font-weight: 600;     
+}
+
+.hero-container {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  min-height: 600px; 
+  gap: 5%; 
+  padding: 0 10%;
+  background-color: var(--e-global-color-primary); 
+  color: var(--e-global-color-text); 
+  font-family: var(--e-global-typography-primary-font-family); 
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* ADICIONADO: responsivo */
+  font-weight: var(--e-global-typography-primary-font-weight); 
+  line-height: 1.1;
+  margin-bottom: 20px;
+  word-wrap: break-word; /* ADICIONADO: quebra palavras longas */
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* ADICIONADO: responsivo */
+  font-weight: 700;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+}
+
+.hero-description {
+  font-size: clamp(0.9rem, 1.8vw, 1rem); /* ADICIONADO: responsivo */
+  line-height: 1.65;
+  max-width: 550px;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
+.hero-content button {
+  background-color: #032100; 
+  color: #3BC90C;
+  font-weight: 600;                 
+  font-size: clamp(0.9rem, 1.5vw, 1rem); /* ADICIONADO: responsivo */
+  line-height: 1.85;                
+  padding: 15px 45px;
+  border-radius: 50px;             
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;            
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  white-space: nowrap; /* ADICIONADO: evita quebra do botão */
+}
+
+.hero-content button:hover {
+  background-color: #052d00;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content button:active {
+  transform: translateY(0);
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.hero-main-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-container {
+    padding: 0 5%;
+    gap: 30px;
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    max-width: 500px;
+  }
+  
+  .hero-image-container {
+    max-width: 400px;
+  }
+}
+
+/* Mobile grande */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: auto;
+    gap: 30px;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-description {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-name {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  }
+  
+  .hero-description {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    margin-bottom: 30px;
+  }
+  
+  .hero-content button {
+    padding: 12px 40px;
+    font-size: 0.95rem;
+    white-space: normal; /* Permite quebra em mobile se necessário */
+    max-width: 100%;
+  }
+  
+  .hero-image-container {
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+  
+  .hero-name {
+    font-size: clamp(1.6rem, 5vw, 1.8rem);
+    margin-bottom: 12px;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.95rem, 3vw, 1rem);
+    margin-bottom: 10px;
+  }
+  
+  .hero-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  
+  .hero-content button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .hero-image-container {
+    max-width: 250px;
+  }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 360px) {
+  .hero-container {
+    padding: 20px 10px;
+  }
+  
+  .hero-name {
+    font-size: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .hero-description {
+    font-size: 0.8rem;
+  }
+  
+  .hero-content button {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    max-width: 240px;
+  }
+  
+  .hero-image-container {
+    max-width: 200px;
+  }
+}
+
+/* Telas muito grandes */
+@media (min-width: 1600px) {
+  .hero-container {
+    padding: 0 15%;
+    min-height: 700px;
+    gap: 8%;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+  }
+  
+  .hero-name {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    max-width: 650px;
+  }
+  
+  .hero-image-container {
+    max-width: 600px;
+  }
+}

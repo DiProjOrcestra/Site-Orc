@@ -155,7 +155,7 @@
 
 }
 
-* Scroll customizado para Webkit */
+/* Scroll customizado para Webkit */
 .projeto-resumo::-webkit-scrollbar {
   width: 4px;
 }

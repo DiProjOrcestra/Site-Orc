@@ -92,7 +92,7 @@ export const SERVICOS = {
       },
       {
         title: "Propor melhorias",
-        text: "Por meio de um estudo profundo das técnicas, objetivos e do público, encontramos onde a gamificação está falhando para assim determinarmos determinar as causas raízes dos principais problemas encontrados."
+        text: "Por meio de um estudo profundo das técnicas, objetivos e do público, encontramos onde a gamificação está falhando para assim determinar as causas raízes dos principais problemas encontrados."
       },
       {
         title: "Revisão de objetivos",

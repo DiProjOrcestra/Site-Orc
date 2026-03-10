@@ -1,0 +1,88 @@
+.parceiros-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.container-title {
+  margin-top: 4rem;
+}
+
+.title {
+  color: #032100;
+  font-size: 2rem;
+}
+
+.container-parceiros {
+  margin-top: 0.25rem;
+}
+
+/* Linha verde com comprimento igual ao grid */
+.line {
+  width: 100%;
+  max-width: 1200px; /* ajuste conforme a largura desejada para a linha */
+  height: 2px;
+  background-color: #3BC90C;
+  margin: 0; /* se quiser centralizar: margin: 0 auto; */
+}
+
+.container-subtitle {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #032100;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* Grid de parceiros */
+.parceiros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 1200px; /* mesma largura máxima da linha */
+  width: 100%;
+}
+
+.parceiro-card {
+  text-align: center;
+}
+
+.parceiro-card img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsividade: em telas muito pequenas, a linha e o grid se ajustam */
+@media (max-width: 768px) {
+    .title {
+    font-size: 1rem;
+    }
+    .subtitle {
+    font-size: 0.875rem;
+    }
+    .line {
+    max-width: 100%; /* linha ocupa toda largura disponível */
+    }
+    .parceiros-grid {
+    max-width: 100%;
+    }
+    .parceiro-card img {
+    max-width: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+    font-size: 1.5rem;
+    }
+    .subtitle {
+    font-size: 1rem;
+    }
+    .parceiro-card img {
+    max-width: 150px;
+    }
+}

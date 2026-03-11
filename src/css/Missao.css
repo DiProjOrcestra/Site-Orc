@@ -1,0 +1,129 @@
+.missao-section {
+  padding: 1rem 0; 
+  background-color: #ffffff;
+}
+
+.container-missao {
+  width: 95%; 
+  max-width: 1600px; 
+  margin: 0 auto;
+}
+
+.titulo-secao {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #032100;
+  margin-bottom: 0.5rem;
+}
+
+.linha-verde {
+  border: none;
+  height: 2px;
+  background-color: #3BC90C;
+  margin-bottom: 3rem; 
+}
+
+.missao-conteudo {
+  display: flex;
+  gap: 4rem; 
+  align-items: stretch;
+}
+
+.missao-card {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #032100; 
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.missao-imagem img {
+  width: 100%;
+  display: block;
+}
+
+.missao-texto-card {
+  background-color: #032100; 
+  padding: 2.5rem;
+  color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.missao-texto-card h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.missao-texto-card p {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.missao-detalhes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem; 
+  padding: 2.5rem 0; 
+}
+
+.detalhe-item h4 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #032100; 
+  margin-bottom: 0.7rem;
+}
+
+.detalhe-item p {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 800; 
+  color: #032100;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .missao-conteudo {
+    flex-direction: column; 
+    gap: 2rem;
+  }
+
+  .missao-detalhes {
+    gap: 1.5rem; 
+    padding: 0 2rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .container-missao {
+    width: 90%; 
+  }
+
+  .titulo-secao {
+    font-size: 32px;
+  }
+
+  .missao-imagem img {
+    height: 200px;
+    object-fit: cover; 
+    object-position: center;
+  }
+
+  .missao-conteudo {
+    gap: 2rem; 
+  }
+}

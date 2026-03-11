@@ -1,77 +1,104 @@
 .secao-servicos {
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 60px auto;
   padding: 0 20px;
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .header-container {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .titulo-secao {
-  font-size: 28px;
-  color: #004d00; /* Tom de verde escuro */
-  margin-bottom: 5px;
-  font-weight: bold;
+    font-size: clamp(26px, 5vw, 32px);
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: 800;
 }
 
 .subtitulo-secao {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
+    font-size: clamp(18px, 3vw, 20px);
+    font-weight: 500;
+    color: #032100;
 }
 
 .divisor-verde {
   border: none;
-  height: 2px;
+  height: 3px;
   background-color: #28a745;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.grid-servicos-centralizado {
+  display: flex;
+  flex-wrap: wrap;      
+  justify-content: center;
+  gap: 40px;             
   width: 100%;
 }
 
-.grid-cards {
-  display: grid;
-  /* Cria 3 colunas no desktop, mas ajusta conforme o espaço */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 50px 30px;
-}
-
 .card-item {
+  flex: 0 1 280px; 
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinhado à esquerda como na imagem */
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer; 
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.card-item:hover {
+  transform: scale(1.05); 
+  background-color: #ffffff;
+  box-shadow: 0px 10px 25px rgba(40, 167, 69, 0.25);
 }
 
 .card-item img {
   width: 100%;
-  max-width: 280px;
   height: 180px;
   object-fit: contain;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
 }
 
-.card-item h3 {
-  font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  color: #000;
+.card-item:hover img {
+  transform: translateY(-5px); 
+}
+
+.titulo-servico {
+    font-size: clamp(22px, 4vw, 26px);      
+    font-weight: 900;      
+    color: #032100;        
+    margin-bottom: 12px;
+    line-height: 1.1;      
+    letter-spacing: -0.5px; 
 }
 
 .card-item p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.4;
-  max-width: 250px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #032100;
+    line-height: 1.5;
 }
 
-/* Ajuste para telas pequenas */
-@media (max-width: 768px) {
-  .grid-cards {
-    grid-template-columns: 1fr;
+
+@media (max-width: 650px) {
+  .secao-servicos {
+    text-align: center;
   }
   
   .card-item {
+    flex: 0 1 100%; 
+    max-width: 350px; 
     align-items: center;
-    text-align: center;
+  }
+  
+  
+  .card-item:hover {
+    transform: none;
   }
 }

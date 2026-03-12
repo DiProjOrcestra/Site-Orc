@@ -1,8 +1,8 @@
 import ImpactIndicators from "./ImpactIndicators"
-
+import Contato from "./components/contato"
 function App() {
   return (
-    <ImpactIndicators></ImpactIndicators>
+    <><Contato></Contato></>
   )
 }
 

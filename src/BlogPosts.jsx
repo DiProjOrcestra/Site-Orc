@@ -1,10 +1,10 @@
 import './BlogPosts.css'
-function BlogPosts() {
+function BlogPosts({irParaPagina}) {
     return (
         <div style={{padding: '0px'}} >
             <h2>Se mantenha atualizado com nossos conteúdos</h2>
             <hr />
-            <p>Blog</p>
+            <p onClick={irParaPagina}>Blog</p>
             <div className="posts-container">
                 <div className="post-item"> 
                     <img className="blog-image" src="/Blog-1.webp" alt="imagem blog" />

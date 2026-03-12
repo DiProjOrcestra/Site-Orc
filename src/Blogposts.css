@@ -23,6 +23,9 @@ hr {
     border: 0px;
     
 }
+.blog-image {
+    width: 265px;
+}
 .posts-container {
     display: flex;
     padding: 0px;

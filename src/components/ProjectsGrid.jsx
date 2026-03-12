@@ -13,17 +13,13 @@ function ProjectsGrid() {
   return (
     <section className="projects-grid">
 
-      {/*    Seção que está dando PROBLEMA -> NÃO CONSIGO RESOLVER DE JEITO NENHUM {SOCORRO}
-              Falta a imagem de fundo (COLOCAR DEPOIS)
-
       <div className="projects-header">
-        <h2 className="projects-title">Onde já impactamos?</h2>
-        <p className="projects-subtitle">Portfólio</p>
-
+        <h1 className="projects-title">Onde já impactamos?</h1>
+        <p className="projects-subtitle">
+          Portfólio
+        </p>
       </div>
-      */}
       
-
       <ProjectCard
         title="Hakuna"
         category="Desenvolvimento"

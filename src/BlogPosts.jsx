@@ -1,7 +1,7 @@
 import './BlogPosts.css'
 function BlogPosts({irParaPagina}) {
     return (
-        <div style={{padding: '0px'}} >
+        <div className='banner'>
             <h2>Se mantenha atualizado com nossos conteúdos</h2>
             <hr />
             <p onClick={irParaPagina}>Blog</p>

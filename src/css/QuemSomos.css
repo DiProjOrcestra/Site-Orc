@@ -1,0 +1,9 @@
+.pagina-quem-somos {
+  width: 100%;
+  overflow-x: hidden; 
+  background-color: #ffffff; 
+}
+
+.pagina-quem-somos section {
+  margin: 0 !important; 
+}

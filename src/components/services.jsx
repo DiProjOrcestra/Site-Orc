@@ -33,14 +33,14 @@ const Servicos = () => {
 
         <div className="card-item">
           <img src={SERVICOS["consultoria-gamificada"].imageHero} alt="Consultoria" />
-          <h3 className="texto-servico-destaque">Consultoria de Gamificação</h3>
+          <h3 className="texto-servico-destaque">Consultoria Gamificada</h3>
           <p>Impulsione a eficiência da sua gamificação com uma equipe especializada</p>
         </div>
 
     
         <div className="card-item">
           <img src={SERVICOS["treinamento-gamificado"].imageHero} alt="Treinamento" />
-          <h3 className="texto-servico-destaque">Treinamento</h3>
+          <h3 className="texto-servico-destaque">Treinamento Gamificado</h3>
           <p>Capacite seus colaboradores com uma empresa experiente no ramo</p>
         </div>
       </div>

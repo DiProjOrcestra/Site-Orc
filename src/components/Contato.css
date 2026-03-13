@@ -1,6 +1,5 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -95,9 +94,12 @@ body {
 
 .location-section h2{
   font-size: 37.5px;
+  
 }
 .location-section p{
   font-size: 16.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .social-icons{
@@ -108,14 +110,16 @@ body {
 }
 
 .social-icons img{
-  width:32px;
-  height:32px;
+  width:75px;
+  height:75px;
   fill:#000;
   transition:0.2s;
   
 }
 .social-section h2{
   font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .social-icons img:hover{
@@ -126,12 +130,7 @@ body {
   font-size: 22.5px;
   margin-bottom:8px;
 }
-.tudo {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+
 
 .numero-email p {
   overflow-wrap: break-word;
@@ -208,7 +207,7 @@ body {
     }
 
 
-    @media (max-width: 1300px){
+    @media (max-width: 1500px){
       .numero-email{
         flex-wrap: wrap;
       }
@@ -220,4 +219,13 @@ body {
         align-items: center;
         text-align: center;
       }
+      .social-icons{
+        margin-top: 25px;
+        gap: 20px;
+        
+      }
+      .social-section h2{
+        margin-top: 25px;
+      }
+      
     } 

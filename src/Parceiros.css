@@ -20,10 +20,10 @@
 /* Linha verde com comprimento igual ao grid */
 .line {
   width: 100%;
-  max-width: 1200px; /* ajuste conforme a largura desejada para a linha */
+  max-width: 1200px; 
   height: 2px;
   background-color: #3BC90C;
-  margin: 0; /* se quiser centralizar: margin: 0 auto; */
+  margin: 0; 
 }
 
 .container-subtitle {
@@ -57,6 +57,14 @@
 }
 
 /* Responsividade: em telas muito pequenas, a linha e o grid se ajustam */
+@media (max-width: 511px) {
+    .container-title {
+      text-align: center;
+    }
+    .container-subtitle {
+      text-align: center; 
+    }
+}
 @media (max-width: 768px) {
     .title {
     font-size: 1rem;
@@ -65,7 +73,7 @@
     font-size: 0.875rem;
     }
     .line {
-    max-width: 100%; /* linha ocupa toda largura disponível */
+    max-width: 100%; 
     }
     .parceiros-grid {
     max-width: 100%;

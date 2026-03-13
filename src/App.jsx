@@ -1,10 +1,14 @@
 import ImpactIndicators from "./ImpactIndicators"
 import Parceiros from "./Parceiros"
+import Popup from "./Popup"
 
 function App() {
   return (
-    <><ImpactIndicators></ImpactIndicators>
-    <Parceiros> </Parceiros></>
+    <>
+    <Popup></Popup>
+    <ImpactIndicators></ImpactIndicators>
+    <Parceiros> </Parceiros>
+    </>
   )
 }
 

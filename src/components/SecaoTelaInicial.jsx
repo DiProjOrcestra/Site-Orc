@@ -6,12 +6,20 @@ const SecaoTelaInicial = () => {
     <section className="secao-container">
       
       <div className="secao-content">
+        
         <h1 className="secao-name">A maior Empresa Júnior de gamificação do Brasil!</h1>
         <p className="secao-subtitle">Ressignificando a vida das pessoas através da gamificação</p>
         
         <div className="secao-botoes">
-          <button className="secao-btn">O que fazemos</button>
-          <button className="secao-btn">Fale conosco</button>
+
+          <button className="secao-btn"
+          onClick={() => document.getElementById('id-da-seção')?.scrollIntoView({behavior: 'smooth'})}
+          >O que fazemos</button>
+          
+          <button className="secao-btn" 
+          onClick={() => document.getElementById('id-da-seção')?.scrollIntoView({behavior: 'smooth'})}
+          >Fale conosco</button>
+
         </div>
       </div>
       

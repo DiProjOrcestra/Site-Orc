@@ -9,7 +9,7 @@ function BlogPagination({ paginaAtual, mudarPagina }) {
       imagem: "/Blog-1.webp",
       titulo: "Gamificação Estratégica para Negócios: O Guia Completo para Aumentar o Engajamento e o ROI",
       resumo: "Sua equipe está desengajada? A produtividade parece estagnada e as metas parecem cada vez mais distantes? Você não está sozinho.",
-      link: "https://youtube.com"
+      link: "https://orcestra.com.br"
     },
     {
       id: 2,
@@ -32,34 +32,34 @@ function BlogPagination({ paginaAtual, mudarPagina }) {
       resumo: "A promessa da gamificação é sedutora: equipes mais engajadas, clientes mais leais e resultados de negócio amplificados.",
       link: "https://orcestra.com.br/"
     },
-    {
-      id: 5,
-      imagem: "/Blog-4.webp",
-      titulo: "placeholder-4",
-      resumo: "A promessa da gamificação é sedutora: equipes mais engajadas, clientes mais leais e resultados de negócio amplificados.",
-      link: "https://orcestra.com.br/"
-    },
-    {
-      id: 6,
-      imagem: "/Blog-4.webp",
-      titulo: "placeholder-3",
-      resumo: "A promessa da gamificação é sedutora: equipes mais engajadas, clientes mais leais e resultados de negócio amplificados.",
-      link: "https://orcestra.com.br/"
-    },
-    {
-      id: 7,
-      imagem: "/Blog-4.webp",
-      titulo: "placeholder-2",
-      resumo: "A promessa da gamificação é sedutora: equipes mais engajadas, clientes mais leais e resultados de negócio amplificados.",
-      link: "https://orcestra.com.br/"
-    },
-    {
-      id: 8,
-      imagem: "/Blog-4.webp",
-      titulo: "placeholder-1",
-      resumo: "A promessa da gamificação é sedutora: equipes mais engajadas, clientes mais leais e resultados de negócio amplificados.",
-      link: "https://orcestra.com.br/"
-    }
+      {
+          id: 5,
+          imagem: "/Blog-5.webp",
+          titulo: "Processos seletivos gamificados e o que você precisa saber sobre",
+          resumo: "Ter um alto nível de engajamento nos processos de recrutamento é algo essencial para seu sucesso, logo um processo seletivo gamificado é certeza de resultado! Mas antes de saber os benefícios e ver exemplos práticos dessa aplicação é melhor você entender porque utilizá-la…",
+          link: "https://orcestra.com.br/"
+      },
+      {
+          id: 6,
+          imagem: "/Blog-6.webp",
+          titulo: "Como construímos nossos softwares?",
+          resumo: "Desenvolver softwares de qualidade é uma jornada que envolve planejamento, inovação e muita dedicação. Seguimos um processo claro e bem estruturado para garantir que cada produto entregue atenda às expectativas e necessidades dos nossos clientes. Vamos te mostrar um resumo geral de como tudo funciona!",
+          link: "https://orcestra.com.br/"
+      },
+      {
+          id: 7,
+          imagem: "/Blog-7.webp",
+          titulo: "Aprenda a definir objetivos realistas",
+          resumo: "Quando vamos definir objetivos, é bem comum traçarmos objetivos que não sejam realistas e que muitas vezes acabam sendo abandonados. Ao final de 2021, muitos de nós irão pensar em um ano 2022 melhor e traçar objetivos de ano novo...",
+          link: "https://orcestra.com.br/"
+      },
+      {
+          id: 8,
+          imagem: "/Blog-8.webp",
+          titulo: "Como a Gamificação Pode Transformar seu Desenvolvimento Profissional",
+          resumo: "Você sabia que desenvolver soft skills pode ser mais leve, estratégico e até divertido? Muita gente ainda associa a gamificação apenas ao ensino de habilidades técnicas. Mas a verdade é que ela pode ir muito além: ajuda no crescimento pessoal e profissional, fortalecendo competências que fazem toda a diferença no mercado de trabalho.",
+          link: "https://orcestra.com.br/"
+      }
   ];
 
   {/* Flexivel se você quiser colocar mais páginas, o sistema vai adicionar automaticamente 
@@ -76,7 +76,7 @@ function BlogPagination({ paginaAtual, mudarPagina }) {
 
       <h2>Mais recentes</h2>
       <hr />
-
+      <p></p>
       <div className="posts-container">
         {postsExibidos.map((post) => (
           <BlogPost

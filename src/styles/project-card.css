@@ -26,9 +26,9 @@
 }
 
 .title-card {
+  font: 20px "Ubuntu", sans-serif;
   color: #032100;
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 8px;
   line-height: 1.2;
 }

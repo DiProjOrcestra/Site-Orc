@@ -22,7 +22,7 @@ function BlogPage() {
       </div>
 
       <div className="blog-frame-image">
-        <img src={blogframe} alt="Ilustração do desenhoo" />
+        <img className="blog-img" src={blogframe} alt="Ilustração do desenhoo" />
       </div>
     </section>
   );

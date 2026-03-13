@@ -10,6 +10,7 @@ body {
   justify-content: space-between;
   gap: 40px;
   font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
 }
 
 .blog-text {
@@ -45,8 +46,10 @@ body {
 @media (max-width: 768px) {
   .blog-c {
     flex-direction: column;
+    display: block;
     padding: 30px 20px;
     gap: 20px;
+    width: 100%;
   }
 
   .blog-text {

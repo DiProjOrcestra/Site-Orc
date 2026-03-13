@@ -10,6 +10,7 @@ p {
 }
 .post-item {
     padding: 0px 15px;
+    width: 265px;
 }
 @media (max-width: 1024px){
     .post-item {

@@ -1,8 +1,12 @@
 import "./BlogPage.css";
+import { useState } from "react";
 import blogframe from "../public/frame-blog.svg";
+import BlogPagination from "./BlogPagination";
 
 function BlogPage() {
+  const [pagina, setPagina] = useState(1);
   return (
+    <>
     <section className="blog-c">
       <div className="blog-content">
         <a href="/blog" className="blog-tag">
@@ -25,6 +29,11 @@ function BlogPage() {
         <img className="blog-img" src={blogframe} alt="Ilustração do desenhoo" />
       </div>
     </section>
+    <BlogPagination
+      paginaAtual={pagina}
+      mudarPagina={setPagina}
+    />
+    </>
   );
 }
 

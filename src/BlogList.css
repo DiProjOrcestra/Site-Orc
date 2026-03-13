@@ -1,0 +1,43 @@
+.banner {
+    color: #032100;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 1200px;
+}
+p, h2 {
+    text-align: start;
+}
+p {
+    font-size: 18px;
+}
+h2 {
+    font-size: 32px;
+    margin: 0px;
+}
+hr {
+    margin: 0px;
+    background-color: #3bc90c;
+    height: 2px;
+    border: 0px;
+    
+}
+.posts-container {
+    display: flex;
+    padding: 0px;
+}
+
+@media (max-width: 1024px){
+    
+    .posts-container {
+        justify-content: center; 
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 420px){
+    
+    .posts-container {
+        display: block;
+    }
+}

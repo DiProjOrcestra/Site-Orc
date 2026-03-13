@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import BlogPosts from './BlogPosts'
+import BlogList from './BlogList'
 import BlogPage from './BlogPage';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     {pagina === 'banner' ?(
-      <BlogPosts irParaPagina={() => setPagina('blog')} />)
+      <BlogList irParaPagina={() => setPagina('blog')} />)
       :
       <BlogPage />
       }

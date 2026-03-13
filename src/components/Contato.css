@@ -229,3 +229,11 @@ body {
       }
       
     } 
+    
+    @media(max-width: 389px){
+      .social-icons{
+        flex-wrap: wrap;
+        gap: 30px;
+        width: calc(90% - 20px);
+      }
+    }

@@ -48,6 +48,8 @@
   cursor: pointer; 
   background-color: transparent;
   box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-item img {

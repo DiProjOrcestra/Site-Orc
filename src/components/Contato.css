@@ -147,9 +147,6 @@ body {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .team-section {
-        width: 100%;
-    } 
     .location-section h2, .location-section p{
       padding-bottom: 8px;
     }
@@ -160,6 +157,12 @@ body {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      flex-grow: 1;
+    }
+    .team-section{
+      flex-direction: row;
+      width: 100%;
+      margin: 15px 0px;
     }
  
 }
@@ -184,8 +187,10 @@ body {
       padding-left: 0px;
       border-width: 2px 0px 0px 0px;
       text-align: start;
-      margin: 0px;
-      
+      margin: 0px; 
+    }
+    .team-section{
+      margin: 25px 0px;
     }
     
 

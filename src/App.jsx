@@ -1,5 +1,6 @@
 import ImpactIndicators from "./ImpactIndicators"
-import Contato from "./components/contato"
+import Contato from "./components/Contato"
+
 function App() {
   return (
     <><Contato></Contato></>

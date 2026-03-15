@@ -44,6 +44,10 @@ body {
   padding-bottom: 2px;
 }
 
+.port-link {
+  text-decoration: none;
+}
+
 .projects-subtitle {
   font: 20px "Ubuntu", sans-serif;
   color: #ffffff;

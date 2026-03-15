@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ProjectsGrid from "./components/ProjectsGrid";
+import PortfolioPage from "./components/PortfolioPage";
 
 import Hakuna from "./pages/Hakuna";
 import FitFlow from "./pages/FitFlow";
@@ -15,9 +16,10 @@ import Ect2016 from "./pages/Ect2016";
 import ElasProjetam from "./pages/ElasProjetam";
 import MeteoroPegasus from "./pages/MeteoroPegasus";
 import Moonlight from "./pages/Moonlight";
-
+import Gloria from "./pages/Gloria";
 
 import "./styles/project-page.css";
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<ProjectsGrid />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
 
         <Route path="/hakuna" element={<Hakuna />} />
         <Route path="/fitflow" element={<FitFlow />} />
@@ -39,6 +42,7 @@ function App() {
         <Route path="/elas-projetam" element= {<ElasProjetam />} />
         <Route path="/meteoro-pegasus" element= {<MeteoroPegasus />} />
         <Route path="/moonlight" element= {<Moonlight />} />
+        <Route path="/gloria" element= {<Gloria />} />
 
 
       </Routes>

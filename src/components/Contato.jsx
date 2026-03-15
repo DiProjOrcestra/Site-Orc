@@ -31,7 +31,7 @@ function Contact() {
 
         <div className="team-card">
           <a
-            href="https://www.linkedin.com/in/annaju-primo/"
+            href="https://www.linkedin.com/in/vinícius-araújo-638a54360/"
             target="_blank"
             rel="noopener noreferrer"
           >

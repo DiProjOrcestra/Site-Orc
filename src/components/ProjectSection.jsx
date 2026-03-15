@@ -2,7 +2,7 @@ function ProjectSection({ title, children }) {
   return (
     <section className="section">
       <h2 className="sub-title">{title}</h2>
-      <p className="paragraph">{children}</p>
+      <div className="paragraph">{children}</div>
     </section>
   );
 }

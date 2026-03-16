@@ -4,9 +4,9 @@ function BlogPost({imagem , titulo = "Titulo", resumo= "Resumo", link = "https:/
     return (
         <div className="post-item"> 
             <img className="blog-image" src={imagem} alt="imagem blog" />
-            <h3>{titulo}</h3>
+            <a className="blog-title" target="_blank" href={link}><h3>{titulo}</h3></a>
             <p>{resumo}</p>
-            <a target="_blank" href={link}>Ler Mais »</a>
+            <a className="blog-link" target="_blank" href={link}>Ler Mais »</a>
         </div>
     );
 }

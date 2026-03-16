@@ -12,6 +12,13 @@ p {
     padding: 0px 15px;
     width: 265px;
 }
+.blog-link {
+    color: #2EB600;
+}
+.blog-title{
+    color: inherit;
+    text-decoration: none;
+}
 @media (max-width: 1024px){
     .post-item {
         display: flex;

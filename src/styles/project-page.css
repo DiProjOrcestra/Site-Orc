@@ -60,7 +60,6 @@ body {
   text-indent: 30px; 
 }
 
-/* notebook / telas médias */
 @media (max-width: 1200px) {
   .project-title,
   .sub-title,
@@ -75,7 +74,6 @@ body {
   }
 }
 
-/* tablet */
 @media (max-width: 900px) {
   .project {
     padding: 0;
@@ -94,7 +92,6 @@ body {
   }
 }
 
-/* celular */
 @media (max-width: 600px) {
   .project {
     padding: 0;

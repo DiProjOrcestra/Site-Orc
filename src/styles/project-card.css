@@ -40,14 +40,12 @@
 
 
 
-/* tablet */
 @media (max-width: 900px) {
   .project-card-image {
     height: 170px;
   }
 }
 
-/* celular */
 @media (max-width: 600px) {
   .project-card-image {
     height: 200px;

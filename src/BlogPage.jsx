@@ -1,10 +1,16 @@
 import "./BlogPage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import blogframe from "../public/frame-blog.svg";
 import BlogPagination from "./BlogPagination";
 
 function BlogPage() {
   const [pagina, setPagina] = useState(1);
+  useEffect (()=>{
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }, [pagina]);
   return (
     <>
     <section className="blog-c">

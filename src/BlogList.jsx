@@ -7,7 +7,7 @@ function BlogList({irParaPagina}) {
             imagem: "/Blog-1.webp",
             titulo: "Gamificação Estratégica para Negócios: O Guia Completo para Aumentar o Engajamento e o ROI",
             resumo: "Sua equipe está desengajada? A produtividade parece estagnada e as metas parecem cada vez mais distantes? Você não está sozinho.",
-            link: "https://youtube.com"
+            link: "https://orcestra.com.br/"
         },
         {
             id: 2,

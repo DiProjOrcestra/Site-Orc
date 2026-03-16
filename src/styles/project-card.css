@@ -35,7 +35,10 @@
 
 .project-card p {
   color: #434d40;
+  font: 14px "Ubuntu", sans-serif;;
 }
+
+
 
 /* tablet */
 @media (max-width: 900px) {

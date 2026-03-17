@@ -24,7 +24,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
 }
 
 .projects-header {
@@ -68,6 +67,9 @@ body {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
     gap: 20px;
     padding: 32px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

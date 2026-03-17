@@ -7,6 +7,7 @@
   display: block;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   color: #434d40;
+  align-self: flex-start;
 }
 
 .project-card:hover {
@@ -39,18 +40,7 @@
 }
 
 
-
-@media (max-width: 900px) {
-  .project-card-image {
-    height: 170px;
-  }
-}
-
 @media (max-width: 600px) {
-  .project-card-image {
-    height: 200px;
-  }
-
   .project-card-content {
     padding: 14px;
   }

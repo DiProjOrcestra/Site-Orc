@@ -1,12 +1,11 @@
-import React from 'react';
-import QuemSomos from './QuemSomos'; 
+import ImpactIndicators from "./ImpactIndicators"
+import SecaoTelaInicial from "./components/SecaoTelaInicial"
 
 function App() {
   return (
-    <>
-      <QuemSomos />
-    </>
-  );
+    <SecaoTelaInicial/>
+    <ImpactIndicators/>  
+  )
 }
 
 export default App;

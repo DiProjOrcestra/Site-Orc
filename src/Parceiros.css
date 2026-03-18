@@ -38,24 +38,31 @@
 
 /* Grid de parceiros */
 .parceiros-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza os itens horizontalmente em cada linha */
+  gap: 1rem;               /* espaçamento entre os cards (substitui o gap do grid) */
   margin-top: 2rem;
-  max-width: 1200px; /* mesma largura máxima da linha */
+  max-width: 1200px;
   width: 100%;
 }
 
 .parceiro-card {
+  flex: 0 1 200px;         /* largura base de 200px, não cresce, pode encolher */
   text-align: center;
+  display: flex;
+  align-items: center;     /* mantém o alinhamento vertical das imagens */
+  justify-content: center;
+  height: auto;            /* altura definida pelo conteúdo */
 }
 
 .parceiro-card img {
-  max-width: 200px;
+  max-width: 100%;
+  max-height: 150px;       /* altura máxima para controle */
+  width: auto;
   height: auto;
-  margin-bottom: 0.5rem;
+  object-fit: contain;
 }
-
 /* Responsividade: em telas muito pequenas, a linha e o grid se ajustam */
 @media (max-width: 511px) {
     .container-title {
@@ -77,6 +84,9 @@
     }
     .parceiros-grid {
     max-width: 100%;
+    }
+    .parceiro-card {
+      flex: 0 1 150px; 
     }
     .parceiro-card img {
     max-width: 100px;

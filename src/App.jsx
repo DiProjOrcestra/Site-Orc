@@ -1,13 +1,12 @@
-import ImpactIndicators from "./ImpactIndicators"
-import Servicos from "./components/services"
+import React from 'react';
+import QuemSomos from './QuemSomos'; 
 
 function App() {
   return (
     <>
-      <ImpactIndicators></ImpactIndicators>
-      <Servicos></Servicos>
+      <QuemSomos />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

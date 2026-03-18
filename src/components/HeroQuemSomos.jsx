@@ -1,0 +1,25 @@
+import React from 'react';
+import '../css/HeroQuemSomos.css';
+
+const HeroQuemSomos = () => {
+  return (
+    <section className="hero-section"> 
+      <div className="container-conteudo hero-flex">
+         
+        <div className="hero-texto">
+          <h1>Projeta Aqui, Motiva Lá!</h1>
+          <p>Uma empresa empenhada a transformar vidas das pessoas através da gamificação</p>
+        </div>
+
+        <div className="hero-imagem">
+          <img 
+            src="https://orcestra.com.br/wp-content/uploads/2023/06/Frame-211.svg" 
+            alt="Ilustração da equipe Orc'estra se abraçando" 
+          />
+        </div>
+      </div>
+    </section>
+  );
+};  
+
+export default HeroQuemSomos;

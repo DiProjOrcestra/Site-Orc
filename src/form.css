@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', Sans-serif;
+}
+
+.form-container-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #032100;
+  padding: 60px 50px;
+  min-height: 0;
+  width: 100%;
+  gap: 60px;
+}
+
+.form-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  padding: 10px 0px;
+  width: 60%;
+}
+
+h2 {
+ 
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+p {
+
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  text-align: start;
+}
+
+.form-logo {
+  max-width: 300px;
+  margin-bottom: 20px;
+  position: initial;
+}
+
+.fields-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 50px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+
+.width-50 {
+  width: calc(50% - 15px);
+}
+
+.width-33 {
+  width: calc(33.33% - 15px);
+}
+
+.width-100 {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .width-50,
+  .width-33,
+  .form-error-style,
+  .btn-submit,
+  .react-form-styled {
+    width: 100% !important;
+  }
+
+  .form-container-main {
+    flex-direction: column;
+    padding: 40px 35px;
+    gap: 30px;
+  }
+
+  .form-header {
+    align-items: flex-start;
+    width: 100% !important;
+  }
+
+  .h2 {
+    font-size: 2.5rem;
+    text-align: start;
+  }
+
+  .p {
+    text-align: start;
+    font-size: 1.1rem;
+  }
+
+  textarea {
+    width: calc(100% - 15px);
+  }
+
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #636363;
+}
+
+label span {
+  color: #ff4d4d;
+}
+
+input,
+select,
+textarea {
+  padding: 6px 10px;
+  border: 1px solid #3bc90c;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #032100;
+  color: #bcbaba;
+  opacity: 1;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3bc90c !important;
+  box-shadow: 0 0 5px rgba(59, 201, 12, 0.5) !important;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+  border-color: #ff4d4d;
+}
+
+.field-error {
+  border-color: #ff4d4d !important;
+}
+
+.form-error-style {
+  background-color: #008700 !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-family: "Ubuntu", Sans-serif;
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+  margin: 0 0 25px 0 !important;
+  width: calc(100% - 15px) !important;
+  box-sizing: border-box !important;
+}
+
+::placeholder {
+  color: #bcbaba;
+  opacity: 1;
+}
+
+.btn-submit {
+  width: 250px !important;
+  font-size: 15px !important;
+  height: 43px !important;
+  line-height: normal !important;
+  text-align: center;
+  background: #3bc90c !important;
+  border-width: 0px;
+  border-color: #3bc90c !important;
+  border-style: solid;
+  color: #032100 !important;
+  cursor: pointer;
+  font-weight: bold !important;
+  border-radius: 100px !important;
+  text-shadow: none;
+  padding: 10px 20px !important;
+  box-sizing: border-box;
+  box-shadow: 0 1px 1px #032100;
+  margin: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-submit:hover {
+  background-color: #3bc90c;
+  opacity: 0.9;
+}
+
+.btn-submit:focus {
+  outline: none;
+}
+
+textarea {
+  max-width: 100%;
+  resize: none;
+  height: 60px;
+  max-height: 1000px;
+  width: calc(100% - 15px);
+  scrollbar-color: #3bc90c #032100;
+  scrollbar-width: thin;
+}
+
+.img-div {
+  display: flex;
+  align-items: start;
+}

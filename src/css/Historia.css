@@ -1,0 +1,280 @@
+.historia-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.container-historia {
+  width: 95%; 
+  max-width: 1600px; 
+  margin: 0 auto;
+  margin-top: -50px !important; 
+  position: relative; 
+  z-index: 10;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1400px;
+  margin-left: auto;  
+  margin-right: auto;  
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.timeline-linha {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #dcdcdc; 
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-linha::before,
+.timeline-linha::after {
+  content: '';
+  position: absolute;
+  width: 12px; 
+  height: 12px;
+  background-color: #dcdcdc; 
+  border-radius: 50%; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-linha::before { top: 0; }
+.timeline-linha::after { bottom: 0; }
+
+.timeline-item {
+  width: 50%;
+  position: relative;
+  margin-bottom: 3rem;
+  z-index: 2;
+}
+
+.timeline-item.direita {
+  margin-left: 50%;
+  padding-left: 50px; 
+}
+
+.timeline-item.esquerda {
+  margin-left: 0;
+  padding-right: 50px;
+}
+
+.timeline-icone {
+  position: absolute;
+  top: 15px; 
+  width: 44px; 
+  height: 44px;
+  background-color: #3BC90C; 
+  border: 4px solid #e6e6e6; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.timeline-item.direita .timeline-icone { left: -22px; } 
+.timeline-item.esquerda .timeline-icone { right: -22px; }
+
+.timeline-ano {
+  position: absolute;
+  top: 26px; 
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #3BC90C;
+  white-space: nowrap; 
+}
+
+.timeline-item.direita .timeline-ano { 
+  left: -45px; 
+  transform: translateX(-100%); 
+}
+
+.timeline-item.esquerda .timeline-ano { 
+  right: -45px; 
+  transform: translateX(100%); 
+}
+
+.timeline-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s ease; /* 👇 Efeito de flutuação suave ao passar o mouse */
+}
+
+.timeline-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.timeline-item.direita .timeline-card { border-left: 3px solid #3BC90C; }
+.timeline-item.esquerda .timeline-card { border-right: 3px solid #3BC90C; }
+
+.timeline-card::after {
+  display: none; 
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 30px; 
+  width: 16px; 
+  height: 16px;
+  background-color: #ffffff; 
+  box-sizing: border-box; 
+  z-index: 10;
+}
+
+.timeline-item.direita .timeline-card::before {
+  left: -8px; 
+  border-bottom: 3px solid #3BC90C; 
+  border-left: 3px solid #3BC90C; 
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg); 
+}
+
+.timeline-item.esquerda .timeline-card::before {
+  right: -8px; 
+  border-top: 3px solid #3BC90C; 
+  border-right: 3px solid #3BC90C; 
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg); 
+}
+
+.timeline-card h3.verde {
+  color: #3BC90C;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.timeline-item.esquerda .timeline-card h3.verde { text-align: right; }
+.timeline-item.direita .timeline-card h3.verde { text-align: left; }
+
+.card-imagem {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.timeline-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.timeline-card li {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  
+  .container-historia {
+    width: 100% !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .timeline-container {
+    padding-left: 0 !important;
+    padding-right: 15px !important;
+    overflow: hidden;
+  }
+
+  .timeline-linha {
+    left: 25px !important; 
+    width: 4px !important;
+    transform: none !important;
+    z-index: 1 !important;
+  }
+
+  .timeline-linha::before,
+  .timeline-linha::after {
+    left: 2px !important; 
+    transform: translateX(-50%) !important;
+  }
+
+  .timeline-item {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 65px !important; 
+    padding-right: 0 !important;
+    margin-bottom: 3.5rem !important;
+    position: relative !important;
+  }
+
+  .timeline-ano {
+    position: relative !important; 
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+    transform: none !important;
+    font-size: 22px !important;
+    line-height: 22px !important; 
+  }
+
+  .timeline-icone {
+    position: absolute !important;
+    width: 42px !important;
+    height: 42px !important;
+    left: 6px !important; 
+    top: 32px !important; 
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 10 !important;
+  }
+
+  .timeline-card {
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 1.5rem 1.2rem !important;
+    border-right: none !important;
+    border-left: 3px solid #3BC90C !important;
+    position: relative !important;
+  }
+
+  .timeline-card::after { display: none !important; }
+
+  .timeline-card::before {
+    content: '' !important;
+    position: absolute !important;
+    left: -10px !important; 
+    top: 18px !important; 
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #ffffff !important;
+    z-index: 10 !important; 
+    border-bottom: 3px solid #3BC90C !important;
+    border-left: 3px solid #3BC90C !important;
+    border-top: none !important;
+    border-right: none !important;
+    transform: rotate(45deg) !important;
+  }
+
+  .timeline-item.esquerda .timeline-card h3.verde,
+  .timeline-item.esquerda .timeline-card ul {
+    text-align: left !important;
+  }
+}

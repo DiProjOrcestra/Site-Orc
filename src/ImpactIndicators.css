@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Efeito Parallax aaaaa
+-- Teria que ter um espaço em cima e em baxio para testar de forma definitiva
+*/
+
+.parallax {
+  height: 100vh;
+  background-image: url("/img-indicadores.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+}
+
+.overlay {
+  width: 100%;
+  background: #003D0DBF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* COntainers (Pai) */
+.metrics-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Os cubos (retangulos, n sei) --> (Filho)*/
+.metric-card {
+  border: 1px solid #3bc90c;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(4px);
+  transition: 0.4s ease;
+  width: 280px;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 255, 100, 0.1);
+}
+
+.metric-card h2 {
+  font-size: 32px;
+}
+
+.metric-card p {
+  font-size: 20px;
+}
+
+@media (max-width: 768px){
+  .metrics-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 390px) {
+  .metric-card{
+    width: 220px;
+  }
+}

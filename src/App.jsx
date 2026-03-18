@@ -1,22 +1,12 @@
-
-import { useState } from 'react'
-import BlogList from './BlogList'
-import BlogPage from './BlogPage';
+import React from 'react';
+import QuemSomos from './QuemSomos'; 
 
 function App() {
-
-  const [pagina,setPagina]= useState("banner");
-
   return (
     <>
-    {pagina === 'banner' ?(
-      <BlogList irParaPagina={() => setPagina('blog')} />)
-      :
-      <BlogPage />
-      }
-
+      <QuemSomos />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

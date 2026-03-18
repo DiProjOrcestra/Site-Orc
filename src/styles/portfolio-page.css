@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.portfolio-page {
+  width: 100%;
+  background-color: #fff;
+}
+
+.port-c {
+  background: #3bc90c;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  font-family: "Ubuntu", sans-serif;
+  flex-wrap: wrap;
+}
+
+.port-content {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.port-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #032100;
+  margin: 10px 0;
+  line-height: 1.1;
+}
+
+.port-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #032100;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.port-frame-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.port-img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+}
+
+.tabela-gloria,
+.exemplo-gloria {
+  width: 100%;
+  max-width: 100%;
+  padding: 30px 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.portfolio-section {
+  padding: 50px 8%;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+@media (min-width: 1440px) {
+  .port-c {
+    padding: 60px 10%;
+    gap: 60px;
+  }
+
+  .port-content {
+    max-width: 650px;
+  }
+
+  .port-title {
+    font-size: 3.8rem;
+  }
+
+  .port-text {
+    font-size: 22px;
+    max-width: 550px;
+  }
+
+  .port-img {
+    max-width: 480px;
+  }
+
+  .portfolio-section {
+    padding: 70px 10%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 32px;
+  }
+
+  .tabela-gloria,
+  .exemplo-gloria {
+    max-width: 1200px;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .portfolio-section {
+    padding: 40px 6%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+
+  .port-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .port-c {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px;
+    gap: 24px;
+  }
+
+  .port-content,
+  .port-frame-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .port-title {
+    font-size: 2rem;
+  }
+
+  .port-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .port-img {
+    max-width: 100%;
+  }
+
+  .portfolio-section {
+    padding: 30px 20px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

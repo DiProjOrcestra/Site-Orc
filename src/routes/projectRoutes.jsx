@@ -15,23 +15,21 @@ import MeteoroPegasus from "../pages/MeteoroPegasus";
 import Moonlight from "../pages/Moonlight";
 import Gloria from "../pages/Gloria";
 
-export default function ProjectRoutes() {
-  return (
-    <>
-      <Route path="/hakuna" element={<Hakuna />} />
-      <Route path="/fitflow" element={<FitFlow />} />
-      <Route path="/allegro" element={<Allegro />} />
-      <Route path="/edwiges" element={<Edwiges />} />
-      <Route path="/nutrir" element={<Nutrir />} />
-      <Route path="/four-seasons" element={<FourSeasons />} />
-      <Route path="/adote-post" element={<AdotePost />} />
-      <Route path="/camaro-amarelo" element={<CamaroAmarelo />} />
-      <Route path="/meninos-porteira" element={<MeninosPorteira />} />
-      <Route path="/ect2016" element={<Ect2016 />} />
-      <Route path="/elas-projetam" element={<ElasProjetam />} />
-      <Route path="/meteoro-pegasus" element={<MeteoroPegasus />} />
-      <Route path="/moonlight" element={<Moonlight />} />
-      <Route path="/gloria" element={<Gloria />} />
-    </>
-  );
-}
+export const projectRoutes = (
+  <>
+    <Route path="/hakuna" element={<Hakuna />} />
+    <Route path="/fitflow" element={<FitFlow />} />
+    <Route path="/allegro" element={<Allegro />} />
+    <Route path="/edwiges" element={<Edwiges />} />
+    <Route path="/nutrir" element={<Nutrir />} />
+    <Route path="/four-seasons" element={<FourSeasons />} />
+    <Route path="/adote-post" element={<AdotePost />} />
+    <Route path="/camaro-amarelo" element={<CamaroAmarelo />} />
+    <Route path="/meninos-porteira" element={<MeninosPorteira />} />
+    <Route path="/ect2016" element={<Ect2016 />} />
+    <Route path="/elas-projetam" element={<ElasProjetam />} />
+    <Route path="/meteoro-pegasus" element={<MeteoroPegasus />} />
+    <Route path="/moonlight" element={<Moonlight />} />
+    <Route path="/gloria" element={<Gloria />} />
+  </>
+);

@@ -1,10 +1,10 @@
 import ImpactIndicators from "./ImpactIndicators"
-import SecaoTelaInicial from "./components/SecaoTelaInicial"
+import Parceiros from "./Parceiros"
 
 function App() {
   return (
-    <SecaoTelaInicial/>
-    <ImpactIndicators/>  
+    <><ImpactIndicators></ImpactIndicators>
+    <Parceiros> </Parceiros></>
   )
 }
 

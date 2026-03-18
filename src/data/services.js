@@ -175,7 +175,7 @@ export const SERVICOS = {
   "treinamento-gamificado":{
 
     
-    name: "Treinamentos Gamificados",
+    name: "Treinamento Gamificado",
     imageHero: "/assets/imagem4orc.svg",
     texto1:"Traga novos aprendizados para a sua equipe!",
     texto2:"Forneça à sua equipe um treinamento gamificado que reúne conceitos teóricos e práticos com o intuito de aumentar o engajamento e potencializar resultados. Para isso, utilize já técnicas validadas pelo mercado e melhore o desempenho do seu time.",

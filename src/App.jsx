@@ -3,11 +3,9 @@ import SecaoTelaInicial from "./components/SecaoTelaInicial"
 
 function App() {
   return (
-    <> <SecaoTelaInicial></SecaoTelaInicial>
-    <ImpactIndicators></ImpactIndicators>
-    </>
-    
+    <SecaoTelaInicial/>
+    <ImpactIndicators/>  
   )
 }
 
-export default App
+export default App;

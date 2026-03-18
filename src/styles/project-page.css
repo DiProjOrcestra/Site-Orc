@@ -1,0 +1,120 @@
+
+/*PROBLEMA NA RESPONSIVIDADE EM DISPOSITIVOS MENORES
+(RESOLVER)
+*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.project {
+  background-color: white;
+  width: 100%;
+  padding: 0 0 50px 0;
+}
+
+.project-image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.project-title,
+.sub-title,
+.paragraph {
+  font-family: "Ubuntu", sans-serif;
+  color: #032100;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.project-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+  line-height: 1.1;
+}
+
+.sub-title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3bc90c;
+  width: calc(100% - 200px);
+  padding-bottom: 8px;
+  line-height: 1.2;
+}
+
+.paragraph {
+  color: #032100;
+  font-family: "Ubuntu", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 18.75px);
+  width: calc(100% - 200px);
+  font-weight: 455;
+  margin-bottom: 2.2em;
+  text-align: justify;
+  line-height: 1.7;
+  text-indent: 30px; 
+}
+
+@media (max-width: 1200px) {
+  .project-title,
+  .sub-title,
+  .paragraph {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  .sub-title,
+  .paragraph {
+    width: calc(100% - 140px);
+  }
+}
+
+@media (max-width: 900px) {
+  .project {
+    padding: 0;
+  }
+
+  .project-title,
+  .sub-title,
+  .paragraph {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .sub-title,
+  .paragraph {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    padding: 0;
+  }
+
+  .project-title,
+  .sub-title,
+  .paragraph {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .project-title {
+    margin-bottom: 28px;
+  }
+
+  .sub-title,
+  .paragraph {
+    width: calc(100% - 40px);
+  }
+
+  .paragraph {
+    text-align: left;
+    line-height: 1.6;
+  }
+}

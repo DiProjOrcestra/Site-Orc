@@ -5,17 +5,22 @@
     padding: 50px;
     max-width: 1200px;
 }
-p, h2 {
+.banner p, h2 {
     text-align: start;
+    color: #032100;
 }
-p {
+.banner p {
     font-size: 18px;
+    margin: 18px 0px;
 }
-h2 {
+.banner h2 {
     font-size: 32px;
     margin: 0px;
 }
-hr {
+.banner h3 {
+    margin: 24px 0px;
+}
+.banner hr {
     margin: 0px;
     background-color: #3bc90c;
     height: 2px;
@@ -35,7 +40,7 @@ hr {
         flex-wrap: wrap;
     }
 }
-@media (max-width: 420px){
+@media (max-width: 475px){
     
     .posts-container {
         display: block;

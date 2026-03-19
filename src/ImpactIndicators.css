@@ -9,7 +9,7 @@
 */
 
 .parallax {
-  height: 100vh;
+  height: 100%;
   background-image: url("/img-indicadores.webp");
   background-attachment: fixed;
   background-position: center;
@@ -20,6 +20,7 @@
 }
 
 .overlay {
+  height: 455px;
   width: 100%;
   background: #003D0DBF;
   display: flex;

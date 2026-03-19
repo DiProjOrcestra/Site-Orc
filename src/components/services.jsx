@@ -5,7 +5,7 @@ import '../css/services.css';
 
 const Servicos = () => {
   return (
-    <section className="secao-servicos">
+    <section className="secao-servicos" id='services'>
       <div className="header-container">
         <h2 className="titulo-secao">A nossa gamificação pode te ajudar de várias formas</h2>
         <hr className="divisor-verde" />

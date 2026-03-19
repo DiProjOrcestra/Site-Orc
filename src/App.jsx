@@ -15,7 +15,6 @@ function App() {
     <ProjectsGrid/>
     <Parceiros/>
     <BlogList/>
-    <ContactForm/>
     </>
   )
 }

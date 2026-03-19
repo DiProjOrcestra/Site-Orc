@@ -40,10 +40,7 @@
 /* Os cubos (retangulos, n sei) --> (Filho)*/
 .metric-card {
   border: 1px solid #3bc90c;
-  padding-top: 15px;
-  padding-bottom: 5px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 15px 25px;
   text-align: center;
   color: white;
   backdrop-filter: blur(4px);
@@ -58,10 +55,13 @@
 
 .metric-card h2 {
   font-size: 32px;
+  text-align: center;
 }
 
 .metric-card p {
   font-size: 20px;
+  color: white;
+  text-align: center;
 }
 
 @media (max-width: 768px){

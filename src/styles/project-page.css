@@ -28,6 +28,11 @@ body {
   margin-right: 100px;
 }
 
+p {
+  color: #032100;
+  font-size: 1.5rem;
+}
+
 .project-title {
   font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 700;

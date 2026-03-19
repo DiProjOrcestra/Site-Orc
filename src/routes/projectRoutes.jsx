@@ -15,8 +15,10 @@ import MeteoroPegasus from "../pages/MeteoroPegasus";
 import Moonlight from "../pages/Moonlight";
 import Gloria from "../pages/Gloria";
 
-export const projectRoutes = (
+
+function projectRoutes (){
   <>
+    
     <Route path="/hakuna" element={<Hakuna />} />
     <Route path="/fitflow" element={<FitFlow />} />
     <Route path="/allegro" element={<Allegro />} />
@@ -32,4 +34,8 @@ export const projectRoutes = (
     <Route path="/moonlight" element={<Moonlight />} />
     <Route path="/gloria" element={<Gloria />} />
   </>
-);
+
+}
+
+
+export default projectRoutes;

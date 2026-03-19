@@ -37,11 +37,12 @@ h2 {
   margin-bottom: 20px;
 }
 
-p {
+.p {
 
   font-size: 1.25rem;
   color: #FFFFFF;
   text-align: start;
+  padding-top: 20px;
 }
 
 .form-logo {

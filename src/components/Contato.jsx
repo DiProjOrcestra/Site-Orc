@@ -20,7 +20,7 @@ function Contact() {
             </div>
             
             <div className="numero-email">
-              <p>(17) 9 82070899</p>
+              <p>(17) 9 8207-0899</p>
               <p>guilherme.ventura@orcestra.com.br</p>
             </div>
             
@@ -50,7 +50,7 @@ function Contact() {
             
 
             <div className="numero-email">
-              <p>(61) 9 99732566</p>
+              <p>(61) 9 9973-2566</p>
               <p>vini.araujo@orcestra.com.br</p>
             </div>
           </div>
@@ -63,7 +63,7 @@ function Contact() {
       <div className="location-medias">
         <div className="location-section">
           <h2>Localização</h2>
-            <p>Container 13, Faculdade do Gama UnB, Brasília - DF</p>
+            <p>Container 06, Faculdade do Gama UnB, Brasília - DF</p>
            
                   <iframe
                     title="Orc'estra Gamificação"

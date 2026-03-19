@@ -6,7 +6,7 @@ import ComoFunciona from '../components/PageServicos/ComoFunciona';
 import Beneficios from '../components/PageServicos/Beneficios';
 import SobreInstitucional from '../components/PageServicos/QuemSomos';
 import Projetos from '../components/PageServicos/Projetos';
-import ContactForm from '../form';
+
 
 
 const ServicePage = ({ DadosManuais }) => {
@@ -56,7 +56,6 @@ const ServicePage = ({ DadosManuais }) => {
         titulo={dados.tituloProjetos}
         lista={dados.projetos}
       />
-      <ContactForm/>
     </main>
   );
 };

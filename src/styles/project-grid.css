@@ -13,7 +13,7 @@ body {
   grid-template-columns: repeat(5, minmax(180px, 1fr));
   gap: 24px;
   padding: 100px 100px;
-  min-height: 100vh;
+  min-height: auto;
   width: 100%;
   justify-items: start;
   align-items: start;

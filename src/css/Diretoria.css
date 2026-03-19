@@ -6,7 +6,8 @@
 .container-diretoria {
   width: 95%;
   max-width: 1600px;
-  margin: 0 auto;   
+  margin: 0 auto;
+  padding-top: 20px;   
 }
 
 .titulo-diretoria-container {

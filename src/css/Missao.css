@@ -15,6 +15,7 @@
   font-weight: 800;
   color: #032100;
   margin-bottom: 0.5rem;
+  padding-top: 40px;
 }
 
 .linha-verde {
@@ -68,6 +69,7 @@
   font-weight: 900;
   line-height: 1.3;
   margin: 0;
+  color: white;
 }
 
 .missao-detalhes {

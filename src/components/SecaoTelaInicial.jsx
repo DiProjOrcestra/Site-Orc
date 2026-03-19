@@ -13,11 +13,11 @@ const SecaoTelaInicial = () => {
         <div className="secao-botoes">
 
           <button className="secao-btn"
-          onClick={() => document.getElementById('id-da-seção')?.scrollIntoView({behavior: 'smooth'})}
+          onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'}, )}
           >O que fazemos</button>
           
           <button className="secao-btn" 
-          onClick={() => document.getElementById('id-da-seção')?.scrollIntoView({behavior: 'smooth'})}
+          onClick={() => document.getElementById('forms')?.scrollIntoView({behavior: 'smooth'})}
           >Fale conosco</button>
 
         </div>

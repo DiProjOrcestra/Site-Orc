@@ -16,10 +16,10 @@ body {
   display:flex;
   flex-direction:row;
   gap:30px;
-  padding:40px;
   background-color: white;
   color: #032100;;
   padding: 50px 100px;
+  padding-top: 150px;
 }
 
 /* Pessoas */
@@ -45,6 +45,10 @@ body {
   border: 2px solid #56E22F;
   border-radius: 8px;
 }
+
+.team-card h2 {
+  color: #032100;
+}
 .team-section a{
   width: 200px;
   height: 200px;
@@ -53,7 +57,6 @@ body {
   display:flex;
   flex-direction:column;
   gap: 8px;
-  padding-bottom: 15px;
 }
 .numero-email p{
   font-size: 18px;
@@ -70,6 +73,11 @@ body {
   margin-top:15px;
   
 }
+
+.location-section h2, .social-section h2 {
+  color: #032100;
+}
+
 .location-medias{
     width: 100%;
     border-style: solid;
@@ -142,10 +150,8 @@ body {
         row-gap: 20px;
         column-gap: 20px;
         flex-wrap: wrap;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 20px;
+        padding-top: 100px;
     }
     .location-section h2, .location-section p{
       padding-bottom: 8px;
@@ -163,6 +169,7 @@ body {
       flex-direction: row;
       width: 100%;
       margin: 15px 0px;
+      gap: 0;
     }
  
 }
@@ -235,6 +242,16 @@ body {
       
     } 
     
+    @media(max-width: 425px) {
+      .contact-container {
+        padding-top: 60px;
+      }
+
+      .team-section{
+        gap: 40px;
+      }
+    }
+
     @media(max-width: 389px){
       .social-icons{
         flex-wrap: wrap;

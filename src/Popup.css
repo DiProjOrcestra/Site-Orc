@@ -1,0 +1,214 @@
+/* ===== ESTILOS DO POP-UP (responsivo) ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  top: 5%;
+  background: #003D0D;
+  color: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  overflow-y: auto;
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+/* Título principal */
+.popup-content .title {
+  color: #fff !important;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Botão de fechar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+}
+
+.close-button img {
+  width: 15px;
+  height: auto;
+}
+
+/* ===== AJUSTES RESPONSIVOS PARA TELAS PEQUENAS ===== */
+@media (max-width: 400px) {
+  .popup-content {
+    padding: 15px;
+    width: 95%;
+    max-width: 95%; /* Ocupa quase toda a tela */
+  }
+
+  .popup-content .title {
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
+  }
+
+  .close-button {
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .close-button img {
+    width: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .popup-content {
+    padding: 10px;
+  }
+
+  .popup-content .title {
+    font-size: 1.1rem;
+  }
+
+  .close-button {
+    width: 22px;
+    height: 22px;
+  }
+
+  .close-button img {
+    width: 10px;
+  }
+}
+
+/* ===== SOBRESCRITA DOS ESTILOS DO FORMULÁRIO ===== */
+.popup-content .form-container-main {
+  display: block !important;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.popup-content .form-header {
+  margin-bottom: 15px;
+}
+
+.popup-content .form-header .img-div {
+  margin-bottom: 5px;
+}
+
+.popup-content .form-header .h2 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.popup-content .form-header .p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.popup-content .fields-grid {
+  padding-top: 1.5rem !important;
+  display: block !important;
+}
+
+.popup-content .field-group {
+  width: 100% !important;
+  margin-right: 0 !important;
+  margin-bottom: 15px;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.popup-content .field-group input,
+.popup-content .field-group select,
+.popup-content .field-group textarea {
+  width: 100% !important;
+  padding: 10px !important;
+  box-sizing: border-box;
+}
+
+/* Ajuste responsivo para inputs em telas muito pequenas */
+@media (max-width: 320px) {
+  .popup-content .field-group input,
+  .popup-content .field-group select,
+  .popup-content .field-group textarea {
+    padding: 8px !important;
+    font-size: 0.9rem;
+  }
+}
+
+.popup-content .field-group label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.popup-content .error-msg {
+  font-size: 0.8rem;
+  text-align: left;
+  display: block;
+  margin-top: 3px;
+}
+
+.popup-content .submit-container {
+  text-align: center;
+}
+
+.popup-content .btn-submit {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media (max-width: 320px) {
+  .popup-content .btn-submit {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+.popup-content .form-error-style {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Oculta elementos indesejados */
+.popup-content .img-div {
+  display: none;
+}
+
+.popup-content .form-header .h2,
+.popup-content .form-header .p {
+  display: none;
+}

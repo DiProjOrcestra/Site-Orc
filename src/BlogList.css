@@ -35,7 +35,7 @@ hr {
         flex-wrap: wrap;
     }
 }
-@media (max-width: 420px){
+@media (max-width: 475px){
     
     .posts-container {
         display: block;

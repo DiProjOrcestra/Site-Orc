@@ -6,7 +6,7 @@ p {
     font-size: 18px;
 }
 .blog-image {
-    width: 265px;
+    width: 100%;
 }
 .post-item {
     padding: 0px 15px;
@@ -39,7 +39,7 @@ p {
         margin-bottom: 0;
     }
 }
-@media (max-width: 420px){
+@media (max-width: 475px){
     .post-item {
         justify-content: center;
         width: 100%;        

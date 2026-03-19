@@ -1,0 +1,68 @@
+import React from 'react';
+import '../css/Valores.css'; 
+
+const Valores = () => {
+  return (
+    <section className="valores-section">
+      <div className="container-valores">
+        
+        <h2 className="titulo-valores">Nossos valores</h2>
+        <hr className="linha-verde" />
+
+        <div className="valores-grid">
+          <div className="valor-card">
+
+            <div className="valor-imagem">
+              <img 
+                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-233-3.svg" 
+                alt="Ilustração Família" /> 
+            </div>
+            <div className="valor-texto">
+              <h3>Família</h3>
+              <p>Nós somos responsáveis uns pelos outros. Nosso dever como Orcs é de cuidar uns dos outros, prezar pela empatia, motivar a equidade e celebrar a diversidade. Somos feitos pela junção das mais diferentes pessoas, origens, objetivos e sonhos.</p>
+            </div>
+          </div>
+
+          <div className="valor-card">
+            <div className="valor-imagem">
+              <img 
+                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-234.svg" 
+                alt="Ilustração Sintonia" />
+            </div>
+            <div className="valor-texto">
+              <h3>Sintonia</h3>
+              <p>Mais do que juntos, estamos no mesmo ritmo. Nos conhecemos tão bem que nossas vontades são quase as mesmas. Estarmos alinhados é nossa meta, para que possamos sempre crescer em tamanho e qualidade constantes.</p>
+            </div>
+          </div>
+
+          <div className="valor-card">
+            <div className="valor-imagem">
+              <img 
+                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-236.svg" 
+                alt="Ilustração Crescimento" />
+            </div>
+            <div className="valor-texto">
+              <h3>Crescimento</h3>
+              <p>Estamos sempre atrás de novos conhecimentos, não temos medo de tentar e errar, pois só assim podemos crescer e só assim podemos nos conhecer. Com maiores conhecimentos, aparecem maiores desafios. Mas isso não nos impede.</p>
+            </div>
+          </div>
+
+          <div className="valor-card">
+            <div className="valor-imagem">
+              <img 
+                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-237.svg" 
+                alt="Ilustração Sangue Orc" />
+            </div>
+            <div className="valor-texto">
+              <h3>Sangue Orc</h3>
+              <p>Nossa identidade está sempre estampada em tudo o que fazemos. Temos orgulho de ser quem somos, e orgulho de sermos os responsáveis pela proteção e desenvolvimento de nossa realidade. Somos a Orc'estra Gamificação e nosso sangue é de Orcs.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Valores;

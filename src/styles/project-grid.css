@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 24px;
+  padding: 100px 100px;
+  min-height: 100vh;
+  width: 100%;
+  justify-items: start;
+  align-items: start;
+  
+  background:
+    linear-gradient(#003D0DBF, #003D0DBF),
+    url("../assets/imagem-fundo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.projects-header {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.projects-title {
+  font: 40px "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  border-bottom: 3px solid #3bc90c; 
+  padding-bottom: 2px;
+}
+
+.port-link {
+  text-decoration: none;
+}
+
+.projects-subtitle {
+  font: 20px "Ubuntu", sans-serif;
+  color: #ffffff;
+  margin-top: 8px;
+  text-align: left;
+  max-width: 600px;
+}
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    padding: 40px 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 32px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 28px 20px;
+  }
+}

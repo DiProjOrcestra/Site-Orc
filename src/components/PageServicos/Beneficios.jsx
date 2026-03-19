@@ -8,7 +8,7 @@ const Beneficios = ({ titulo, intro, lista, textButao }) => {
         <div className="beneficios-left">
             <h2 className="beneficios-titulo">{titulo}</h2>
             <p className="beneficios-intro">{intro}</p>
-            <button onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}>
+            <button onClick={() => document.getElementById('forms').scrollIntoView({ behavior: 'smooth' })}>
                 {textButao || 'Entre em Contato'}
             </button>
         </div>

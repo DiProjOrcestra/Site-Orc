@@ -23,6 +23,7 @@ import Gloria from "./pages/Gloria";
 import Contact from './components/Contato.jsx'
 import ContactForm from "./form.jsx";
 import QuemSomos from "./QuemSomos.jsx"
+import BlogPage from "./BlogPage.jsx"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -49,7 +50,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/moonlight" element={<Moonlight />} />
         <Route path="/gloria" element={<Gloria />} />
         <Route path='/contato' element={<Contact/>} />
-        <Route path='quem-somos' element={<QuemSomos/>} />
+        <Route path='/quem-somos' element={<QuemSomos/>} />
+        <Route path='/blog' element={<BlogPage/>} />
       </Routes>
       <ContactForm/>
     </BrowserRouter>

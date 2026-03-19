@@ -13,7 +13,8 @@ body {
 
 .port-c {
   background: #3bc90c;
-  padding: 0 8%;
+  padding: 60px 8%;
+  padding-top: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,7 +82,6 @@ body {
 
 @media (min-width: 1440px) {
   .port-c {
-    padding: 60px 10%;
     gap: 60px;
   }
 
@@ -135,10 +135,11 @@ body {
 
 @media (max-width: 768px) {
   .port-c {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 30px 20px;
     gap: 24px;
+    padding-top: 80px;
   }
 
   .port-content,
@@ -157,7 +158,7 @@ body {
   }
 
   .port-img {
-    max-width: 100%;
+    width: 100%;
   }
 
   .portfolio-section {

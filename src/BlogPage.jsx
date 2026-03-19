@@ -15,10 +15,6 @@ function BlogPage() {
     <>
     <section className="blog-c">
       <div className="blog-content">
-        <a href="/blog" className="blog-tag">
-          Blog
-        </a>
-
         <h1 className="blog-title">
           Além de empresa,
           <br />

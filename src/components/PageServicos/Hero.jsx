@@ -13,7 +13,7 @@ const Hero = ({ name, texto1, texto2, image, textButao }) => {
         
         <button 
           className="hero-btn-contato"
-          onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => document.getElementById('forms').scrollIntoView({ behavior: 'smooth'})}
         >
           {textButao || 'Entre em Contato'}
         </button>

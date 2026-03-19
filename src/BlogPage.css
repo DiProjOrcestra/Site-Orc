@@ -5,6 +5,7 @@ body {
 .blog-c {
   background: #3bc90c;
   padding: 0px 8%;
+  padding-top: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;

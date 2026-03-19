@@ -1,6 +1,6 @@
 .hero-section {
   background-color: #3BC90C; 
-  padding: 4.5rem 0 0; 
+  padding: 4.5rem 60px 0; 
 }
 
 .container-conteudo {
@@ -96,6 +96,7 @@
     width: 90%;
     margin: 0 auto;
     padding: 0;
+    padding-top: 40px;
   }
 
   .hero-flex {

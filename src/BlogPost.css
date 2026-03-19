@@ -11,9 +11,17 @@ p {
 .post-item {
     padding: 0px 15px;
     width: 265px;
+    display: flex;
+    flex-direction: column;
 }
+
+.post-item p {
+    margin: 12px 0;
+}
+
 .blog-link {
     color: #2EB600;
+    margin-top: auto;
 }
 .blog-title{
     color: inherit;
@@ -37,6 +45,10 @@ p {
     }
     .post-item h3 {
         margin-bottom: 0;
+    }
+
+    .post-item p {
+
     }
 }
 @media (max-width: 475px){

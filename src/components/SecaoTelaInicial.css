@@ -4,6 +4,7 @@
   align-items: center;
   background-color: #3BC90C;
   padding: 40px 8%; 
+  padding-top: 80px;
 }
 
 .secao-content {
@@ -68,7 +69,7 @@
   .secao-container {
     flex-direction: column;
     text-align: center;
-    padding: 60px 5%;
+    padding: 80px 5%;
   }
   .secao-content, .secao-imagem-container {
     width: 100%;
@@ -79,5 +80,8 @@
   .secao-botoes {
     justify-content: center;
     margin-bottom: 40px;
+  }
+  .secao-subtitle {
+    text-align: center;
   }
 }

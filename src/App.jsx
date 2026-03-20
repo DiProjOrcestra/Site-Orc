@@ -16,6 +16,7 @@ function App() {
     <ProjectsGrid/>
     <Parceiros/>
     <BlogList/>
+    <Popup/>
     </>
   )
 }

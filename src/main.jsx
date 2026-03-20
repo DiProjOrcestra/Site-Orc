@@ -24,12 +24,15 @@ import Contact from './components/Contato.jsx'
 import ContactForm from "./form.jsx";
 import QuemSomos from "./QuemSomos.jsx"
 import BlogPage from "./BlogPage.jsx"
+import ScrollToTop from './components/ScrollTotop.jsx'
+import PageTitle from './components/PageTitle.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Header /> 
-      
+      <ScrollToTop/>
+      <PageTitle/>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/servicos/:id" element={<ServicePage />} />

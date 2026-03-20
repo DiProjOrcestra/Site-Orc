@@ -111,6 +111,7 @@
     flex-direction: column-reverse;
     text-align: center;
     padding: 40px 20px;
+    padding-top: 80px;
     min-height: auto;
     gap: 30px;
   }
@@ -161,6 +162,7 @@
   .hero-container {
     padding: 30px 15px;
     gap: 20px;
+    padding-top: 60px;
   }
   
   .hero-name {
@@ -195,6 +197,7 @@
 @media (max-width: 360px) {
   .hero-container {
     padding: 20px 10px;
+    padding-top: 60px;
   }
   
   .hero-name {

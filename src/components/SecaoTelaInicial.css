@@ -1,0 +1,87 @@
+.secao-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3BC90C;
+  padding: 40px 8%; 
+  padding-top: 80px;
+}
+
+.secao-content {
+  width: 45%;
+  color: #111;
+}
+
+/* --- LADO ESQUERDO (TEXTO E BOTÕES) --- */
+
+.secao-name {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.secao-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.secao-botoes {
+  display: flex;
+  gap: 15px;
+}
+
+.secao-btn {
+  background-color: #0b2c04;
+  color: #3BC90C;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secao-btn:hover {
+  background-color: #111;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* --- LADO DIREITO (IMAGEM) --- */
+
+.secao-imagem-container {
+  width: 50%; 
+  display: flex;
+  justify-content: center;
+}
+
+.secao-img {
+  width: 100%;
+  display: flex;
+  border-radius: 16px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .secao-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+  }
+  .secao-content, .secao-imagem-container {
+    width: 100%;
+  }
+  .secao-name {
+    font-size: 2.2rem;
+  }
+  .secao-botoes {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .secao-subtitle {
+    text-align: center;
+  }
+}

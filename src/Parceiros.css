@@ -1,0 +1,106 @@
+.parceiros-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.container-title {
+  margin-top: 4rem;
+}
+
+.title {
+  color: #032100;
+  font-size: 2rem;
+}
+
+.container-parceiros {
+  margin-top: 0.25rem;
+}
+
+/* Linha verde com comprimento igual ao grid */
+.line {
+  width: 100%;
+  max-width: 1200px; 
+  height: 2px;
+  background-color: #3BC90C;
+  margin: 0; 
+}
+
+.container-subtitle {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #032100;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* Grid de parceiros */
+.parceiros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza os itens horizontalmente em cada linha */
+  gap: 1rem;               /* espaçamento entre os cards (substitui o gap do grid) */
+  margin-top: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.parceiro-card {
+  flex: 0 1 200px;         /* largura base de 200px, não cresce, pode encolher */
+  text-align: center;
+  display: flex;
+  align-items: center;     /* mantém o alinhamento vertical das imagens */
+  justify-content: center;
+  height: auto;            /* altura definida pelo conteúdo */
+}
+
+.parceiro-card img {
+  max-width: 100%;
+  max-height: 150px;       /* altura máxima para controle */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+/* Responsividade: em telas muito pequenas, a linha e o grid se ajustam */
+@media (max-width: 511px) {
+    .container-title {
+      text-align: center;
+    }
+    .container-subtitle {
+      text-align: center; 
+    }
+}
+@media (max-width: 768px) {
+    .title {
+    font-size: 1rem;
+    }
+    .subtitle {
+    font-size: 0.875rem;
+    }
+    .line {
+    max-width: 100%; 
+    }
+    .parceiros-grid {
+    max-width: 100%;
+    }
+    .parceiro-card {
+      flex: 0 1 150px; 
+    }
+    .parceiro-card img {
+    max-width: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+    font-size: 1.5rem;
+    }
+    .subtitle {
+    font-size: 1rem;
+    }
+    .parceiro-card img {
+    max-width: 150px;
+    }
+}

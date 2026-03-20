@@ -1,0 +1,104 @@
+.diretoria-section {
+  padding: 0rem 0;
+  background-color: #ffffff;
+}
+
+.container-diretoria {
+  width: 95%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 20px;   
+}
+
+.titulo-diretoria-container {
+  margin-bottom: 4rem; 
+  text-align: left;
+}
+
+.titulo-diretoria-container h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: #113211; 
+  margin-bottom: 10px;
+}
+
+.linha-verde-diretoria {
+  width: 100%;
+  height: 2px;
+  background-color: #3BC90C; 
+}
+
+.diretoria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  row-gap: 4rem; 
+  column-gap: 2rem;
+}
+
+.diretoria-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+.link-diretoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; 
+  cursor: pointer;
+}
+
+.foto-diretoria {
+  width: 180px; 
+  height: 180px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 1.5rem;
+}
+
+.cargo-diretoria {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 32px;
+  font-weight: 800; 
+  color: #111111; 
+  margin: 0 0 0.5rem 0;
+}
+
+.nome-diretoria {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: 500; 
+  color: #111111;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container-diretoria {
+    width: 90% !important; 
+  }
+
+  .titulo-diretoria-container h2 {
+    font-size: 32px !important; 
+  }
+
+  .diretoria-grid {
+    grid-template-columns: 1fr; 
+    row-gap: 3.5rem; 
+  }
+  
+  .cargo-diretoria {
+    font-size: 26px; 
+  }
+  
+  .nome-diretoria {
+    font-size: 20px;
+  }
+  
+  .foto-diretoria {
+    width: 150px; 
+    height: 150px; 
+  }
+}

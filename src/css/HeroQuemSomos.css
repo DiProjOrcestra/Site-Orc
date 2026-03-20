@@ -1,0 +1,144 @@
+.hero-section {
+  background-color: #3BC90C; 
+  padding: 4.5rem 60px 0; 
+}
+
+.container-conteudo {
+  width: 95%;
+  max-width: 1600px;
+  margin: 0 auto; 
+  padding: 0;
+}
+
+.hero-flex {
+  display: flex;
+  align-items: flex-end; 
+  justify-content: space-between;
+}
+
+.hero-texto {
+  flex: 1.5;
+  padding-left: 0; 
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+  padding-bottom: 0;
+}
+
+.hero-texto h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 45px; 
+  font-weight: 800;
+  color: #032100;
+  margin-bottom: 0;
+}
+
+.hero-texto p {
+  font-family: 'Ubuntu', sans-serif; 
+  font-size: 22.5px;
+  font-weight: 500; 
+  color: #032100;
+  margin-top: 5px;
+  margin-bottom: 1.6em; 
+  line-height: 1.2;
+  white-space: normal;
+  max-width: none;
+}
+
+.hero-imagem {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.hero-imagem img {
+  width: 100%;
+  max-width: 700px; 
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .hero-texto h1,
+  .hero-texto p {
+    white-space: normal; 
+    max-width: 100%;
+  }
+
+  .hero-texto h1 {
+    font-size: 38px;
+  }
+  
+  .hero-texto p {
+    font-size: 20px;
+  }
+
+  .hero-texto {
+    flex: 1; 
+    padding-left: 0; 
+  }
+
+  .hero-flex {
+    gap: 0; 
+    align-items: center; 
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0 4rem 0; 
+  }
+
+  .container-conteudo {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .hero-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-texto {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    min-height: auto;
+  }
+
+  .hero-texto h1 {
+    font-size: 38px;
+    line-height: 1.1;
+    white-space: normal;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-texto p {
+    font-size: 20px;
+    font-weight: 500; 
+    line-height: 1.2;
+    white-space: normal;
+    margin-top: 0;
+    margin-bottom: 0; 
+    max-width: 90%;
+  }
+
+  .hero-imagem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: -15px; 
+  }
+
+  .hero-imagem img {
+    max-width: 95%; 
+    height: auto;
+    margin: 0;
+    display: block;
+  }
+}

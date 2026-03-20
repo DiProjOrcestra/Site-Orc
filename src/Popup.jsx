@@ -4,16 +4,18 @@ import ContactForm from './form';
 
 const PopupAfterThreeMinutes = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [tick, setTick] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 30000); // 30 segundos
+    }, 120000); // 120 segundos ou 2 min
     return () => clearTimeout(timer);
-  }, []);
+  }, [tick]);
 
   const handleClosePopup = () => {
     setShowPopup(false);
+    setTick((v) => v + 1)
   };
 
   // Impede que o clique no conteúdo feche o pop-up

@@ -1,4 +1,4 @@
-import './Parceiros.css';
+import '../css/Parceiros.css';
 
 function Parceiros() {
   return (
@@ -15,19 +15,19 @@ function Parceiros() {
 
         <div className="parceiros-grid">
           <div className="parceiro-card">
-            <img src="/assets/facto-logo.png" alt="Facto" />
+            <img src="./src/assets/facto-logo.png" alt="Facto" />
           </div>
           <div className="parceiro-card">
-            <img src="/assets/360-logo.png" alt="360" />
+            <img src="./src/assets/360-logo.png" alt="360" />
           </div>
           <div className="parceiro-card">
-            <img src="/assets/associacao-bring.png" alt="Associação BRING" />
+            <img src="./src/assets/associacao-bring.png" alt="Associação BRING" />
           </div>
           <div className="parceiro-card">
-            <img src="/assets/trinus-logo.png" alt="Trinus" />
+            <img src="./src/assets/trinus-logo.png" alt="Trinus" />
           </div>
           <div className="parceiro-card">
-            <img src="/assets/brasil-junior-logo.png" alt="Brasil Júnior" />
+            <img src="./src/assets/brasil-junior-logo.png" alt="Brasil Júnior" />
           </div>
         </div>
       </div>

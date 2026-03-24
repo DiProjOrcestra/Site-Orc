@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { SERVICOS } from '../data/services';
-import Hero from '../components/PageServicos/Hero';
-import ComoFunciona from '../components/PageServicos/ComoFunciona';
-import Beneficios from '../components/PageServicos/Beneficios';
-import SobreInstitucional from '../components/PageServicos/QuemSomos';
-import Projetos from '../components/PageServicos/Projetos';
+import Hero from '../pages/PageServicos/Hero';
+import ComoFunciona from '../pages/PageServicos/ComoFunciona';
+import Beneficios from '../pages/PageServicos/Beneficios';
+import SobreInstitucional from '../pages/PageServicos/QuemSomos';
+import Projetos from '../pages/PageServicos/Projetos';
 
 
 

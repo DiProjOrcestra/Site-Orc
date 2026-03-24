@@ -1,4 +1,4 @@
-import './ImpactIndicators.css';
+import '../css/ImpactIndicators.css';
 
 function ImpactIndicators(){
     return(

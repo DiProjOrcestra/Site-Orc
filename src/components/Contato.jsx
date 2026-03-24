@@ -1,4 +1,4 @@
-import "./Contato.css";
+import "../css/Contato.css";
 
 function Contact() {
   return (
@@ -9,7 +9,7 @@ function Contact() {
             href="https://www.linkedin.com/in/guilherme-lorenzi-ventura-005b27342/"
             target="_blank"
             rel="noopener noreferrer">
-            <img src="/assets/presidenteInstitucional.jpeg" alt="Guilherme Lorenzi Ventura"/>
+            <img src="./src/assets/presidenteInstitucional.jpeg" alt="Guilherme Lorenzi Ventura"/>
           </a>
 
           <div>
@@ -36,7 +36,7 @@ function Contact() {
             rel="noopener noreferrer"
           >
             <img
-              src="/assets/presidenteOrg.jpg"
+              src="./src/assets/presidenteOrg.jpg"
               alt="Vinicius Araújo de Oliveira"
             />
           </a>
@@ -80,19 +80,19 @@ function Contact() {
         <div className="social-icons">
 
           <a href="https://pt-br.facebook.com/Orcestra.Ej/" target="_blank" rel="noreferrer">
-            <img src="/assets/icons8-facebook (1).svg" alt="facebook-icon"/>
+            <img src="./src/assets/icons8-facebook (1).svg" alt="facebook-icon"/>
           </a>
 
           <a href="https://open.spotify.com/show/7z5VG5HPnaMFsDh2fLu5L6" target="_blank" rel="noreferrer">
-              <img src="/assets/icons8-spotify.svg" alt="spotify-icon" />
+              <img src="./src/assets/icons8-spotify.svg" alt="spotify-icon" />
           </a>
 
           <a href="https://www.instagram.com/orcgamificacao/" target="_blank" rel="noreferrer">
-            <img src="/assets/icons8-instagram-96.png" alt="instagram-icon"/>
+            <img src="./src/assets/icons8-instagram-96.png" alt="instagram-icon"/>
           </a>
 
           <a href="https://www.linkedin.com/company/orcestragamificacao/" target="_blank" rel="noreferrer">
-            <img src="/assets/icons8-linkedin (2).svg" alt="linkedin-icon"/>
+            <img src="./src/assets/icons8-linkedin (2).svg" alt="linkedin-icon"/>
           </a>
 
         </div>

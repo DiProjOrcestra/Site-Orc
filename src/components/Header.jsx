@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import '../css/Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ const Header = () => {
     <header className="header">
       <div className="logo-container">
         <Link to="/" onClick={closeMenu}>
-          <img src="/assets/logo.png" alt="Orcestra Gamificação" className="logo" />
+          <img src="./src/assets/logo.png" alt="Orcestra Gamificação" className="logo" />
         </Link>
       </div>
 

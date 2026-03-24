@@ -1,5 +1,5 @@
-import "./BlogList.css";
-import "./BlogPagination.css";
+import "../css/BlogPagination.css";
+import "../css/BlogPage.css";
 import BlogPost from "./BlogPost";
 
 function BlogPagination({ paginaAtual, mudarPagina }) {

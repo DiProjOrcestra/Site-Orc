@@ -14,7 +14,7 @@ const Valores = () => {
 
             <div className="valor-imagem">
               <img 
-                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-233-3.svg" 
+                src="../src/assets/Frame-233-3.svg" 
                 alt="Ilustração Família" /> 
             </div>
             <div className="valor-texto">
@@ -26,7 +26,7 @@ const Valores = () => {
           <div className="valor-card">
             <div className="valor-imagem">
               <img 
-                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-234.svg" 
+                src="../src/assets/Frame-234.svg" 
                 alt="Ilustração Sintonia" />
             </div>
             <div className="valor-texto">
@@ -38,7 +38,7 @@ const Valores = () => {
           <div className="valor-card">
             <div className="valor-imagem">
               <img 
-                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-236.svg" 
+                src="../src/assets/Frame-236.svg" 
                 alt="Ilustração Crescimento" />
             </div>
             <div className="valor-texto">
@@ -50,7 +50,7 @@ const Valores = () => {
           <div className="valor-card">
             <div className="valor-imagem">
               <img 
-                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-237.svg" 
+                src="../src/assets/Frame-237.svg" 
                 alt="Ilustração Sangue Orc" />
             </div>
             <div className="valor-texto">

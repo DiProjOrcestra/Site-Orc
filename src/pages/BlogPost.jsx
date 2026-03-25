@@ -1,4 +1,4 @@
-import "./BlogPost.css";
+import "../css/BlogPost.css";
 function BlogPost({imagem , titulo = "Titulo", resumo= "Resumo", link = "https://orcestra.com.br/"}) {
     
     return (

@@ -3,7 +3,7 @@ export const SERVICOS = {
 
     
     name: "Desenvolvimento Gamificado",
-    imageHero: "/assets/imagem2orc.svg",
+    imageHero: "../src/assets/imagem2orc.svg",
     texto1:"Transforme seu projeto de Desenvolvimento em uma experiência divertida e envolvente!",
     texto2:"Construa o seu site ou aplicativo utilizando técnicas de um desenvolvimento gamificado que vão trazer mais motivação e engajamento para os usuários da sua aplicação. Tudo isso feito por profissionais especializados no assunto e capacitados para atender a sua necessidade.",
     textButao: "Motive meus usuários",
@@ -46,19 +46,19 @@ export const SERVICOS = {
         id: 1, 
         name: "Adote um postinho", 
         resumo: "O Adote um Postinho foi um projeto voltado para a fiscalização e verificação do andamento das resoluções de problemas dentro das UBS. Nosso avatar postinho é um cara amigável que incentiva o usuário a se tornar um voluntário para acompanhar o surgimento novos problemas e ajudar em soluções, buscando ter uma comunidade mais colaborativa e transparente com o sistema de saúde.",
-        image: "/img/projetos/Adote-um-postinho.png"
+        image: "../src/assets/Adote-um-postinho.png"
       },
       {
         id: 2, 
         name: "Hakuna Matata", 
         resumo: "O Hakuna consistiu em uma plataforma de educação gamificada na qual os usuários poderiam ter acessos a diversos conteúdos voltados para a área de gerenciamento de projetos. A plataforma tem como tema central uma savana, onde foram criadas várias trilhas de conteúdo com temáticas diferentes para aumentar o engajamento dos usuários e sua motivação para avançar e terminar essas trilhas.",
-        image: "/img/projetos/Hakuna-Matata.png"
+        image: "../src/assets/Hakuna-Matata.png"
       },
       {
         id: 3, 
         name: "Four Seasons", 
         resumo: "O objetivo do projeto foi trabalhar a temática de Educação Ambiental de uma forma mais lúdica e divertida, para isso a equipe do projeto desenvolveu uma plataforma web em formato de jogo de tabuleiro trazendo em cada uma das casas do jogo perguntas sobre a temática, assim proporcionando mais comprometimento dos membros da empresa a estarem se capacitando para ganhar cada vez mais pontos.",
-        image: "/img/projetos/Four-seasons.png"
+        image: "../src/assets/Four-seasons.png"
       }
     ]
 
@@ -66,7 +66,7 @@ export const SERVICOS = {
   "consultoria-gamificada": {
             
     name: "Consultoria Gamificada",
-    imageHero: "/assets/Imagem1orc.svg",
+    imageHero: "../src/assets/Imagem1orc.svg",
     texto1:"Torne sua gamificação mais eficiente",
     texto2:"Tenha a garantia de que a sua gamificação está funcionando com o seu potencial máximo e sem trazer o efeito contrário, por meio de uma consultoria com profissionais especializados na área.",
     textButao: "Melhore minha gamificação",
@@ -107,19 +107,19 @@ export const SERVICOS = {
         id: 1, 
         name: "Edwiges", 
         resumo: "No projeto Edwiges, nosso cliente precisava de uma reformulação da gamificação do seu processo recrutador, visando tornar mais divertido e engajador, além de tornar os futuros membros mais bem treinados e alinhados com a cultura da empresa, foi utilizada a temática de Harry Potter pois é o que os membros da empresa gostam.Inicialmente era uma consultoria, mas o projeto evoluiu para um Design de gamificação",
-        image: "/img/projetos/Edwiges.png"
+        image: "../src/assets/Edwiges.png"
       },
       {
         id: 2, 
         name: "Meteoro de Pegasus", 
         resumo: "No Meteoro de Pegasus, trabalhamos em um jogo que têm como objetivo desenvolver conhecimentos acerca de astrologia através de uma história guiada pelo jogador, foi aperfeiçoado as fases na jornada do jogador (Descoberta, Entrada, Dia-a-dia e Saída) e proposto atividades para aumentar a motivação dos usuários.",
-        image: "/img/projetos/Meteoro-pegasus.png"
+        image: "../src/assets/Meteoro-pegasus.png"
       },
       {
         id: 3, 
         name: "Moonlight Sonata", 
         resumo: "Moonlight Sonata é o nome do projeto de consultoria, o cliente já possui uma gamificação com a temática de investigação e espionagem e foi desenvolvida para a área de vendas da empresa, foi feita uma adaptação para o contexto de trabalho remoto, adição de novos conteúdos e rebalanceamento no sistema de pontuação.Inicialmente era uma consultoria, mas o projeto evoluiu para um Design de gamificação",
-        image: "/img/projetos/Moonlight.png"
+        image: "../src/assets/Moonlight.png"
       }
     ]
   },
@@ -127,7 +127,7 @@ export const SERVICOS = {
 
     
     name: "Concepção de Software",
-    imageHero: "/assets/imagem3orc.svg",
+    imageHero: "../src/assets/imagem3orc.svg",
     texto1:"Deixe a sua ideia pronta para o desenvolvimento!",
     texto2:"Tenha um olhar profissional sobre sua solução e receba todo o material necessário para tirar a sua ideia do papel usando uma técnica inovadora.Tudo isso por um custo mais acessível!",
     textButao: "Desenvolva minha ideia",
@@ -168,7 +168,7 @@ export const SERVICOS = {
         id: 1, 
         name: "FitFlow", 
         resumo: "O projeto Fitflow consistiu na concepção de um aplicativo para o monitoramento da dieta, treino e sono do usuário, além de incentivar que o mesmo continuasse a melhorar a sua saúde. A gamificação é essencial para manter o usuário engajado com a aplicação, fornecendo incentivos por meio de desafios para serem cumpridos sozinho ou com amigos.",
-        image: "/img/projetos/Fitflow.png"
+        image: "../src/assets/Fitflow.png"
       }
     ]
   },
@@ -176,7 +176,7 @@ export const SERVICOS = {
 
     
     name: "Treinamento Gamificado",
-    imageHero: "/assets/imagem4orc.svg",
+    imageHero: "../src/assets/imagem4orc.svg",
     texto1:"Traga novos aprendizados para a sua equipe!",
     texto2:"Forneça à sua equipe um treinamento gamificado que reúne conceitos teóricos e práticos com o intuito de aumentar o engajamento e potencializar resultados. Para isso, utilize já técnicas validadas pelo mercado e melhore o desempenho do seu time.",
     textButao: "Quero treinar minha equipe",
@@ -223,19 +223,19 @@ export const SERVICOS = {
         id: 1, 
         name: "ECT 2016", 
         resumo: "Este foi o nosso Orc’shop de gamificação apresentado no Encontro de Ciência e Tecnologia de 2016, evento realizado na Universidade de Brasília (UnB) com o objetivo de divulgar trabalhos científicos e disseminar conhecimento ligados à tecnologia. A gamificação do Orc’shop consistiu na distribuição de pontos que, ao final das atividades, podiam ser trocados por souveniers como adesivos, canecas e cadernos.",
-        image: "/img/projetos/ECT.png"
+        image: "../src/assets/ECT.png"
       },
       {
         id: 2, 
         name: "Elas Projetam", 
         resumo: "Elas Projetam é um hub profissional para mulheres que buscam capacitação profissional na área de gestão de projetos e inovação, o Orc’shop teve como temática uma ilha de desafios em que os desafios eram dinâmicas diferentes a cada etapa e foi apresentado sobre o desafio de engajamento de equipes, gamificação em projetos e a importância de conciliar a vida profissional e pessoal, incluindo a família no dia-a-dia.",
-        image: "/img/projetos/Elas-projetam.png"
+        image: "../src/assets/Elas-projetam.png"
       },
       {
         id: 3, 
         name: "Nutrir Jr", 
         resumo: "Este projeto foi desenvolvido para uma empresa júnior da Universidade de Brasília (UnB), que se interessou no treinamento de gamificação para que pudessem aplicar as técnicas de engajamento em seus processos internos. Com o conteúdo aprendido, tiveram a chance de identificar as dificuldades que estavam enfrentando e superá-las utilizando técnicas desenvolvidas por eles mesmos.",
-        image: "/img/projetos/Nutrir.png"
+        image: "../src/assets/Nutrir.png"
       }
     ]
   },
@@ -243,7 +243,7 @@ export const SERVICOS = {
 
     
     name: "Design de Gamificação",
-    imageHero: "/assets/imagem5orc.svg",
+    imageHero: "../src/assets/imagem5orc.svg",
     texto1:"Motive mais o seu público para alcançar o seu objetivo",
     texto2:"Construímos uma Gamificação totalmente personalizada e original, com técnicas inovadoras que vão trazer mais motivação para seu público. Tudo isso por um custo que você consegue arcar!",
     textButao: "Motivar meu público",
@@ -284,19 +284,19 @@ export const SERVICOS = {
         id: 1, 
         name: "Allegro", 
         resumo: "A empresa buscava gamificar a experiência dos usuários dentro da sua plataforma de forma simples e clara, assim objetivo do projeto foi identificar os principais usuários que estariam acessando o site e conseguir dar visibilidade e autonomia para que eles executassem algumas tarefas na plataforma. Dessa forma, a Orc’estra utilizou frameworks consolidados no mercado, como Octalysis, Bartle e LGD para gerar um forte senso de pertencimento e identificação com a empresa.",
-        image: "/img/projetos/Allegro.png"
+        image: "../src/assets/Allegro.png"
       },
       {
         id: 2, 
         name: "Camaro Amarelo", 
         resumo: "A empresa buscou por uma solução que tornasse a atividade de realização de projetos mais engajadora e interessante. Construímos uma gamificação única com temática de Reality Show e tornamos as atividades de projetos arquitetônicos, atividades de diretoria e outras tarefas mais produtivas e engajadoras para serem realizadas. Assim, os membros se sentiram imersos na cultura e nas atividades da empresa, o que trouxe uma experiência inigualável para os participantes.",
-        image: "/img/projetos/Camaro-amarelo.png"
+        image: "../src/assets/Camaro-amarelo.png"
       },
       {
         id: 3, 
         name: "Meninos da Porteira", 
         resumo: "O objetivo do projeto Meninos da Porteira foi ajudar com a capacitação dos membros durante o processo seletivo, pois devido ao grande acervo de documentos para capacitação muitos membros não se sentiam motivados para procurar e ter contato com todos esses arquivos, assim foi montada uma gamificação com charadas e caças ao tesouro fazendo com que os players acessassem os arquivos de forma divertida e natural.",
-        image: "/img/projetos/Meninos-porteira.png"
+        image: "../src/assets/Meninos-porteira.png"
       }
     ]
   }

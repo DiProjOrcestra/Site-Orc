@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import './form.css';
+import '../css/Form.css';
 
 
 const ContactForm = () => {
@@ -38,7 +38,7 @@ const ContactForm = () => {
     <footer className="form-container-main" id="forms">
       <div className="form-header">
         <div className="img-div">
-          <img src="https://orcestra.com.br/wp-content/uploads/2023/05/Group-27.svg" alt="Logo" className="form-logo" />
+          <img src="../src/assets/Group-27.svg" alt="Logo" className="form-logo" />
         </div>
         <div>
           <h2 className="h2">Vamos conversar?</h2>

@@ -23,7 +23,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Criação InSoft</h3>
               <img
-                src="https://i0.wp.com/orcestra.com.br/wp-content/uploads/2023/08/INSOFT.png?w=1024&ssl=1"
+                src="../src/assets/INSOFT.webp"
                 alt="Criação Insoft"
                 className="card-imagem" />
               <ul>
@@ -44,7 +44,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Implementando Gamificação</h3>
               <img 
-                src="https://i0.wp.com/orcestra.com.br/wp-content/uploads/2023/08/i4816qoo.png?fit=938%2C587&ssl=1" alt="Implementando Gamificação" className="card-imagem" />
+                src="../src/assets/implementandoGamificacao.webp" alt="Implementando Gamificação" className="card-imagem" />
               <ul>
                 <li>Bruno Pinheiro e Paulo Markes finalizam uma matéria sobre gamificação;</li>
                 <li>Ambos fazem um treinamento sobre gamificação, se identificam com a ideia e percebem que seria uma área de interesse para trabalhar futuramente.</li>
@@ -63,7 +63,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Virada de Chave</h3>
               <img 
-                src="https://i0.wp.com/orcestra.com.br/wp-content/uploads/2023/08/18948053_767283186778621_4474902966591029248_n.jpg?fit=480%2C480&ssl=1" alt="Virada de Chave" className="card-imagem" />
+                src="../src/assets/fotoViradaDeChave.webp" alt="Virada de Chave" className="card-imagem" />
               <ul>
                 <li>Começo do uso gamificação como ferramenta inovadora e transformadora;</li>
                 <li>Trocado o nome de Insoft para Orc'estra Gamificação;</li>
@@ -83,7 +83,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Reconhecimento</h3>
               <img 
-                src="https://i0.wp.com/orcestra.com.br/wp-content/uploads/2023/08/3zi296x9.png?fit=1024%2C641&ssl=1" alt="Reconhecimento" className="card-imagem" />
+                src="../src/assets/reconhecimento.webp" alt="Reconhecimento" className="card-imagem" />
               <ul>
                 <li>Empresa se tornou uma referência como uma das EJs que mais cresceu após a sua federação;</li>
                 <li>Ganhou o Prêmio Concentro como Destaque da Comunidade.</li>
@@ -102,7 +102,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Impacto</h3>
               <img 
-                src="https://i0.wp.com/orcestra.com.br/wp-content/uploads/2023/08/rgrz9mmh.png?w=1170&ssl=1" alt="Impacto" className="card-imagem" />
+                src="../src/assets/impacto.webp" alt="Impacto" className="card-imagem" />
               <ul>
                 <li>Atingimos Alto Crescimento;</li>
                 <li>EJ conectada;</li>
@@ -123,7 +123,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Tri-Impactante</h3>
               <img 
-                src="https://i0.wp.com/orcestra.com.br/wp-content/uploads/2023/08/Design-sem-nome.jpg?w=1080&ssl=1" alt="Tri-Impactante" className="card-imagem" />
+                src="../src/assets/impactoTri.webp" alt="Tri-Impactante" className="card-imagem" />
               <ul>
                 <li>A Empresa conseguiu o TRI Impacto!</li>
               </ul>
@@ -141,7 +141,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Aumentando o Alcance</h3>
               <img 
-                src="https://i0.wp.com/orcestra.com.br/wp-content/uploads/2023/08/%E2%80%94Pngtree%E2%80%94business-web-concept-design_5335945.png?fit=1024%2C1024&ssl=1" 
+                src="../src/assets/concepcao.webp" 
                 alt="Aumentando o Alcance" className="card-imagem" />
               <ul>
                 <li>O Serviço de Concepção foi criado.</li>

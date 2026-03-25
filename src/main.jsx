@@ -1,29 +1,29 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import './index.css'
+import './css/index.css'
 import App from './App.jsx' // Se o seu App for a Home
-import ServicePage from './pages/PageServicos'
+import ServicePage from '../src/pages/PageServicos'
 import Header from './components/Header'
-import PortfolioPage from './components/PortfolioPage.jsx'
-import Hakuna from "./pages/Hakuna";
-import FitFlow from "./pages/FitFlow";
-import Allegro from "./pages/Allegro";
-import Edwiges from "./pages/Edwiges";
-import Nutrir from "./pages/Nutrir";
-import FourSeasons from "./pages/FourSeasons";
-import AdotePost from "./pages/AdotePost";
-import CamaroAmarelo from "./pages/CamaroAmarelo";
-import MeninosPorteira from "./pages/MeninosPorteira";
-import Ect2016 from "./pages/Ect2016";
-import ElasProjetam from "./pages/ElasProjetam";
-import MeteoroPegasus from "./pages/MeteoroPegasus";
-import Moonlight from "./pages/Moonlight";
-import Gloria from "./pages/Gloria";
+import PortfolioPage from '../src/components/PortfolioPage.jsx'
+import Hakuna from "../src/pages/Hakuna";
+import FitFlow from "../src/pages/FitFlow";
+import Allegro from "../src/pages/Allegro.jsx";
+import Edwiges from "../src/pages/Edwiges";
+import Nutrir from "../src/pages/Nutrir";
+import FourSeasons from "../src/pages/FourSeasons";
+import AdotePost from "../src/pages/AdotePost";
+import CamaroAmarelo from "../src/pages/CamaroAmarelo";
+import MeninosPorteira from "../src/pages/MeninosPorteira";
+import Ect2016 from "../src/pages/Ect2016";
+import ElasProjetam from "../src/pages/ElasProjetam";
+import MeteoroPegasus from "../src/pages/MeteoroPegasus";
+import Moonlight from "../src/pages/Moonlight";
+import Gloria from "../src/pages/Gloria";
 import Contact from './components/Contato.jsx'
-import ContactForm from "./form.jsx";
-import QuemSomos from "./QuemSomos.jsx"
-import BlogPage from "./BlogPage.jsx"
+import ContactForm from "./components/form.jsx";
+import QuemSomos from "../src/pages/QuemSomos.jsx";
+import BlogPage from "../src/pages/BlogPage.jsx";
 import ScrollToTop from './components/ScrollTotop.jsx'
 import PageTitle from './components/PageTitle.jsx'
 

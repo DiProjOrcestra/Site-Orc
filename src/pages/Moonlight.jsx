@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import moonlightImg from "../assets/moonlight.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function Moonlight() {
   return (

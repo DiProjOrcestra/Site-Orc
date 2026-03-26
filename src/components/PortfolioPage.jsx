@@ -1,4 +1,4 @@
-import "../styles/portfolio-page.css";
+import "../css/portfolio-page.css";
 import { Link } from "react-router-dom";
 import ProjectSection from "../components/ProjectSection";
 import ProjectCard from "../components/ProjectCard";

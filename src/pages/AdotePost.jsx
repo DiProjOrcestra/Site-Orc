@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import adotePostImg from "../assets/adote-post.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function AdotePost() {
   return (

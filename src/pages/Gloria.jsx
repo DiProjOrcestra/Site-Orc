@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import gloriaImg from "../assets/gloria.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 import tabelaGloria from "../assets/tabela-gloria.png";
 import exemploGloria from "../assets/exemplo-gloria.webp";
 import imagemFinal from "../assets/img-final-gloria.webp";

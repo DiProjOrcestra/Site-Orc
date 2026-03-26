@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import edwigesImg from "../assets/edwiges.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function Edwiges() {
   return (

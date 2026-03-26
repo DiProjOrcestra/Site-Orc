@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import meninosPortImg from "../assets/meninos-port.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function MeninosPorteira() {
   return (

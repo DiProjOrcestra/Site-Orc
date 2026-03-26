@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import fitflowImg from "../assets/fitflow.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function FitFlow() {
   return (

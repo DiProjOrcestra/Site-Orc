@@ -1,12 +1,14 @@
 import React from 'react';
 import '../../css/QuemSomos.css';
+import imgEsquerda from '../../assets/Frame-78.jpg';
+import imgDireita from '../../assets/Frame-84.jpg';
 
 const SobreInstitucional = ({ textButao }) => {
   return (
     <section className="institucional-section">
 
       <div className="decor-images left">
-        <img src="../src/assets/Frame-78.jpg" alt="Imagem decorativa esquerda da Orc'estra" className="img-1" />
+        <img src={imgEsquerda} alt="Imagem decorativa esquerda da Orc'estra" className="img-1" />
       </div>
 
       <div className="institucional-container">
@@ -28,7 +30,7 @@ const SobreInstitucional = ({ textButao }) => {
 
       
       <div className="decor-images right">
-        <img src="../src/assets/Frame-84.jpg" alt="Imagem decorativa direita da Orc'estra" className="img-2" />
+        <img src={imgDireita} alt="Imagem decorativa direita da Orc'estra" className="img-2" />
       </div>
     </section>
   );

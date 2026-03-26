@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import hakunaImg from "../assets/hakuna.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function Hakuna() {
   return (

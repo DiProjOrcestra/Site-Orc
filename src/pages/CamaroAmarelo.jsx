@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import CamaroImg from "../assets/camaro-amarelo.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function CamaroAmarelo() {
   return (

@@ -10,7 +10,7 @@
 
 .parallax {
   height: 100%;
-  background-image: url("/img-indicadores.webp");
+  background-image: url("../assets/img-indicadores.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

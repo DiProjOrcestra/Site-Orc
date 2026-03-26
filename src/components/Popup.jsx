@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Popup.css';
+import '../css/Popup.css';
 import ContactForm from './form';
 
 const PopupAfterThreeMinutes = () => {
@@ -30,7 +30,7 @@ const PopupAfterThreeMinutes = () => {
           <div className="popup-content" onClick={handleContentClick}>
             <h2 className='title'>Entre em Contato</h2>
             <button className="close-button" onClick={handleClosePopup}>
-              <img src="./assets/close.png" alt="fechar" />
+              <img src="../src/assets/close.png" alt="fechar" />
             </button>
             <ContactForm />
           </div>

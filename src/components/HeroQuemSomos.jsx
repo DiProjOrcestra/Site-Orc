@@ -13,7 +13,7 @@ const HeroQuemSomos = () => {
 
         <div className="hero-imagem">
           <img 
-            src="https://orcestra.com.br/wp-content/uploads/2023/06/Frame-211.svg" 
+            src="../src/assets/Frame-211.svg" 
             alt="Ilustração da equipe Orc'estra se abraçando" 
           />
         </div>

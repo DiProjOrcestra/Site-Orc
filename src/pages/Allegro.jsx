@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import allegroImg from "../assets/allegro.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function Allegro() {
   return (

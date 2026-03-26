@@ -1,11 +1,11 @@
-import ImpactIndicators from "./ImpactIndicators"
-import Parceiros from "./Parceiros"
-import Popup from "./Popup"
-import SecaoTelaInicial from "./components/SecaoTelaInicial"
-import ContactForm from "./form"
-import ProjectsGrid from "./components/ProjectsGrid"
-import BlogList from "./BlogList"
-import Servicos from "./components/services"
+import ImpactIndicators from "../src/components/ImpactIndicators"
+import Parceiros from "../src/components/Parceiros"
+import Popup from "../src/components/Popup"
+import SecaoTelaInicial from "../src/components/SecaoTelaInicial"
+import ContactForm from "./components/form"
+import ProjectsGrid from "../src/components/ProjectsGrid"
+import BlogList from "../src/pages/BlogList"
+import Servicos from "../src/components/services"
 
 function App() {
   return (

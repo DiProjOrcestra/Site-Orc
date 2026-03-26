@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import "../styles/project-grid.css";
+import "../css/project-grid.css";
 import { Link } from "react-router-dom";
 
 

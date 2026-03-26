@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import ElasProjetamImg from "../assets/elas-projetam.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function ElasProjetam() {
   return (

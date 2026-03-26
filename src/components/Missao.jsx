@@ -14,7 +14,7 @@ const Missao = () => {
           <div className="missao-card">
             <div className="missao-imagem">
               <img 
-                src="https://orcestra.com.br/wp-content/uploads/2023/07/Frame-136.svg" alt="Alvo Gamificação" />
+                src="../src/assets/Frame-136.svg" alt="Alvo Gamificação" />
             </div>
             <div className="missao-texto-card">
               <h3>Missão</h3>

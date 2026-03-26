@@ -1,6 +1,6 @@
-import "./BlogPage.css";
+import "../css/BlogPage.css";
 import { useEffect, useState } from "react";
-import blogframe from "../public/frame-blog.svg";
+import blogframe from "../assets/frame-blog.svg";
 import BlogPagination from "./BlogPagination";
 
 function BlogPage() {

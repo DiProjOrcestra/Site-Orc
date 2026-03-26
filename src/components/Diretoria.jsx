@@ -1,47 +1,53 @@
 import React from 'react';
 import '../css/Diretoria.css';
+import presInt from '../assets/Fotos-DirEx-Site-2026-1.webp';
+import presOrg from '../assets/Fotos-DirEx-Site-2026-3.webp';
+import dirCom from '../assets/Fotos-DirEx-Site-2026.webp';
+import dirNeg from '../assets/Fotos-DirEx-Site-2026-2.webp';
+import dirProj from '../assets/Fotos-DirEx-Site-2026-4.webp';
+import dirOp from '../assets/Fotos-DirEx-Site-2026-5.webp';
 
 const diretores = [
   {
     id: 1,
     cargo: "Presidente Institucional",
     nome: "Guilherme Lorenzi Ventura",
-    foto: "../src/assets/Fotos-DirEx-Site-2026-1.webp", 
+    foto: presInt,
     linkedin: "https://www.linkedin.com/in/guilherme-lorenzi-ventura-005b27342/" 
   },
   {
     id: 2,
     cargo: "Presidente Organizacional",
     nome: "Vinícius Araújo Oliveira",
-    foto: "../src/assets/Fotos-DirEx-Site-2026-3.webp",
+    foto: presOrg,
     linkedin: "https://www.linkedin.com/in/vin%C3%ADcius-ara%C3%BAjo-638a54360"
   },
   {
     id: 3,
     cargo: "Diretor de Comunicação e Marketing",
     nome: "Bryan Martinez Gutierrez Leite",
-    foto: "../src/assets/Fotos-DirEx-Site-2026.webp",
+    foto: dirCom,
     linkedin: "https://www.linkedin.com/in/bryan-martinez-gutierrez/"
   },
   {
     id: 4,
     cargo: "Diretor de Negócios",
     nome: "Arthur Martins Santos da Silva",
-    foto: "../src/assets/Fotos-DirEx-Site-2026-2.webp",
+    foto: dirNeg,
     linkedin: "https://www.linkedin.com/in/arthur-martins-71a608230/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app     "
   },
   {
     id: 5,
     cargo: "Diretor de Projetos",
     nome: "Alan Semil Dos Santos Vieira", 
-    foto: "../src/assets/Fotos-DirEx-Site-2026-4.webp",
+    foto: dirProj,
     linkedin: "https://www.linkedin.com/in/alan-semil-dos-santos-vieira-895195271/"
   },
   {
     id: 6,
     cargo: "Diretor de Operações",
     nome: "Pedro Henrique Galdino de Andrade Wollmann",
-    foto: "../src/assets/Fotos-DirEx-Site-2026-5.webp",
+    foto: dirOp,
     linkedin: "https://www.linkedin.com/in/pedro-galdino-318a95268/"
   }
 ];

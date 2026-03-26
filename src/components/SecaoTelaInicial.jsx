@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/SecaoTelaInicial.css';
+import sabJunior from '../assets/Orcestra_SábJún.jpg';
 
 const SecaoTelaInicial = () => {
   return (
@@ -24,7 +25,7 @@ const SecaoTelaInicial = () => {
       </div>
       
       <div className="secao-imagem-container">
-        <img src="./src/assets/Orc'estra_SábJún.jpg" alt="Equipe da Orc'estra" className="secao-img" />
+        <img src={sabJunior} alt="Equipe da Orc'estra" className="secao-img" />
       </div>
 
     </section>

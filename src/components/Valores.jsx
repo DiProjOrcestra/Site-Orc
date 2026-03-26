@@ -1,5 +1,9 @@
 import React from 'react';
 import '../css/Valores.css'; 
+import familia from '../assets/Frame-233-3.svg';
+import sintonia from '../assets/Frame-234.svg';
+import crescimento from '../assets/Frame-236.svg';
+import sangueOrc from '../assets/Frame-237.svg';
 
 const Valores = () => {
   return (
@@ -14,7 +18,7 @@ const Valores = () => {
 
             <div className="valor-imagem">
               <img 
-                src="../src/assets/Frame-233-3.svg" 
+                src={familia} 
                 alt="Ilustração Família" /> 
             </div>
             <div className="valor-texto">
@@ -26,7 +30,7 @@ const Valores = () => {
           <div className="valor-card">
             <div className="valor-imagem">
               <img 
-                src="../src/assets/Frame-234.svg" 
+                src={sintonia} 
                 alt="Ilustração Sintonia" />
             </div>
             <div className="valor-texto">
@@ -38,7 +42,7 @@ const Valores = () => {
           <div className="valor-card">
             <div className="valor-imagem">
               <img 
-                src="../src/assets/Frame-236.svg" 
+                src={crescimento} 
                 alt="Ilustração Crescimento" />
             </div>
             <div className="valor-texto">
@@ -50,7 +54,7 @@ const Valores = () => {
           <div className="valor-card">
             <div className="valor-imagem">
               <img 
-                src="../src/assets/Frame-237.svg" 
+                src={sangueOrc} 
                 alt="Ilustração Sangue Orc" />
             </div>
             <div className="valor-texto">

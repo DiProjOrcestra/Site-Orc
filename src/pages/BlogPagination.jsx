@@ -1,61 +1,69 @@
 import "../css/BlogPagination.css";
 import "../css/BlogPage.css";
 import BlogPost from "./BlogPost";
+import img1 from '../assets/Blog-1.webp';
+import img2 from '../assets/Blog-2.webp';
+import img3 from '../assets/Blog-3.webp';
+import img4 from '../assets/Blog-4.webp';
+import img5 from '../assets/Blog-5.webp';
+import img6 from '../assets/Blog-6.webp';
+import img7 from '../assets/Blog-7.webp';
+import img8 from '../assets/Blog-8.webp';
 
 function BlogPagination({ paginaAtual, mudarPagina }) {
   const posts = [
     {
       id: 1,
-      imagem: "../src/assets/Blog-1.webp",
+      imagem: img1,
       titulo: "Gamificação Estratégica para Negócios: O Guia Completo para Aumentar o Engajamento e o ROI",
       resumo: "Sua equipe está desengajada? A produtividade parece estagnada e as metas parecem cada vez mais distantes? Você não está sozinho.",
       link: "https://orcestra.com.br"
     },
     {
       id: 2,
-      imagem: "../src/assets/Blog-2.webp",
+      imagem: img2,
       titulo: "O Código do Engajamento: 3 Gatilhos Psicológicos que Fazem as Pessoas Amarem (e Usarem) Suas Ideias",
       resumo: "Vamos ser honestos. Você já dedicou semanas a um projeto, criou um conteúdo incrível ou lançou uma nova funcionalidade... apenas",
       link: "https://orcestra.com.br/"
     },
     {
       id: 3,
-      imagem: "../src/assets/Blog-3.webp",
+      imagem: img3,
       titulo: "Engaje, Motive e Transforme: Como Estruturar um Bom Sistema de Feedback Gamificado",
       resumo: "No ambiente corporativo dinâmico de hoje, manter equipes engajadas e em constante desenvolvimento é um dos maiores desafios das organizações.",
       link: "https://orcestra.com.br/"
     },
     {
       id: 4,
-      imagem: "../src/assets/Blog-4.webp",
+      imagem: img4,
       titulo: "O Manual do Desastre: 5 Sinais de que Sua Gamificação Está Fadada ao Fracasso",
       resumo: "A promessa da gamificação é sedutora: equipes mais engajadas, clientes mais leais e resultados de negócio amplificados.",
       link: "https://orcestra.com.br/"
     },
       {
           id: 5,
-          imagem: "../src/assets/Blog-5.webp",
+          imagem: img5,
           titulo: "Processos seletivos gamificados e o que você precisa saber sobre",
           resumo: "Ter um alto nível de engajamento nos processos de recrutamento é algo essencial para seu sucesso, logo um processo seletivo gamificado é certeza de resultado! Mas antes de saber os benefícios e ver exemplos práticos dessa aplicação é melhor você entender porque utilizá-la…",
           link: "https://orcestra.com.br/"
       },
       {
           id: 6,
-          imagem: "../src/assets/Blog-6.webp",
+          imagem: img6,
           titulo: "Como construímos nossos softwares?",
           resumo: "Desenvolver softwares de qualidade é uma jornada que envolve planejamento, inovação e muita dedicação. Seguimos um processo claro e bem estruturado para garantir que cada produto entregue atenda às expectativas e necessidades dos nossos clientes. Vamos te mostrar um resumo geral de como tudo funciona!",
           link: "https://orcestra.com.br/"
       },
       {
           id: 7,
-          imagem: "../src/assets/Blog-7.webp",
+          imagem: img7,
           titulo: "Aprenda a definir objetivos realistas",
           resumo: "Quando vamos definir objetivos, é bem comum traçarmos objetivos que não sejam realistas e que muitas vezes acabam sendo abandonados. Ao final de 2021, muitos de nós irão pensar em um ano 2022 melhor e traçar objetivos de ano novo...",
           link: "https://orcestra.com.br/"
       },
       {
           id: 8,
-          imagem: "../src/assets/Blog-8.webp",
+          imagem: img8,
           titulo: "Como a Gamificação Pode Transformar seu Desenvolvimento Profissional",
           resumo: "Você sabia que desenvolver soft skills pode ser mais leve, estratégico e até divertido? Muita gente ainda associa a gamificação apenas ao ensino de habilidades técnicas. Mas a verdade é que ela pode ir muito além: ajuda no crescimento pessoal e profissional, fortalecendo competências que fazem toda a diferença no mercado de trabalho.",
           link: "https://orcestra.com.br/"

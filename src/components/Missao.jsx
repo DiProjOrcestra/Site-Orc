@@ -1,5 +1,6 @@
 import React from 'react';
-import '../css/Missao.css'; 
+import '../css/Missao.css';
+import missao from '../assets/Frame-136.svg'; 
 
 const Missao = () => {
   return (
@@ -14,7 +15,8 @@ const Missao = () => {
           <div className="missao-card">
             <div className="missao-imagem">
               <img 
-                src="../src/assets/Frame-136.svg" alt="Alvo Gamificação" />
+                src={missao} 
+                alt="Alvo Gamificação" />
             </div>
             <div className="missao-texto-card">
               <h3>Missão</h3>

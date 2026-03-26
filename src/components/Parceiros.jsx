@@ -1,4 +1,11 @@
 import '../css/Parceiros.css';
+import facto from '../assets/facto-logo.png'
+import logo360 from '../assets/logo-360.png'
+import trinus from '../assets/trinus-logo.png'
+import brasilJunior from '../assets/brasil-junior-logo.png'
+import bring from '../assets/associacao-bring.png'
+
+
 
 function Parceiros() {
   return (
@@ -15,19 +22,19 @@ function Parceiros() {
 
         <div className="parceiros-grid">
           <div className="parceiro-card">
-            <img src="./src/assets/facto-logo.png" alt="Facto" />
+            <img src={facto} alt="Facto" />
           </div>
           <div className="parceiro-card">
-            <img src="./src/assets/360-logo.png" alt="360" />
+            <img src={logo360} alt="360" />
           </div>
           <div className="parceiro-card">
-            <img src="./src/assets/associacao-bring.png" alt="Associação BRING" />
+            <img src={bring} alt="Associação BRING" />
           </div>
           <div className="parceiro-card">
-            <img src="./src/assets/trinus-logo.png" alt="Trinus" />
+            <img src={trinus} alt="Trinus" />
           </div>
           <div className="parceiro-card">
-            <img src="./src/assets/brasil-junior-logo.png" alt="Brasil Júnior" />
+            <img src={brasilJunior} alt="Brasil Júnior" />
           </div>
         </div>
       </div>

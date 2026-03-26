@@ -3,18 +3,18 @@ import adoteUmPostinho from '../assets/Adote-um-postinho.png';
 import hakuna from '../assets/Hakuna-Matata.png';
 import seasons from '../assets/four-seasons.png';
 import imgHero2 from '../assets/Imagem1orc.svg';
-import edwiges from '../assets/Edwiges.png';
-import pegasus from '../assets/Meteoro-pegasus.png';
-import moonlight from '../assets/Moonlight.png';  
+import edwiges from '../assets/edwiges.png';
+import pegasus from '../assets/meteoro-pegasus.png';
+import moonlight from '../assets/moonlight.png';  
 import img3 from '../assets/imagem3orc.svg';
-import fitflow from '../assets/Fitflow.png';
+import fitflow from '../assets/fitflow.png';
 import img4 from '../assets/imagem4orc.svg';
 import ect from '../assets/ECT.png';
-import elas from '../assets/Elas-projetam.png';
-import nutrir from '../assets/Nutrir.png';
+import elas from '../assets/elas-projetam.png';
+import nutrir from '../assets/nutrir.png';
 import img5 from '../assets/imagem5orc.svg';
-import allegro from '../assets/Allegro.png';
-import camaro from '../assets/Camaro-amarelo.png';
+import allegro from '../assets/allegro.png';
+import camaro from '../assets/camaro-amarelo.png';
 import meninos from '../assets/Meninos-porteira.png';
 
 

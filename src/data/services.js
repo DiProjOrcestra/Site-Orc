@@ -53,7 +53,7 @@ export const SERVICOS = {
       {
         title: "Feedback imediato",
         text: "Com um desenvolvimento bem estruturado, será fornecido feedbacks imediatos ao usuário sobre seu desempenho, utilizando técnicas comprovadas de gamificação. Isso permite que os usuários monitorem seu progresso e se sintam constantemente motivados a melhorar."
-      },import seasons from '../assets/Four-seasons.png';
+      },
 
       {
         title: "Customização",

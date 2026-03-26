@@ -1,7 +1,7 @@
 import imgHero1 from '../assets/imagem2orc.svg';
 import adoteUmPostinho from '../assets/Adote-um-postinho.png';
 import hakuna from '../assets/Hakuna-Matata.png';
-import seasons from '../assets/Four-seasons.png';
+import seasons from '../assets/four-seasons.png';
 import imgHero2 from '../assets/Imagem1orc.svg';
 import edwiges from '../assets/Edwiges.png';
 import pegasus from '../assets/Meteoro-pegasus.png';
@@ -53,7 +53,8 @@ export const SERVICOS = {
       {
         title: "Feedback imediato",
         text: "Com um desenvolvimento bem estruturado, será fornecido feedbacks imediatos ao usuário sobre seu desempenho, utilizando técnicas comprovadas de gamificação. Isso permite que os usuários monitorem seu progresso e se sintam constantemente motivados a melhorar."
-      },
+      },import seasons from '../assets/Four-seasons.png';
+
       {
         title: "Customização",
         text: "A gamificação permite a personalização total da aplicação, adaptando-se às necessidades e preferências individuais de cada usuário. Além disso, a coleta e análise de dados de desempenho ajudam a monitorar e otimizar a eficácia do software continuamente."
@@ -149,7 +150,7 @@ export const SERVICOS = {
     
     name: "Concepção de Software",
     imageHero: img3,
-    texto1:"Deixe a sua ideia pronta para o desenvolvimento!",
+    texto1 : "Deixe a sua ideia pronta para o desenvolvimento!",
     texto2:"Tenha um olhar profissional sobre sua solução e receba todo o material necessário para tirar a sua ideia do papel usando uma técnica inovadora.Tudo isso por um custo mais acessível!",
     textButao: "Desenvolva minha ideia",
 

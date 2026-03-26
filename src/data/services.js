@@ -2,7 +2,7 @@ import imgHero1 from '../assets/imagem2orc.svg';
 import adoteUmPostinho from '../assets/Adote-um-postinho.png';
 import hakuna from '../assets/Hakuna-Matata.png';
 import seasons from '../assets/Four-seasons.png';
-import imgHero1 from '../assets/Imagem1orc.svg';
+import imgHero2 from '../assets/Imagem1orc.svg';
 import edwiges from '../assets/Edwiges.png';
 import pegasus from '../assets/Meteoro-pegasus.png';
 import moonlight from '../assets/Moonlight.png';  
@@ -87,7 +87,7 @@ export const SERVICOS = {
   "consultoria-gamificada": {
             
     name: "Consultoria Gamificada",
-    imageHero: imgHero1,
+    imageHero: imgHero2,
     texto1:"Torne sua gamificação mais eficiente",
     texto2:"Tenha a garantia de que a sua gamificação está funcionando com o seu potencial máximo e sem trazer o efeito contrário, por meio de uma consultoria com profissionais especializados na área.",
     textButao: "Melhore minha gamificação",

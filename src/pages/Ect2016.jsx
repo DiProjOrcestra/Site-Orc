@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import ect2016Img from "../assets/ect2016.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function Ect2016() {
   return (

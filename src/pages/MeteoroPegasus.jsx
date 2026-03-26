@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import meteoroImg from "../assets/meteoro-pegasus.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function MeteoroPegasus() {
   return (

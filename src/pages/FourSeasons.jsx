@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import fourSeasonsImg from "../assets/four-seasons.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function FourSeasons() {
   return (

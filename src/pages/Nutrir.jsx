@@ -1,6 +1,6 @@
 import ProjectSection from "../components/ProjectSection";
 import nutrirImg from "../assets/nutrir.png";
-import "../styles/project-page.css";
+import "../css/project-page.css";
 
 function Nutrir() {
   return (

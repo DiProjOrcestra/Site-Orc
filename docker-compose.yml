@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: .
+    container_name: orcestra_frontend
+    ports:
+      - "5173:4173"
+    restart: always
+
+  npm:  
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    restart: unless-stopped
+    ports:
+      - "80:80"     
+      - "443:443"   
+      - "81:81"     
+    environment:
+      DB_SQLITE_FILE: "/data/database.sqlite"
+    volumes:
+      - ./npm/data:/data
+      - ./npm/letsencrypt:/etc/letsencrypt

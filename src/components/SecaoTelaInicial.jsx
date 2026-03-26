@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/SecaoTelaInicial.css';
+import sabJunior from '../assets/Orcestra_SábJún.jpg';
 
 const equipeImg = new URL('../assets/orcestra-equipe.jpg', import.meta.url).href;
 
@@ -28,11 +29,7 @@ const SecaoTelaInicial = () => {
       </div>
       
       <div className="secao-imagem-container">
-        <img 
-          src={equipeImg} 
-          alt="Equipe da Orc'estra" 
-          className="secao-img" 
-        />
+        <img src={sabJunior} alt="Equipe da Orc'estra" className="secao-img" />
       </div>
     </section>
   );

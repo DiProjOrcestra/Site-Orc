@@ -1,5 +1,12 @@
 import React from 'react';
 import '../css/Historia.css';
+import insoft from '../assets/INSOFT.webp';
+import gamificacao from '../assets/implementandoGamificacao.webp';
+import viradaDeChave from '../assets/fotoViradaDeChave.webp';
+import reconhecimento from '../assets/reconhecimento.webp';
+import impacto from '../assets/impacto.webp';
+import impactoTri from '../assets/impactoTri.webp';
+import concepcao from '../assets/concepcao.webp';
 
 const Historia = () => {
   return (
@@ -23,7 +30,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Criação InSoft</h3>
               <img
-                src="../src/assets/INSOFT.webp"
+                src={insoft}
                 alt="Criação Insoft"
                 className="card-imagem" />
               <ul>
@@ -44,7 +51,9 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Implementando Gamificação</h3>
               <img 
-                src="../src/assets/implementandoGamificacao.webp" alt="Implementando Gamificação" className="card-imagem" />
+                src={gamificacao} 
+                alt="Implementando Gamificação" 
+                className="card-imagem" />
               <ul>
                 <li>Bruno Pinheiro e Paulo Markes finalizam uma matéria sobre gamificação;</li>
                 <li>Ambos fazem um treinamento sobre gamificação, se identificam com a ideia e percebem que seria uma área de interesse para trabalhar futuramente.</li>
@@ -63,7 +72,9 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Virada de Chave</h3>
               <img 
-                src="../src/assets/fotoViradaDeChave.webp" alt="Virada de Chave" className="card-imagem" />
+                src={viradaDeChave} 
+                alt="Virada de Chave" 
+                className="card-imagem" />
               <ul>
                 <li>Começo do uso gamificação como ferramenta inovadora e transformadora;</li>
                 <li>Trocado o nome de Insoft para Orc'estra Gamificação;</li>
@@ -83,7 +94,9 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Reconhecimento</h3>
               <img 
-                src="../src/assets/reconhecimento.webp" alt="Reconhecimento" className="card-imagem" />
+                src={reconhecimento} 
+                alt="Reconhecimento" 
+                className="card-imagem" />
               <ul>
                 <li>Empresa se tornou uma referência como uma das EJs que mais cresceu após a sua federação;</li>
                 <li>Ganhou o Prêmio Concentro como Destaque da Comunidade.</li>
@@ -102,7 +115,9 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Impacto</h3>
               <img 
-                src="../src/assets/impacto.webp" alt="Impacto" className="card-imagem" />
+                src={impacto} 
+                alt="Impacto" 
+                className="card-imagem" />
               <ul>
                 <li>Atingimos Alto Crescimento;</li>
                 <li>EJ conectada;</li>
@@ -123,7 +138,9 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Tri-Impactante</h3>
               <img 
-                src="../src/assets/impactoTri.webp" alt="Tri-Impactante" className="card-imagem" />
+                src={impactoTri} 
+                alt="Tri-Impactante" 
+                className="card-imagem" />
               <ul>
                 <li>A Empresa conseguiu o TRI Impacto!</li>
               </ul>
@@ -141,7 +158,7 @@ const Historia = () => {
             <div className="timeline-card">
               <h3 className="verde">Aumentando o Alcance</h3>
               <img 
-                src="../src/assets/concepcao.webp" 
+                src={concepcao} 
                 alt="Aumentando o Alcance" className="card-imagem" />
               <ul>
                 <li>O Serviço de Concepção foi criado.</li>

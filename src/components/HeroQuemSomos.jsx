@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/HeroQuemSomos.css';
+import equipe from '../assets/Frame-211.svg';
 
 const HeroQuemSomos = () => {
   return (
@@ -13,7 +14,7 @@ const HeroQuemSomos = () => {
 
         <div className="hero-imagem">
           <img 
-            src="../src/assets/Frame-211.svg" 
+            src={equipe} 
             alt="Ilustração da equipe Orc'estra se abraçando" 
           />
         </div>

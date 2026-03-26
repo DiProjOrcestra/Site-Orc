@@ -4,17 +4,18 @@ services:
   frontend:
     build: .
     container_name: orcestra_frontend
+    ports:
+      - "5173:4173"
     restart: always
-    # Não exponha mais a porta 4173 para fora (o Nginx Proxy Manager vai acessar internamente pela porta 80)
 
-  npm:
+  npm:  
     image: jc21/nginx-proxy-manager:latest
     container_name: nginx-proxy-manager
     restart: unless-stopped
     ports:
-      - "80:80"      # HTTP
-      - "443:443"    # HTTPS
-      - "81:81"      # Interface admin do NPM
+      - "80:80"     
+      - "443:443"   
+      - "81:81"     
     environment:
       DB_SQLITE_FILE: "/data/database.sqlite"
     volumes:

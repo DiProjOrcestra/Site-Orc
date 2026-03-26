@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/SecaoTelaInicial.css';
 
-// Forma mais confiável do Vite para importar imagens
 const equipeImg = new URL('../assets/orcestra-equipe.jpg', import.meta.url).href;
 
 const SecaoTelaInicial = () => {

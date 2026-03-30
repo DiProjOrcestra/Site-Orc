@@ -19,20 +19,19 @@ function Contact() {
             <img src={presInt} alt="Guilherme Lorenzi Ventura"/>
           </a>
 
-          <div>
-            <div className="tudo">
+        
+          <div className="tudo">
               <div className="nome-cargo">
-              <h2>Guilherme Lorenzi</h2>
-              <p className="role">Presidente Institucional</p>
-            </div>
+                <h2>Guilherme Lorenzi</h2>
+                <p className="role">Presidente Institucional</p>
+              </div>
             
             <div className="numero-email">
               <p>(17) 9 8207-0899</p>
               <p>guilherme.ventura@orcestra.com.br</p>
             </div>
-            
+          
           </div>
-            </div>
             
         </div>
 

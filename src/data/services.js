@@ -1,20 +1,20 @@
 import imgHero1 from '../assets/imagem2orc.svg';
 import adoteUmPostinho from '../assets/Adote-um-postinho.png';
 import hakuna from '../assets/Hakuna-Matata.png';
-import seasons from '../assets/Four-seasons.png';
-import imgHero1 from '../assets/Imagem1orc.svg';
-import edwiges from '../assets/Edwiges.png';
-import pegasus from '../assets/Meteoro-pegasus.png';
-import moonlight from '../assets/Moonlight.png';  
+import seasons from '../assets/four-seasons-copy.png';
+import imgHero2 from '../assets/Imagem1orc.svg';
+import edwiges from '../assets/edwiges-copy.png';
+import pegasus from '../assets/meteoro-pegasus-copy.png';
+import moonlight from '../assets/moonlight-copy.png';  
 import img3 from '../assets/imagem3orc.svg';
-import fitflow from '../assets/Fitflow.png';
+import fitflow from '../assets/fitflow-copy.png';
 import img4 from '../assets/imagem4orc.svg';
 import ect from '../assets/ECT.png';
-import elas from '../assets/Elas-projetam.png';
-import nutrir from '../assets/Nutrir.png';
+import elas from '../assets/elas-projetam-copy.png';
+import nutrir from '../assets/nutrir-copy.png';
 import img5 from '../assets/imagem5orc.svg';
-import allegro from '../assets/Allegro.png';
-import camaro from '../assets/Camaro-amarelo.png';
+import allegro from '../assets/allegro-copy.png';
+import camaro from '../assets/camaro-amarelo-copy.png';
 import meninos from '../assets/Meninos-porteira.png';
 
 
@@ -54,6 +54,7 @@ export const SERVICOS = {
         title: "Feedback imediato",
         text: "Com um desenvolvimento bem estruturado, será fornecido feedbacks imediatos ao usuário sobre seu desempenho, utilizando técnicas comprovadas de gamificação. Isso permite que os usuários monitorem seu progresso e se sintam constantemente motivados a melhorar."
       },
+
       {
         title: "Customização",
         text: "A gamificação permite a personalização total da aplicação, adaptando-se às necessidades e preferências individuais de cada usuário. Além disso, a coleta e análise de dados de desempenho ajudam a monitorar e otimizar a eficácia do software continuamente."
@@ -87,7 +88,7 @@ export const SERVICOS = {
   "consultoria-gamificada": {
             
     name: "Consultoria Gamificada",
-    imageHero: imgHero1,
+    imageHero: imgHero2,
     texto1:"Torne sua gamificação mais eficiente",
     texto2:"Tenha a garantia de que a sua gamificação está funcionando com o seu potencial máximo e sem trazer o efeito contrário, por meio de uma consultoria com profissionais especializados na área.",
     textButao: "Melhore minha gamificação",
@@ -149,7 +150,7 @@ export const SERVICOS = {
     
     name: "Concepção de Software",
     imageHero: img3,
-    texto1:"Deixe a sua ideia pronta para o desenvolvimento!",
+    texto1 : "Deixe a sua ideia pronta para o desenvolvimento!",
     texto2:"Tenha um olhar profissional sobre sua solução e receba todo o material necessário para tirar a sua ideia do papel usando uma técnica inovadora.Tudo isso por um custo mais acessível!",
     textButao: "Desenvolva minha ideia",
 

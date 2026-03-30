@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import '../css/Form.css';
+import '../css/form.css';
 import logoOrc from '../assets/Group-27.svg';
 
 

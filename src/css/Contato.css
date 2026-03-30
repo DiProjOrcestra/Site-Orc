@@ -36,6 +36,7 @@ body {
   display:flex;
   gap:10px;
   align-items:center;
+  text-align: left;
 }
 
 .team-card img{
@@ -143,6 +144,11 @@ body {
 .numero-email p {
   overflow-wrap: break-word;
 }
+ @media (max-width: 355px){
+  .team-card {
+    align-items: start;
+  }
+ }
 
 @media (max-width: 1024px) {
     .contact-container {
@@ -198,6 +204,7 @@ body {
     }
     .team-section{
       margin: 25px 0px;
+      gap: 40px;
     }
     
 
@@ -223,9 +230,8 @@ body {
     @media (max-width: 1500px){
       .numero-email{
         flex-wrap: wrap;
-      }
-      .tudo{
-        flex-direction: column;
+        text-align: start;
+        margin: 0px;
       }
       .team-card{
         flex-direction: column;
@@ -240,9 +246,8 @@ body {
       .social-section h2{
         margin-top: 25px;
       }
-      
-    } 
-    
+     
+    }
     @media(max-width: 425px) {
       .contact-container {
         padding-top: 60px;
@@ -258,5 +263,13 @@ body {
         flex-wrap: wrap;
         gap: 30px;
         width: calc(90% - 20px);
+      }
+    }
+
+    @media (min-width: 60px) and (max-width: 415px) {
+      .team-card {
+        flex-direction: column;
+        align-items:flex-start;
+        text-align: center;
       }
     }

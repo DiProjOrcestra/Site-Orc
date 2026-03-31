@@ -29,7 +29,12 @@ const SecaoTelaInicial = () => {
       </div>
       
       <div className="secao-imagem-container">
-        <img src={sabJunior} alt="Equipe da Orc'estra" className="secao-img" />
+        <img 
+          src={sabJunior} 
+          alt="Equipe da Orc'estra" 
+          className="secao-img"
+          loading="lazy"
+        />
       </div>
     </section>
   );

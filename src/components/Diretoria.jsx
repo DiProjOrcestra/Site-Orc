@@ -43,13 +43,7 @@ const diretores = [
     foto: dirProj,
     linkedin: "https://www.linkedin.com/in/alan-semil-dos-santos-vieira-895195271/"
   },
-  {
-    id: 6,
-    cargo: "Diretor de Operações",
-    nome: "Pedro Henrique Galdino de Andrade Wollmann",
-    foto: dirOp,
-    linkedin: "https://www.linkedin.com/in/pedro-galdino-318a95268/"
-  }
+  
 ];
 
 export function Diretoria() {

@@ -42,8 +42,6 @@ const SecaoTelaInicial = () => {
           src={sabJuniorWebp}
           alt="Equipe da Orc'estra"
           className="secao-img"
-          width="2738"
-          height="1825"
           loading="eager"
           fetchPriority="high"
           decoding="async"

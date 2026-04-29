@@ -1,39 +1,52 @@
 import React from 'react';
 import '../css/SecaoTelaInicial.css';
-import sabJunior from '../assets/Orcestra_SábJún.jpg';
-
-const equipeImg = new URL('../assets/orcestra-equipe.jpg', import.meta.url).href;
+import sabJuniorWebp from '../assets/Orcestra_SabJun.webp';
 
 const SecaoTelaInicial = () => {
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="secao-container">
       <div className="secao-content">
-        <h1 className="secao-name">A maior Empresa Júnior de gamificação do Brasil!</h1>
-        <p className="secao-subtitle">Ressignificando a vida das pessoas através da gamificação</p>
-        
+        <h1 className="secao-name">
+          A maior Empresa Júnior de gamificação do Brasil!
+        </h1>
+
+        <p className="secao-subtitle">
+          Ressignificando a vida das pessoas através da gamificação
+        </p>
+
         <div className="secao-botoes">
-          <button 
+          <button
+            type="button"
             className="secao-btn"
-            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => scrollToSection('services')}
           >
             O que fazemos
           </button>
-          
-          <button 
-            className="secao-btn" 
-            onClick={() => document.getElementById('forms')?.scrollIntoView({ behavior: 'smooth' })}
+
+          <button
+            type="button"
+            className="secao-btn"
+            onClick={() => scrollToSection('forms')}
           >
             Fale conosco
           </button>
         </div>
       </div>
-      
+
       <div className="secao-imagem-container">
-        <img 
-          src={sabJunior} 
-          alt="Equipe da Orc'estra" 
+        <img
+          src={sabJuniorWebp}
+          alt="Equipe da Orc'estra"
           className="secao-img"
-          loading="lazy"
+          width="2738"
+          height="1825"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
     </section>

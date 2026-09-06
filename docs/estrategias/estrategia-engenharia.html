@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Aplica o tema salvo (ou a preferência do sistema) antes da 1ª pintura,
+    // para não haver "flash" de tema errado ao trocar de página.
+    (function () {
+      try {
+        var saved = localStorage.getItem('docs-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) { /* localStorage indisponível */}
+    })();
+    fetch("../components/sidebar.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("sidebar-container").innerHTML = html;
+      });
+  </script>
+  <title>Estratégia de Engenharia de Software — Site Orc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Ubuntu:wght@400;500;700&family=Unbounded:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-page="estrategia-engenharia">
+
+  <!-- marca d'água decorativa a partir do símbolo institucional -->
+  <svg class="watermark" viewBox="0 0 1786 1786" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path
+      d="M747.206 1290.27C751.078 1288.57 753.364 1285.07 753.325 1280.82L747.08 1059.87C746.997 1056.54 745.376 1053.5 742.669 1051.63L617.478 964.644C611.112 960.233 607.322 952.989 607.322 945.21V895.638L552.093 802.536L570.449 1123.71C570.575 1126.38 571.696 1128.83 573.569 1130.62L735.968 1288.19C739.049 1291.19 743.251 1291.94 747.206 1290.23" />
+    <path
+      d="M614.732 876.412L706.378 789.716C715.574 781.02 729.932 781.102 739.049 789.885L882.01 927.935L803.639 561.145C765.936 562.183 725.73 564.182 717.364 566.099L682.612 608.717C694.102 652.582 690.147 686.462 670.709 709.394C647.568 736.694 608.574 741.104 585.846 741.104C581.561 741.104 577.898 740.939 574.986 740.774L552.801 767.991C551.428 769.656 550.763 771.737 550.637 773.902L612.815 878.659C613.441 877.907 614.023 877.116 614.732 876.412Z" />
+    <path
+      d="M969.285 559.815C968.993 559.728 968.785 559.519 968.494 559.398C967.329 558.937 966.247 558.316 965.165 557.69C964.665 557.399 964.126 557.107 963.626 556.773C962.088 555.691 960.671 554.487 959.424 553.027L893.083 476.451L826.906 552.823C825.659 554.278 824.242 555.486 822.704 556.569C822.204 556.899 821.704 557.151 821.205 557.442C820.123 558.107 818.997 558.689 817.793 559.189C817.541 559.315 817.294 559.48 817.042 559.563L893.204 915.95L969.285 559.815Z" />
+    <path
+      d="M1179 945.21C1179 952.95 1175.22 960.233 1168.85 964.644L1043.66 1051.63C1040.95 1053.5 1039.33 1056.58 1039.25 1059.83L1033.01 1280.91C1032.92 1285.15 1035.21 1288.77 1039.16 1290.48C1040.16 1290.9 1041.16 1291.19 1042.16 1291.31C1045.16 1291.69 1048.07 1290.69 1050.4 1288.44L1212.8 1130.87C1214.67 1129.04 1215.76 1126.63 1215.88 1124.01L1234.23 802.536L1179 895.638V945.21Z" />
+    <path
+      d="M1233.49 768.161L1211.22 740.857C1208.55 741.022 1205.35 741.105 1201.73 741.105C1178.96 741.105 1140.01 736.694 1116.87 709.394C1097.64 686.671 1093.52 653.248 1104.59 610.091L1067.84 564.974C1065.89 562.562 1063.01 561.188 1059.89 561.188H982.687L904.234 928.183L1047.28 790.094C1051.86 785.679 1057.77 783.432 1063.68 783.432C1069.51 783.432 1075.37 785.596 1079.91 789.925L1171.56 876.617C1172.26 877.286 1172.8 878.034 1173.43 878.781L1235.65 773.902C1235.48 771.82 1234.86 769.826 1233.52 768.161" />
+    <path
+      d="M1285.97 379.812C1301.28 487.937 1140.09 596.062 1118.49 610.008C1107.46 650.458 1110.38 680.964 1127.15 700.737C1146.92 724.082 1182.34 727.707 1202.27 727.707C1208.93 727.707 1213.84 727.29 1215.92 727.081C1298.87 664.694 1343.32 599.226 1347.98 532.593C1353.06 460.342 1309.15 404.156 1285.97 379.812Z" />
+    <path
+      d="M501.652 379.812C478.429 404.156 434.52 460.342 439.6 532.593C444.302 599.226 488.711 664.694 571.657 727.081C573.739 727.29 578.649 727.663 585.307 727.663C605.241 727.663 640.662 724.043 660.47 700.694C677.245 680.925 680.156 650.375 669.127 609.964C647.529 596.062 486.338 487.937 501.652 379.812Z" />
+    <path
+      d="M722.609 795.378C720.071 795.378 717.529 796.334 715.574 798.207L623.931 884.899C621.889 886.816 620.724 889.519 620.724 892.352V943.749C620.724 947.121 622.35 950.285 625.135 952.158L750.326 1039.14C756.528 1043.43 760.317 1050.51 760.482 1058.04L766.727 1278.99C766.766 1280.24 766.683 1281.49 766.518 1282.66C765.519 1290.98 760.4 1297.97 752.49 1301.43C749.37 1302.8 746.08 1303.46 742.878 1303.46C736.924 1303.46 731.14 1301.14 726.564 1296.72L595.254 1169.33V1331.56H669.879V1406.18H1117.7V1331.56H1192.32V1168.08L1059.68 1296.76C1055.1 1301.17 1049.32 1303.51 1043.37 1303.51H1043.33C1040.12 1303.51 1036.88 1302.84 1033.75 1301.47C1024.81 1297.55 1019.36 1289.07 1019.56 1279.28L1025.85 1058.2C1026.01 1050.71 1029.8 1043.63 1036 1039.35L1161.19 952.366C1163.94 950.45 1165.61 947.286 1165.61 943.958V892.557C1165.61 889.727 1164.44 887.024 1162.4 885.108L1070.75 798.416C1068.76 796.543 1066.26 795.587 1063.72 795.587C1061.18 795.587 1058.6 796.543 1056.6 798.459L968.246 883.735H968.411L967.955 1256.44H819.167V884.608L729.728 798.29C727.729 796.377 725.191 795.421 722.609 795.421V795.378Z" />
+  </svg>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="topbar">
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir navegação" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="7" x2="20" y2="7" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="17" x2="20" y2="17" />
+      </svg>
+    </button>
+
+    <a href="../index.html" class="brand">
+      <svg class="logo-mark" viewBox="0 0 1786 1786" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M747.206 1290.27C751.078 1288.57 753.364 1285.07 753.325 1280.82L747.08 1059.87C746.997 1056.54 745.376 1053.5 742.669 1051.63L617.478 964.644C611.112 960.233 607.322 952.989 607.322 945.21V895.638L552.093 802.536L570.449 1123.71C570.575 1126.38 571.696 1128.83 573.569 1130.62L735.968 1288.19C739.049 1291.19 743.251 1291.94 747.206 1290.23" />
+        <path
+          d="M614.732 876.412L706.378 789.716C715.574 781.02 729.932 781.102 739.049 789.885L882.01 927.935L803.639 561.145C765.936 562.183 725.73 564.182 717.364 566.099L682.612 608.717C694.102 652.582 690.147 686.462 670.709 709.394C647.568 736.694 608.574 741.104 585.846 741.104C581.561 741.104 577.898 740.939 574.986 740.774L552.801 767.991C551.428 769.656 550.763 771.737 550.637 773.902L612.815 878.659C613.441 877.907 614.023 877.116 614.732 876.412Z" />
+        <path
+          d="M969.285 559.815C968.993 559.728 968.785 559.519 968.494 559.398C967.329 558.937 966.247 558.316 965.165 557.69C964.665 557.399 964.126 557.107 963.626 556.773C962.088 555.691 960.671 554.487 959.424 553.027L893.083 476.451L826.906 552.823C825.659 554.278 824.242 555.486 822.704 556.569C822.204 556.899 821.704 557.151 821.205 557.442C820.123 558.107 818.997 558.689 817.793 559.189C817.541 559.315 817.294 559.48 817.042 559.563L893.204 915.95L969.285 559.815Z" />
+        <path
+          d="M1179 945.21C1179 952.95 1175.22 960.233 1168.85 964.644L1043.66 1051.63C1040.95 1053.5 1039.33 1056.58 1039.25 1059.83L1033.01 1280.91C1032.92 1285.15 1035.21 1288.77 1039.16 1290.48C1040.16 1290.9 1041.16 1291.19 1042.16 1291.31C1045.16 1291.69 1048.07 1290.69 1050.4 1288.44L1212.8 1130.87C1214.67 1129.04 1215.76 1126.63 1215.88 1124.01L1234.23 802.536L1179 895.638V945.21Z" />
+        <path
+          d="M1233.49 768.161L1211.22 740.857C1208.55 741.022 1205.35 741.105 1201.73 741.105C1178.96 741.105 1140.01 736.694 1116.87 709.394C1097.64 686.671 1093.52 653.248 1104.59 610.091L1067.84 564.974C1065.89 562.562 1063.01 561.188 1059.89 561.188H982.687L904.234 928.183L1047.28 790.094C1051.86 785.679 1057.77 783.432 1063.68 783.432C1069.51 783.432 1075.37 785.596 1079.91 789.925L1171.56 876.617C1172.26 877.286 1172.8 878.034 1173.43 878.781L1235.65 773.902C1235.48 771.82 1234.86 769.826 1233.52 768.161" />
+        <path
+          d="M1285.97 379.812C1301.28 487.937 1140.09 596.062 1118.49 610.008C1107.46 650.458 1110.38 680.964 1127.15 700.737C1146.92 724.082 1182.34 727.707 1202.27 727.707C1208.93 727.707 1213.84 727.29 1215.92 727.081C1298.87 664.694 1343.32 599.226 1347.98 532.593C1353.06 460.342 1309.15 404.156 1285.97 379.812Z" />
+        <path
+          d="M501.652 379.812C478.429 404.156 434.52 460.342 439.6 532.593C444.302 599.226 488.711 664.694 571.657 727.081C573.739 727.29 578.649 727.663 585.307 727.663C605.241 727.663 640.662 724.043 660.47 700.694C677.245 680.925 680.156 650.375 669.127 609.964C647.529 596.062 486.338 487.937 501.652 379.812Z" />
+        <path
+          d="M722.609 795.378C720.071 795.378 717.529 796.334 715.574 798.207L623.931 884.899C621.889 886.816 620.724 889.519 620.724 892.352V943.749C620.724 947.121 622.35 950.285 625.135 952.158L750.326 1039.14C756.528 1043.43 760.317 1050.51 760.482 1058.04L766.727 1278.99C766.766 1280.24 766.683 1281.49 766.518 1282.66C765.519 1290.98 760.4 1297.97 752.49 1301.43C749.37 1302.8 746.08 1303.46 742.878 1303.46C736.924 1303.46 731.14 1301.14 726.564 1296.72L595.254 1169.33V1331.56H669.879V1406.18H1117.7V1331.56H1192.32V1168.08L1059.68 1296.76C1055.1 1301.17 1049.32 1303.51 1043.37 1303.51H1043.33C1040.12 1303.51 1036.88 1302.84 1033.75 1301.47C1024.81 1297.55 1019.36 1289.07 1019.56 1279.28L1025.85 1058.2C1026.01 1050.71 1029.8 1043.63 1036 1039.35L1161.19 952.366C1163.94 950.45 1165.61 947.286 1165.61 943.958V892.557C1165.61 889.727 1164.44 887.024 1162.4 885.108L1070.75 798.416C1068.76 796.543 1066.26 795.587 1063.72 795.587C1061.18 795.587 1058.6 796.543 1056.6 798.459L968.246 883.735H968.411L967.955 1256.44H819.167V884.608L729.728 798.29C727.729 796.377 725.191 795.421 722.609 795.421V795.378Z" />
+      </svg>
+      <span>
+        Site Orc
+        <small>Orc'estra Gamificação</small>
+      </span>
+    </a>
+
+    <div class="search-box">
+      <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+        <circle cx="11" cy="11" r="7" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input type="text" id="searchInput" placeholder="Buscar na documentação…" autocomplete="off">
+      <span class="search-kbd">Ctrl K</span>
+    </div>
+
+    <div class="topbar-actions">
+      <span class="badge-version">v1.0.0</span>
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <circle cx="12" cy="12" r="4" />
+          <line x1="12" y1="1.5" x2="12" y2="4" />
+          <line x1="12" y1="20" x2="12" y2="22.5" />
+          <line x1="4.2" y1="4.2" x2="6" y2="6" />
+          <line x1="18" y1="18" x2="19.8" y2="19.8" />
+          <line x1="1.5" y1="12" x2="4" y2="12" />
+          <line x1="20" y1="12" x2="22.5" y2="12" />
+          <line x1="4.2" y1="19.8" x2="6" y2="18" />
+          <line x1="18" y1="6" x2="19.8" y2="4.2" />
+        </svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" />
+        </svg>
+      </button>
+      <a class="icon-btn" href="#" aria-label="Repositório no GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 .5C5.73.5.98 5.24.98 11.5c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-1.94c-3.17.69-3.84-1.36-3.84-1.36-.52-1.32-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.33.95.1-.74.4-1.25.72-1.54-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.05-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.13-1.16 3.13-1.16.63 1.58.23 2.75.12 3.04.73.79 1.17 1.81 1.17 3.05 0 4.37-2.67 5.33-5.21 5.61.41.36.77 1.06.77 2.14v3.17c0 .3.21.66.79.55A11.02 11.02 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z" />
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ======================= COMMAND PALETTE (Ctrl+K) ======================= -->
+  <div class="overlay" id="paletteOverlay">
+    <div class="palette">
+      <input type="text" id="paletteInput" placeholder="Digite para buscar páginas…" autocomplete="off">
+      <div class="palette-results" id="paletteResults"></div>
+    </div>
+  </div>
+
+  <!-- ====== SIDEBAR — colada na borda esquerda da janela ====== -->
+  <div id="sidebar-container"></div>
+
+  <div class="main-wrap">
+    <div class="shell">
+
+      <!-- ============================== CONTEÚDO ============================== -->
+      <main class="content">
+        <div class="content-inner">
+
+          <p class="breadcrumb">
+            <span class="sep-label">Estratégias</span><span class="sep">/</span>
+            <span class="current">Estratégia de Engenharia de Software</span>
+          </p>
+
+          <p class="eyebrow">Estratégias</p>
+          <h1 class="page-title">Estratégia de Engenharia de Software</h1>
+
+          <div class="prose">
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Aspecto</th>
+                    <th>Definição</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Abordagem</td>
+                    <td>Agíl</td>
+                  </tr>
+                  <tr>
+                    <td>Ciclo de Vida</td>
+                    <td>Iterativo e Incremental</td>
+                  </tr>
+                  <tr>
+                    <td>Processo</td>
+                    <td>RAD</td>
+                  </tr>
+                  <tr>
+                    <td>Framework</td>
+                    <td>Kanban</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="processo-rad"><a class="anchor" href="#processo-rad">#</a>Processo RAD</h2>
+            <p>O RAD (Rapid Application Development) é um processo de desenvolvimento orientado a ciclos curtos e
+              iterativos, com foco na entrega rápida de versões funcionais do produto e na validação constante
+              com o cliente, em vez de um planejamento extenso e fechado no início do projeto. Cada ciclo passa,
+              de forma resumida, pelas seguintes etapas:</p>
+
+            <ul>
+              <li><strong>Planejamento dos requisitos:</strong> os itens priorizados (via MoSCoW) para o ciclo são
+                refinados e passam pelo checklist de DoR antes de entrarem em desenvolvimento.</li>
+              <li><strong>Modelagem e prototipação:</strong> wireframes e protótipos das telas envolvidas são
+                construídos para alinhar o entendimento antes da implementação.</li>
+              <li><strong>Construção:</strong> a funcionalidade é desenvolvida, testada e validada tecnicamente
+                (DoD Nível 1).</li>
+              <li><strong>Cutover (validação com o cliente):</strong> o incremento entregue é apresentado à
+                cliente, coletando feedback para o próximo ciclo (DoD Nível 2).</li>
+            </ul>
+
+            <p>No contexto do Site da Orcestra, o RAD será utilizado para viabilizar entregas frequentes e visíveis
+              à Orc'estra Gamificação, permitindo ajustes de rota rápidos conforme o feedback do cliente, em vez de
+              esperar até o final do projeto para validar se a solução atende às necessidades reais do negócio.</p>
+
+            <h2 id="kanban"><a class="anchor" href="#kanban">#</a>Kanban</h2>
+            <p>O Kanban é o framework ágil utilizado para gerenciar o fluxo contínuo de trabalho da equipe de
+              desenvolvimento. Cada funcionalidade, caso de uso ou tarefa é representado por um cartão que
+              percorre cinco etapas, permitindo que toda a equipe e os stakeholders acompanhem facilmente o
+              andamento do projeto.</p>
+
+            <p>O quadro Kanban do Site da Orcestra será composto pelas seguintes colunas:</p>
+
+            <ul>
+              <li><strong>Escopo:</strong> reúne todos os itens ainda não iniciados e que aguardam priorização para
+                desenvolvimento.</li>
+              <li><strong>Ready:</strong> contém os itens que já foram refinados, atendem aos critérios de entrada
+                definidos pela equipe e estão prontos para serem iniciados.</li>
+              <li><strong>In Progress:</strong> representa as tarefas que estão sendo desenvolvidas ativamente.</li>
+              <li><strong>In Review:</strong> agrupa os itens que concluíram o desenvolvimento e estão passando por
+                revisão técnica, validação ou testes antes da entrega.</li>
+              <li><strong>Done:</strong> contém os itens finalizados, aprovados e concluídos.</li>
+            </ul>
+
+            <p>No Site da Orcestra, o Kanban será utilizado da seguinte forma:</p>
+
+            <ul>
+              <li><strong>Visualização do fluxo:</strong> cada cartão será movido entre as cinco colunas conforme evolui
+                durante o ciclo de desenvolvimento.</li>
+              <li><strong>Critérios de transição:</strong> um item somente poderá avançar para <em>Ready</em> após ser
+                refinado e atender aos critérios definidos pela equipe. A passagem para <em>Done</em> ocorrerá apenas
+                após a conclusão da revisão e aprovação do item.</li>
+              <li><strong>Limite de trabalho em progresso (WIP):</strong> serão definidos limites para as colunas de
+                trabalho ativo, especialmente <em>In Progress</em> e <em>In Review</em>, evitando sobrecarga da equipe e
+                incentivando a conclusão das atividades antes do início de novas.</li>
+              <li><strong>Acompanhamento do progresso:</strong> o quadro Kanban implementado no próprio Site da Orcestra
+                servirá como ferramenta de gestão e transparência, permitindo que a equipe e os stakeholders acompanhem,
+                em tempo real, o estágio de cada atividade durante o desenvolvimento do projeto.</li>
+            </ul>
+
+            <div class="callout callout--note">
+              <svg class="callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="16" x2="12" y2="12" />
+                <line x1="12" y1="8" x2="12.01" y2="8" />
+              </svg>
+              <div class="callout__body">
+                <p class="callout__title">Pendente</p>
+                <p>A fonte original deste conteúdo (<code>engenharia-software.md</code>) traz a nota "MUDAR TEXTO PARA O
+                  CONTEXTO DO SITE ORC" nos parágrafos que citam "Site da Orcestra". Mantive o texto como está no
+                  markdown por enquanto — vale revisar e trocar para "Portal Orc" quando o texto for atualizado na
+                  fonte.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+
+      <!-- ============================== TOC ============================== -->
+      <aside class="toc">
+        <p class="toc-title">Nesta página</p>
+        <ul class="toc-list" id="tocList"></ul>
+      </aside>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+    <span id="toastMsg">Copiado!</span>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

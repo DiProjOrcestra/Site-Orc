@@ -196,33 +196,17 @@
             </ul>
 
             <h3 id="dor-escopo-invest">Dimensão de Escopo (INVEST)</h3>
-            <p>A história passa integralmente no checklist <strong>INVEST</strong>:</p>
-            <ul class="checklist">
-              <li><label><input type="checkbox" data-check-id="dordod-09"><span><strong>Independente (I)</strong>: pode
-                    ser desenvolvida, testada e entregue sem depender diretamente de outra história não
-                    concluída.</span></label></li>
-              <li><label><input type="checkbox" data-check-id="dordod-10"><span><strong>Negociável (N)</strong>: o
-                    cartão não é um contrato fechado, detalhes de design e comportamento de tela podem ser ajustados em
-                    conversas com o cliente até a entrega.</span></label></li>
-              <li><label><input type="checkbox" data-check-id="dordod-11"><span><strong>Valiosa (V)</strong>: entrega um
-                    valor de uso real, perceptível e claro para o usuário final ou para o negócio.</span></label></li>
-              <li><label><input type="checkbox" data-check-id="dordod-12"><span><strong>Estimável (E)</strong>: o time
-                    possui informação suficiente (visual e funcional) para estimar o esforço.</span></label></li>
-              <li><label><input type="checkbox" data-check-id="dordod-13"><span><strong>Pequena (Small - S)</strong>: é
-                    pequena o bastante para ser planejada, codificada e validada dentro de um único
-                    ciclo/iteração.</span></label></li>
-              <li><label><input type="checkbox" data-check-id="dordod-14"><span><strong>Testável (T)</strong>: possui
-                    critérios que permitem verificar objetivamente (através de testes visuais ou de comportamento) se
-                    foi implementada com sucesso.</span></label></li>
-            </ul>
+            <p>Os atributos <strong>INVEST</strong> (Independente, Negociável, Valiosa, Estimável, Pequena e
+              Testável) seguem como guia informal para avaliar se a história está bem escrita, sem checklist
+              formal a ser marcado item a item. Se uma história parece grande ou dependente demais para caber em
+              um ciclo, isso é sinal de que ela precisa ser quebrada antes de entrar em "Pronto para
+              Desenvolvimento", não de preencher um formulário.</p>
 
             <h2 id="dod-definition-of-done"><a class="anchor" href="#dod-definition-of-done">#</a>DoD (Definition of
               Done) — Filtro de Saída</h2>
-            <p>O <strong>Nível 1</strong> deve ser preenchido pelos responsáveis técnicos antes de mover o item para a
-              coluna de homologação/validação. O <strong>Nível 2</strong> só é preenchido após o feedback positivo da
-              cliente/stakeholder.</p>
-
-            <h3 id="dod-nivel-1">Nível 1 — Done Técnico (Pronto para Homologação)</h3>
+            <p>O DoD é <strong>único</strong>: verificado de uma só vez ao final de cada ciclo curto de entrega,
+              reunindo verificação técnica e validação de negócio no mesmo momento, em vez de duas etapas
+              sequenciais separadas.</p>
 
             <p><strong>Completude Funcional e Visual</strong></p>
             <ul class="checklist">
@@ -261,14 +245,14 @@
                     Homologação/Staging.</span></label></li>
             </ul>
 
-            <h3 id="dod-nivel-2">Nível 2 — Done de Negócio (Pronto para Produção)</h3>
+            <p><strong>Validação com o "Cliente" Interno</strong></p>
             <ul class="checklist">
               <li><label><input type="checkbox" data-check-id="dordod-24"><span><strong>Feedback e Validação
-                      Visual</strong>: demonstração e teste de aceitação (UAT) realizado diretamente com a
-                    cliente/stakeholder.</span></label></li>
-              <li><label><input type="checkbox" data-check-id="dordod-25"><span>A cliente/stakeholder validou que o
-                    comportamento de usabilidade e o design do frontend atendem perfeitamente às expectativas de negócio
-                    acordadas nas conversas da história.</span></label></li>
+                      Visual</strong>: demonstração e teste de aceitação (UAT) realizado diretamente com o
+                    representante do "cliente" interno.</span></label></li>
+              <li><label><input type="checkbox" data-check-id="dordod-25"><span>O representante do "cliente" interno
+                    validou que o comportamento de usabilidade e o design do frontend atendem perfeitamente às
+                    expectativas de negócio acordadas nas conversas da história.</span></label></li>
             </ul>
 
           </div>

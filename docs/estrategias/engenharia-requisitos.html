@@ -163,11 +163,9 @@
             <h2 id="analise-e-consenso"><a class="anchor" href="#analise-e-consenso">#</a>Análise e Consenso</h2>
             <p><strong>Discussões em equipe:</strong> utilizadas para alinhar o entendimento sobre os requisitos
               levantados e avaliar sua viabilidade no contexto do projeto.</p>
-            <p><strong>Priorização MoSCoW:</strong> utilizada para classificar os requisitos conforme sua importância
-              para o MVP, distinguindo funcionalidades essenciais das desejáveis.</p>
-            <p><strong>Matriz de esforço x impacto:</strong> utilizada para avaliar o esforço necessário para
-              implementar cada requisito em relação ao impacto que ele gera para o projeto, auxiliando na definição das
-              funcionalidades que oferecem maior valor com menor custo de implementação.</p>
+            <p><strong>Priorização MoSCoW:</strong> utilizada como único mecanismo de priorização, classificando os
+              requisitos conforme sua importância para o MVP e distinguindo funcionalidades essenciais das
+              desejáveis.</p>
 
             <h2 id="declaracao-de-requisitos"><a class="anchor" href="#declaracao-de-requisitos">#</a>Declaração de
               Requisitos</h2>
@@ -176,40 +174,41 @@
               estruturadas sob os três elementos essenciais (os 3 C's):</p>
             <ul>
               <li>O Cartão (que resume em 2 a 3 frases a intenção usando o formato "Como... quero... para...").</li>
-              <li>A Conversação (o registro de discussões entre a equipe, cliente e Product Owner para detalhar o
-                comportamento do sistema, podendo incluir protótipos e wireframes como anexos).</li>
-              <li>A Confirmação (as condições de satisfação e critérios de aceitação para verificar o sucesso da
-                entrega). Adicionalmente, devem atender aos seis atributos de qualidade definidos pelo acrônimo INVEST
-                (Independentes, Negociáveis, Valiosas, Estimáveis, Pequenas e Testáveis).</li>
+              <li>A Conversação (o registro de discussões entre a equipe e o representante do "cliente" interno para
+                detalhar o comportamento do sistema, podendo incluir protótipos e wireframes como anexos quando a
+                funcionalidade justificar).</li>
             </ul>
+            <p>As condições de aceite (antiga "Confirmação") não formam mais uma etapa separada: elas ficam
+              registradas junto ao próprio cartão e são verificadas no DoD único, descrito adiante. Os atributos
+              INVEST (Independentes, Negociáveis, Valiosas, Estimáveis, Pequenas e Testáveis) seguem como guia
+              informal para escrever boas histórias, sem checklist formal a ser preenchido em cada uma.</p>
 
             <h2 id="representacao-de-requisitos"><a class="anchor"
                 href="#representacao-de-requisitos">#</a>Representação de Requisitos</h2>
-            <p><strong>Protótipos:</strong> utilizados para representar visualmente as principais funcionalidades do
-              sistema antes da implementação.</p>
-            <p><strong>Wireframes:</strong> utilizados para estruturar as telas e os fluxos de navegação do Site da
-              Orcestra.</p>
+            <p><strong>Protótipos e wireframes:</strong> utilizados caso a caso, quando a complexidade da interface
+              ou do fluxo de navegação justificar alinhar o entendimento visual antes da implementação. Não é uma
+              etapa obrigatória para todas as histórias.</p>
 
             <h2 id="organizacao-e-atualizacao"><a class="anchor" href="#organizacao-e-atualizacao">#</a>Organização e
               Atualização de Requisitos</h2>
-            <p><strong>Refinamento e controle dos requisitos:</strong> realizado de forma contínua durante as iterações,
-              com revisão de prioridade (MoSCoW), análise de impacto em OE/CP, ajuste de critérios de aceitação e
-              atualização da documentação/atas sempre que houver mudança aprovada.</p>
+            <p><strong>Refinamento contínuo:</strong> antes de cada ciclo curto de entrega, a equipe revisa
+              rapidamente as histórias que entrarão no ciclo, ajustando prioridade (MoSCoW) e critérios de aceite
+              quando necessário. O registro é leve, feito diretamente no próprio cartão da história, sem exigir ata
+              formal a cada ajuste.</p>
 
             <h2 id="verificacao-e-validacao"><a class="anchor" href="#verificacao-e-validacao">#</a>Verificação e
               Validação de Requisitos</h2>
-            <p><strong>Checklist:</strong> utilizado para garantir que os itens da lista de trabalho estejam claros, sem
-              ambiguidade, completos, verificáveis, consistentes, rastreáveis e com entendimento compartilhado entre
-              equipe e cliente.</p>
-            <p><strong>DoR (Definition of Ready) e DoD (Definition of Done):</strong> utilizados para verificar,
-              respectivamente, se os requisitos estão prontos para serem desenvolvidos e se foram implementados e
-              validados conforme os critérios de aceitação. O DoR confirma se cada item possui objetivo, ator,
-              prioridade, regras de negócio e relação com OE e CP antes de ser assumido pela equipe. O DoD define as
-              condições de conclusão técnica e de negócio.</p>
-            <p><strong>Feedback com stakeholders:</strong> utilizado para validar se os requisitos refletem corretamente
-              as necessidades da cliente e dos demais stakeholders do projeto.</p>
-            <p><strong>Testes:</strong> utilizados posteriormente para verificar se as funcionalidades implementadas
-              atendem aos requisitos definidos.</p>
+            <p><strong>DoR (Definition of Ready):</strong> confirma, antes de a história entrar em desenvolvimento,
+              se ela está clara, sem ambiguidade, e possui objetivo, ator, prioridade e relação com OE e CP
+              definidos. Absorve o que antes era verificado por um checklist separado, não havendo mais duas
+              etapas distintas para a mesma pergunta.</p>
+            <p><strong>DoD (Definition of Done) único:</strong> substitui os antigos dois níveis de DoD (técnico e
+              de cutover) por um único critério de conclusão, verificado ao final de cada ciclo curto de entrega: a
+              funcionalidade foi implementada, testada e apresentada ao representante do "cliente" interno, que
+              confirma se atende aos critérios de aceite da história. Não há mais um gate técnico separado de um
+              gate de validação com o cliente, ambos ocorrem no mesmo fechamento de ciclo.</p>
+            <p><strong>Testes:</strong> utilizados para verificar se as funcionalidades implementadas atendem aos
+              requisitos definidos, como parte da verificação técnica dentro do DoD.</p>
 
           </div>
 

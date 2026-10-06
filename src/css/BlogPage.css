@@ -18,6 +18,11 @@ body {
   max-width: 600px;
 }
 
+.blog-subtitulo {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
 .blog-tag {
   font-size: 20px;
   font-weight: 700;

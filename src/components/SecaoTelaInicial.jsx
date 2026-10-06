@@ -11,11 +11,11 @@ const SecaoTelaInicial = () => {
     <section className="secao-container">
       <div className="secao-content">
         <h1 className="secao-name">
-          A maior Empresa Júnior de gamificação do Brasil!
+          Engenharia de Software para criar experiências digitais que fazem sentido.
         </h1>
 
         <p className="secao-subtitle">
-          Ressignificando a vida das pessoas através da gamificação
+          Desenvolvemos softwares e produtos digitais personalizados, unindo engenharia, estratégia, design e gamificação para resolver problemas reais.
         </p>
 
         <div className="secao-botoes">
@@ -24,7 +24,7 @@ const SecaoTelaInicial = () => {
             className="secao-btn"
             onClick={() => scrollToSection('services')}
           >
-            O que fazemos
+            Conheça nossas soluções
           </button>
 
           <button
@@ -32,7 +32,7 @@ const SecaoTelaInicial = () => {
             className="secao-btn"
             onClick={() => scrollToSection('forms')}
           >
-            Fale conosco
+            Fale com a gente
           </button>
         </div>
       </div>

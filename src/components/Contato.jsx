@@ -12,7 +12,6 @@ function Contact() {
     <>
     <div className="contato-intro">
       <h1>Vamos construir algo juntos?</h1>
-      <p>Todo bom produto começa com uma boa conversa.</p>
       <p>
         Conte para a gente sobre o seu desafio, sua ideia ou o problema que você deseja
         resolver. Nossa equipe irá entender o contexto para avaliar como podemos ajudar.

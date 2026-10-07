@@ -9,13 +9,15 @@ const Hero = ({ name, texto1, texto2, image, textButao }) => {
         <h1 className="hero-name">{name}</h1>
         
         <p className="hero-subtitle">{texto1}</p>
-        <p className="hero-description">{texto2}</p>
+        {texto2.split('\n\n').map((paragrafo, i) => (
+          <p key={i} className="hero-description">{paragrafo}</p>
+        ))}
         
         <button 
           className="hero-btn-contato"
           onClick={() => document.getElementById('forms').scrollIntoView({ behavior: 'smooth'})}
         >
-          {textButao || 'Entre em Contato'}
+          {textButao || 'Fale com a Orc’estra'}
         </button>
       </div>
       

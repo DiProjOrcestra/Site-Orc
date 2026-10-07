@@ -12,7 +12,8 @@
   justify-content: center; 
   min-height: 600px; 
   gap: 5%; 
-  padding: 0 10%;
+  /* espaço no topo para o menu fixo não cobrir títulos longos */
+  padding: 110px 10% 60px;
   background-color: var(--e-global-color-primary); 
   color: var(--e-global-color-text); 
   font-family: var(--e-global-typography-primary-font-family); 
@@ -45,6 +46,11 @@
   margin-bottom: 40px;
   word-wrap: break-word;
   font-weight: 600;
+}
+
+/* quando o texto tem mais de um parágrafo, deixa eles mais próximos */
+.hero-description + .hero-description {
+  margin-top: -24px;
 }
 
 .hero-content button {
@@ -91,7 +97,7 @@
 /* Tablets */
 @media (max-width: 992px) {
   .hero-container {
-    padding: 0 5%;
+    padding: 110px 5% 60px;
     gap: 30px;
     min-height: 500px;
   }

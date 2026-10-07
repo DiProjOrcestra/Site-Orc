@@ -37,7 +37,7 @@ function PortfolioPage() {
       path: "/four-seasons",
     },
     {
-      title: "Adote um Post",
+      title: "Adote um Postinho",
       image: adotePost,
       path: "/adote-post",
     },
@@ -99,7 +99,7 @@ function PortfolioPage() {
       path: "/ect2016",
     },
     {
-      title: "Elas projetam",
+      title: "Elas Projetam",
       image: elasProjetam,
       path: "/elas-projetam",
     },
@@ -113,7 +113,7 @@ function PortfolioPage() {
           <h1 className="port-title">Portfólio</h1>
 
           <p className="port-text">
-            Saiba todos os projetos que fizemos em cada um de nossos serviços.
+            Conheça alguns dos problemas que já ajudamos a transformar em produtos e experiências digitais.
           </p>
         </div>
 
@@ -127,9 +127,9 @@ function PortfolioPage() {
       </section>
 
       <section className="portfolio-section">
-        <ProjectSection title="Desenvolvimento Gamificado">
-          O Desenvolvimento Gamificado é o serviço em que criamos um sistema gamificado 
-          a partir do uso de frameworks e técnicas de gamificação consolidadas no mercado internacional. 
+        <ProjectSection title="Desenvolvimento de Software">
+          Projetos em que transformamos necessidades em sistemas, plataformas e experiências
+          digitais funcionais, personalizadas e preparadas para seus usuários.
         </ProjectSection>
 
         <div className="portfolio-grid">
@@ -141,9 +141,8 @@ function PortfolioPage() {
 
       <section className="portfolio-section">
         <ProjectSection title="Concepção de Software">
-          A Concepção de Software Gamificado é o nosso serviço no qual criamos uma ideia, um plano ou 
-          um design para um software antes que a sua implementação comece. Esse serviço estabelece a 
-          base para o projeto e ajuda a garantir que o produto final atenda às necessidades e requisitos do usuário.
+          Projetos em que estruturamos ideias, requisitos e experiências antes do desenvolvimento,
+          ajudando a transformar possibilidades em produtos digitais mais claros e viáveis.
         </ProjectSection>
 
         <div className="portfolio-grid">
@@ -155,10 +154,8 @@ function PortfolioPage() {
 
       <section className="portfolio-section">
         <ProjectSection title="Design de Gamificação">
-          O Design de Gamificação é o nosso serviço no qual aplicamos as técnicas de Gamificação 
-          no seu contexto, trazendo mais engajamento e motivação ao seu público. 
-          Utilizamos frameworks consolidados no mercado para o planejamento e construção do 
-          seu Design de uma forma completamente personalizada e inovadora.
+          Projetos em que utilizamos princípios de gamificação para estruturar jornadas,
+          comportamentos, feedbacks e experiências mais envolventes.
         </ProjectSection>
 
         <div className="portfolio-grid">
@@ -169,10 +166,9 @@ function PortfolioPage() {
       </section>
 
       <section className="portfolio-section">
-        <ProjectSection title="Treinamento">
-          O Treinamento Gamificado é o nosso serviço no qual montamos um treinamento acerca dos conteúdos Gamificação, 
-          Scrum, Engenharia de Requisitos ou Gestão de Tempo e apresentamos para o público desejado em aulas que podem 
-          durar horas ou dias dependendo das necessidades dos ouvintes. 
+        <ProjectSection title="Treinamentos">
+          Experiências de aprendizagem desenvolvidas para compartilhar conhecimento de maneira
+          prática, estruturada e adaptada ao público.
         </ProjectSection>
 
         <div className="portfolio-grid">
@@ -185,9 +181,8 @@ function PortfolioPage() {
 
       <section className="portfolio-section">
         <ProjectSection title="Consultoria">
-         A consultoria gamificada se baseia em estudos da sua gamificação existente, 
-         observando seus objetivos e metas. Com isso, nós utilizamos frameworks como 6D e 
-         Octalysis para propor modificações e melhorias para tornar a gamificação mais eficiente.
+          Projetos em que analisamos experiências gamificadas existentes e propomos melhorias
+          a partir de objetivos, contexto e comportamento dos usuários.
         </ProjectSection>
 
         <div className="portfolio-grid">

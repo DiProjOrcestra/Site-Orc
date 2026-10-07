@@ -16,19 +16,16 @@ function BlogPage() {
     <section className="blog-c">
       <div className="blog-content">
         <h1 className="blog-title">
-          Além de empresa,
-          <br />
-          também é informação!
+          Além de empresa, também é informação!
         </h1>
 
         <p className="blog-text">
-          Conteúdos sobre inovação, tecnologia e muito mais você só aprende
-          aqui, no Blog da Orc’estra
+          Tecnologia, produtos digitais, gamificação e pessoas sob a ótica da Orc’estra.
         </p>
       </div>
 
       <div className="blog-frame-image">
-        <img className="blog-img" src={blogframe} alt="Ilustração do desenhoo" />
+        <img className="blog-img" src={blogframe} alt="Ilustração do blog da Orc’estra" />
       </div>
     </section>
     <BlogPagination

@@ -9,7 +9,15 @@ import iconLinkedin from "../assets/icon-linkedin.svg";
 
 function Contact() {
   return (
-    <div className="contact-container">
+    <>
+    <div className="contato-intro">
+      <h1>Vamos construir algo juntos?</h1>
+      <p>
+        Conte para a gente sobre o seu desafio, sua ideia ou o problema que você deseja
+        resolver. Nossa equipe irá entender o contexto para avaliar como podemos ajudar.
+      </p>
+    </div>
+    <div className="contact-container contact-container-com-intro">
       <div className="team-section">
         <div className="team-card">
           <a
@@ -81,7 +89,8 @@ function Contact() {
       </div>
 
       <div className="social-section">
-        <h2>Acesse nossas mídias sociais!</h2>
+        <h2>Acompanhe a Orc’estra</h2>
+        <p className="social-texto">Conheça nossos projetos, conteúdos e a rotina de quem constrói a Orc’estra.</p>
 
         <div className="social-icons">
 
@@ -105,6 +114,7 @@ function Contact() {
       </div>
     </div>
     </div>
+    </>
   );
 }
 

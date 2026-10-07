@@ -273,3 +273,59 @@ body {
         text-align: center;
       }
     }
+
+/* Cabeçalho da página de contato ("Vamos construir algo juntos?") */
+
+.contato-intro {
+  background-color: white;
+  color: #032100;
+  padding: 150px 100px 0;
+}
+
+.contato-intro h1 {
+  font-size: 37.5px;
+  color: #032100;
+  margin-bottom: 16px;
+}
+
+.contato-intro p {
+  font-size: 18px;
+  max-width: 800px;
+  margin-bottom: 10px;
+}
+
+/* Como o cabeçalho já dá o espaço do topo, o bloco de baixo fica mais próximo */
+.contact-container.contact-container-com-intro {
+  padding-top: 30px;
+}
+
+.social-texto {
+  font-size: 16.5px;
+}
+
+@media (min-width: 1900px) {
+  .contato-intro {
+    padding-top: 160px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contato-intro {
+    padding: 100px 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .contato-intro {
+    padding-top: 20px;
+  }
+  .contato-intro h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 425px) {
+  .contato-intro {
+    padding-top: 60px;
+  }
+}

@@ -6,7 +6,9 @@ const ComoFunciona = ({ titulo, funcionamento, passos }) => {
     <section className="detalhamento-container">
       <div className="detalhamento-header">
         <h2 className="detalhamento-titulo">{titulo}</h2>
-        <p className="detalhamento-intro">{funcionamento}</p>
+        {funcionamento.split('\n\n').map((paragrafo, i) => (
+          <p key={i} className="detalhamento-intro">{paragrafo}</p>
+        ))}
       </div>
 
       <div className="passos-grid">
@@ -17,7 +19,9 @@ const ComoFunciona = ({ titulo, funcionamento, passos }) => {
             </div>
             <div className="passo-texto">
               <h3>{passo.title}</h3>
-              <p>{passo.text}</p>
+              {passo.text.split('\n\n').map((paragrafo, i) => (
+                <p key={i}>{paragrafo}</p>
+              ))}
             </div>
           </div>
         ))}

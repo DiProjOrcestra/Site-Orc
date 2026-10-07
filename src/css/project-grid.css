@@ -48,6 +48,14 @@ body {
   text-decoration: none;
 }
 
+.projects-text {
+  font: 18px "Ubuntu", sans-serif;
+  color: #ffffff;
+  margin-top: 8px;
+  text-align: left;
+  max-width: 600px;
+}
+
 .projects-subtitle {
   font: 20px "Ubuntu", sans-serif;
   color: #ffffff;

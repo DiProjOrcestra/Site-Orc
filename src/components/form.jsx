@@ -58,7 +58,7 @@ const ContactForm = () => {
 
         <div className="fields-grid">
           <div className="field-group width-50">
-            <label>Qual o seu nome? <span>*</span></label>
+            <label>Nome <span>*</span></label>
             <input
               {...register("nome", { required: "Esse campo é obrigatório.", validate: (value) => value.trim().split(" ").length >= 2 || "Preencha nome e sobrenome", maxLength: {value: 100, message: "O nome deve conter no máximo 100 caracteres."} })}
               placeholder="Nome"
@@ -69,7 +69,7 @@ const ContactForm = () => {
 
 
           <div className="field-group width-50">
-            <label>Qual seu melhor e-mail? <span>*</span></label>
+            <label>E-mail <span>*</span></label>
             <input
               type="email"
               {...register("email", { required: "Esse campo é obrigatório.",
@@ -86,7 +86,7 @@ const ContactForm = () => {
 
 
           <div className="field-group width-33">
-            <label>Qual o seu cargo? <span>*</span></label>
+            <label>Cargo <span>*</span></label>
             <select 
               {...register("cargo", { required: "Esse campo não pode estar em branco." })}
               className={errors.cargo ? "field-error" : "select-styled"}
@@ -104,7 +104,7 @@ const ContactForm = () => {
 
 
           <div className="field-group width-33">
-            <label>Por onde nos conheceu?</label>
+            <label>Como você conheceu a Orc’estra?</label>
             <select {...register("origem")} className={errors.origem ? "field-error" : "select-styled"}>
               <option value="">...</option>
               <option value="Anúncios do Google">Anúncios do Google</option>
@@ -118,7 +118,7 @@ const ContactForm = () => {
 
 
           <div className="field-group width-33">
-            <label>Qual seu telefone? <span>*</span></label>
+            <label>Telefone <span>*</span></label>
             <input
               type="tel"
               {...register("telefone", { required: "Esse campo é obrigatório.", onChange: (e) => {
@@ -138,7 +138,7 @@ const ContactForm = () => {
 
 
           <div className="field-group width-100">
-            <label>Nos conte um pouco sobre sua necessidade <span>*</span></label>
+            <label>Conte um pouco sobre o seu desafio <span>*</span></label>
             <textarea
               {...register("mensagem", { required: "Esse campo não pode estar em branco.", maxLength: {value: 1000 , message: "A mensagem não pode exceder 1000 caracteres."} })}
               placeholder="Mensagem"
@@ -149,7 +149,7 @@ const ContactForm = () => {
 
         </div>
         <div className="submit-container">
-          <button type="submit" className="btn-submit">Enviar</button>
+          <button type="submit" className="btn-submit">Enviar mensagem</button>
         </div>
       </form>
     </footer>

@@ -42,8 +42,8 @@ const ContactForm = () => {
           <img src={logoOrc} alt="Logo" className="form-logo" />
         </div>
         <div>
-          <h2 className="h2">Tem um desafio que pode virar um produto digital?</h2>
-          <p className="p">Conte para a gente o que você precisa. Nosso primeiro passo é compreender o problema, o contexto e os objetivos antes de pensar na tecnologia.</p>
+          <h2 className="h2">Vamos conversar?</h2>
+          <p className="p">Entre em contato com o nosso time para que juntos possamos encontrar a solução mais adequada para você!</p>
         </div>
       </div>
 

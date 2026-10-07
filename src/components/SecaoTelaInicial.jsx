@@ -11,11 +11,11 @@ const SecaoTelaInicial = () => {
     <section className="secao-container">
       <div className="secao-content">
         <h1 className="secao-name">
-          Engenharia de Software para criar experiências digitais que fazem sentido.
+          Tecnologia é ferramenta. Experiência é resultado.
         </h1>
 
         <p className="secao-subtitle">
-          Desenvolvemos softwares e produtos digitais personalizados, unindo engenharia, estratégia, design e gamificação para resolver problemas reais.
+          Transformamos desafios reais em soluções digitais personalizadas.
         </p>
 
         <div className="secao-botoes">

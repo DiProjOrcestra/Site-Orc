@@ -7,9 +7,11 @@ const Beneficios = ({ titulo, intro, lista, textButao }) => {
       <div className="beneficios-container">
         <div className="beneficios-left">
             <h2 className="beneficios-titulo">{titulo}</h2>
-            <p className="beneficios-intro">{intro}</p>
+            {intro.split('\n\n').map((paragrafo, i) => (
+              <p key={i} className="beneficios-intro">{paragrafo}</p>
+            ))}
             <button onClick={() => document.getElementById('forms').scrollIntoView({ behavior: 'smooth' })}>
-                {textButao || 'Entre em Contato'}
+                {textButao || 'Fale com a Orc’estra'}
             </button>
         </div>
 

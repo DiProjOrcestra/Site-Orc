@@ -16,10 +16,13 @@ function ProjectsGrid() {
 
       <div className="projects-header">
         <Link to="/portfolio" className="port-link">
-          <h1 className="projects-title">Onde já impactamos?</h1>
+          <h1 className="projects-title">Onde já construímos valor?</h1>
         </Link>
         <p className="projects-subtitle">
-          Portfólio
+          Projetos
+        </p>
+        <p className="projects-text">
+          Conheça algumas das soluções que desenvolvemos e os desafios que ajudamos nossos parceiros a enfrentar.
         </p>
       </div>
       

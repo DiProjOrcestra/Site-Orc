@@ -9,17 +9,17 @@ function ImpactIndicators(){
             
                     <div className="metric-card">
                         <h2>+35</h2>
-                        <p>Projetos executados</p>
+                        <p>Projetos realizados</p>
                     </div>
             
                     <div className="metric-card">
-                        <h2>+8</h2>
-                        <p>Anos de atuação</p>
+                        <h2>+10</h2>
+                        <p>Anos de experiência</p>
                     </div>
 
                     <div className="metric-card">
                         <h2>1º</h2>
-                        <p>EJ de Gamificação</p>
+                        <p>Pioneiros em gamificação no MEJ</p>
                     </div>
 
                     <div className="metric-card">

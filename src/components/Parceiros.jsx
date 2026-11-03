@@ -11,7 +11,7 @@ function Parceiros() {
   return (
     <section className="parceiros-section">
       <div className="container-title">
-        <h1 className="title">Conheça quem nos apoia</h1>
+        <h1 className="title">Quem constrói essa trajetória com a gente</h1>
       </div>
 
       <div className="container-parceiros">

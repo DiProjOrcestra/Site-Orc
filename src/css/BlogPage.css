@@ -18,6 +18,11 @@ body {
   max-width: 600px;
 }
 
+.blog-subtitulo {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
 .blog-tag {
   font-size: 20px;
   font-weight: 700;
@@ -44,6 +49,14 @@ body {
   width: 100%;
 }
 
+.blog-content .blog-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: #032100;
+  margin: 10px 0;
+  line-height: 1.1;
+}
+
 @media (max-width: 768px) {
   .blog-c {
     flex-direction: column;
@@ -59,6 +72,10 @@ body {
   }
 
   .blog-text h1 {
+    font-size: 26px;
+  }
+
+  .blog-content .blog-title {
     font-size: 26px;
   }
 

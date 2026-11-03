@@ -9,7 +9,7 @@ const HeroQuemSomos = () => {
          
         <div className="hero-texto">
           <h1>Projeta Aqui, Motiva Lá!</h1>
-          <p>Uma empresa empenhada a transformar vidas das pessoas através da gamificação</p>
+          <p>Transformamos desafios em experiências que engajam e geram impacto.</p>
         </div>
 
         <div className="hero-imagem">

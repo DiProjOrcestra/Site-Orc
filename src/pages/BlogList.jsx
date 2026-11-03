@@ -39,9 +39,10 @@ function BlogList({irParaPagina}) {
     const postsHome = posts.slice(0,4);
     return (
         <div className='banner'>
-            <h2>Se mantenha atualizado com nossos conteúdos</h2>
+            <h2>Tecnologia, Engenharia de Software, comportamento e experiência.</h2>
             <hr />
-            <p onClick={irParaPagina}>Blog</p>
+            <p onClick={irParaPagina}>Conteúdos e perspectivas</p>
+            <p>Compartilhamos aprendizados, ideias e discussões sobre tecnologia, software, experiência do usuário, gamificação e mercado.</p>
             <div className="posts-container">
                 {postsHome.map((post) => (
                     <BlogPost

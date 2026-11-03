@@ -13,18 +13,23 @@ const SobreInstitucional = ({ textButao }) => {
 
       <div className="institucional-container">
         <div className="institucional-block">
-          <h2>Quem somos nós?</h2>
-          <p>A Orc’estra Gamificação (ou Orc para os mais íntimos) é a Empresa Júnior de Engenharia de Software da Universidade de Brasília e a primeira a trabalhar com foco em Gamificação no Brasil, sempre procurando transformar o comportamento das pessoas por meio da Gamificação.</p>
-          <p>Trazemos mais motivação e engajamento para nossos parceiros com soluções gamificadas únicas, com o auxílio de metodologias inovadoras consolidadas no mercado.</p>
+          <h2>Quem somos?</h2>
+          <p>A Orc’estra é a empresa júnior de Engenharia de Software da Universidade de Brasília.</p>
+          <p>Desenvolvemos softwares e experiências digitais personalizadas para resolver problemas reais de pessoas e organizações.</p>
+          <p>Unimos Engenharia de Software, estratégia, design e gamificação para criar produtos funcionais, confiáveis e pensados para quem realmente irá utilizá-los.</p>
+          <p>A gamificação faz parte da nossa história e é o nosso maior diferencial. Mas nosso trabalho começa antes dela: começar a entender o problema.</p>
         </div>
 
         <div className="institucional-block">
           <h2>Por que gamificação?</h2>
-          <p>A Gamificação é a aplicação de elementos e conceitos de jogos no mundo real com o intuito de mudar o comportamento das pessoas. Para nós, a Gamificação é muito mais que uma técnica, é uma forma de motivar e engajar pessoas ressignificando suas vidas e transformando obrigações em desafios a serem superados para que o trabalho seja visto como algo prazeroso e divertido de se fazer.</p>
+          <p>Gamificação não é criar jogos.</p>
+          <p>É utilizar princípios de design de jogos em outros contextos para tornar objetivos, progresso, feedback e jornadas mais compreensíveis e envolventes.</p>
+          <p>Na Orc’estra, ela começa com perguntas: qual comportamento queremos apoiar? O que motiva as pessoas? O que dificulta sua participação? Como tornar o progresso visível? Prezamos, sempre, pelo objetivo final dos nossos clientes e as estratégias que vão levar para esses objetivos.</p>
+          <p>Por isso, não aplicamos a gamificação como uma fórmula pronta. Utilizamos essa abordagem quando ela faz sentido para o problema e para as pessoas envolvidas.</p>
         </div>
 
         <button onClick={() => document.getElementById('forms').scrollIntoView({ behavior: 'smooth' })} className="institucional-button">
-            {textButao || 'Fale Conosco'}
+            {textButao || 'Fale com a Orc’estra'}
         </button>
       </div>
 
